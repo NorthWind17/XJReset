@@ -1,0 +1,260 @@
+#project {
+    #diaryAdd {
+        .main {
+            background-color: rgba(0, 0, 0, 0);
+            .border {
+                background-color: rgba(0, 0, 0, 0);
+                .content1 {
+                    background-color: rgba(0, 0, 0, 0);
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    #diaryAdd,
+    #diaryPrintList {
+        .dacontent {
+            width: 200px;
+            border: 1px solid #f0f0f0;
+            align-items: center;
+            padding: 10px;
+            margin-right: 30px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            .img {
+                width: 40px;
+                margin-right: 10px;
+                height: 40px;
+                border-radius: 10px;
+            }
+            .left {
+                display: flex;
+                margin-bottom: 10px;
+                span {
+                    line-height: 40px;
+                    font-weight: 700;
+                }
+            }
+            .mouldClass {
+                display: none;
+            }
+            .bottom {
+                font-size: 12px;
+                > div {
+                    display: flex;
+                    margin-bottom: 10px;
+                    div:nth-child(1) {
+                        color: #6d6d6d;
+                        max-width: 90px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    div:nth-child(2) {
+                        color: #afabab;
+                        min-width: 110px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+    #diaryPrintList {
+        .main {
+            background-color: rgba(0, 0, 0, 0);
+            .dplTitle {
+                width: 100%;
+                background-color: #fff;
+                margin-bottom: 0.2px;
+                .dplTop {
+                    width: 60%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: flex-start;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 16px;
+                    > div {
+                        width: 33.3%;
+                        text-align: center;
+                        span {
+                            display: inline-block;
+                            width: 26px;
+                            height: 26px;
+                            border-radius: 50%;
+                            line-height: 26px;
+                            border: 1px solid #d6d6d6;
+                            margin-right: 6px;
+                            color: #a2a0a0;
+                        }
+                    }
+                    .activeConClass {
+                        background-color: #409eef;
+                        color: #fff;
+                        span {
+                            background-color: #fff;
+                            border: 1px solid #409eef;
+                            color: #409eef;
+                        }
+                    }
+                }
+            }
+
+            .content {
+                .dpcTopBtn {
+                    margin-bottom: 30px;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                .dacontent {
+                    margin: 0 44px;
+                    margin-bottom: 20px;
+                    .left {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .diaryMPic {
+                    width: 100%;
+                    padding: 20px 0;
+                    background-color: #d6d6d6;
+                    > div {
+                        width: 500px;
+                        height: 600px;
+                        margin: 0 auto;
+                        position: relative;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                        .dmpForm {
+                            .el-form-item:before {
+                                content: '*';
+                                color: #f56c6c;
+                                margin-right: 2px;
+                            }
+                            .el-form-item {
+                                width: 185px;
+                                left: 200px;
+                                display: flex;
+                                .el-form-item__content {
+                                    line-height: 30px;
+                                    margin-left: 0 !important;
+                                    .el-date-editor {
+                                        width: 100%;
+                                    }
+                                    .el-input {
+                                        line-height: 30px;
+                                        .el-input__inner {
+                                            border: 1px dashed #409eef;
+                                            background-color: #ecceb4;
+                                            height: 30px;
+                                            line-height: 30px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .dmpjsc {
+                                position: absolute;
+                                bottom: 240px;
+                            }
+                            .dmppro {
+                                position: absolute;
+                                bottom: 190px;
+                            }
+                            .dmpsg {
+                                position: absolute;
+                                bottom: 140px;
+                            }
+                            .dmgtime {
+                                position: absolute;
+                                bottom: 90px;
+                            }
+                        }
+                        .dmpName {
+                            position: absolute;
+                            z-index: 20;
+                            top: 18%;
+                            left: 0;
+                            width: 100%;
+                            text-align: center;
+                            font-size: 38px;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+            .dplpDiaClass {
+                .el-dialog {
+                    margin-top: 70px !important;
+                    .el-dialog__body {
+                        padding: 0;
+                        padding-bottom: 80px;
+                        background-color: rgba(0, 0, 0, 0.04);
+                        .content {
+                            height: 640px;
+                            overflow-y: auto;
+                            overflow-x: hidden;
+                            background-color: #fff;
+                            margin-top: 20px;
+                            padding: 20px 10px 0 10px;
+                            .content1 {
+                                display: flex;
+                                flex-wrap: wrap;
+                            }
+                            .dmpForm {
+                                .el-input__icon {
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .backBtn {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                padding: 10px 0;
+                background-color: #fff;
+                .bback {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    #diaryList,
+    #diaryPrintList {
+        text-align: center;
+        .el-table {
+            margin-bottom: 20px;
+        }
+        .comeSearch {
+            margin-bottom: 20px;
+            .el-form {
+                display: flex;
+                width: 100%;
+                .searchBottom {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    .searchLeft {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+}

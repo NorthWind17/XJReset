@@ -1,0 +1,574 @@
+#system {
+    #systemRole {
+        font-size: 14px;
+        .appContent {
+            // padding: 20px 10px 0 10px;
+            display: flex;
+            justify-content: space-between;
+            .appContentLeft {
+                width: 18%;
+                // min-width: 220px;
+                background-color: #ffffff;
+                box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.06);
+                border-radius: 10px;
+                border: solid 1px #edf0f5;
+                // overflow-y: auto;
+                .top {
+                    border-bottom: 1px solid #e6e6e7;
+                    i {
+                        color: #409eff;
+                        cursor: pointer;
+                    }
+                }
+                .top,
+                .item {
+                    .line {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0 20px;
+                        height: 55px;
+                        line-height: 55px;
+                        > div:nth-child(2) {
+                            width: 16px;
+                        }
+                        > div:nth-child(1) {
+                            width: 100%;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+                .item {
+                    .line {
+                        cursor: pointer;
+                        .activeRoleClass {
+                            color: #409eff;
+                        }
+                        .el-icon-delete {
+                            color: red;
+                        }
+                    }
+                }
+            }
+            .appContentRight {
+                width: 76%;
+                background-color: #ffffff;
+                box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.06);
+                border-radius: 10px;
+                border: solid 1px #edf0f5;
+                overflow-y: auto;
+                .appCRLine {
+                    border-bottom: 1px solid #e6e6e7;
+                    .appCRHeader {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0 10px;
+                        padding-left: 30px;
+                        .appCRHLeft {
+                            display: flex;
+                            justify-content: flex-start;
+                            height: 55px;
+                            line-height: 55px;
+                            cursor: pointer;
+                            div:nth-child(1) {
+                                margin-right: 30px;
+                            }
+                            .activeRoleClass {
+                                color: #409eff;
+                            }
+                        }
+                        .appCRHRight {
+                            line-height: 60px;
+                            padding-right: 10px;
+                            span,
+                            i {
+                                cursor: pointer;
+                            }
+                            span {
+                                color: #409eef;
+                            }
+                            .crhrSpan {
+                                color: #d6d6d6;
+                            }
+                        }
+                    }
+                }
+                .appCRBottom {
+                    padding: 20px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    .arcbMain {
+                        display: flex;
+                    }
+                    .acrbHeader,
+                    .acrbFooter {
+                        padding: 14px 0 14px 14px;
+                    }
+                    .acrbHeader,
+                    .acf2 {
+                        width: 200px;
+                    }
+                    .acf1 {
+                        width: 460px;
+                    }
+                    .acrbFooter {
+                        padding-left: 40px;
+                        // border-left: 1px solid #e6e6e7;
+                        // border-right: 1px solid #e6e6e7;
+                        // border-bottom: 1px solid #e6e6e7;
+                    }
+                    .acrbUser {
+                        min-height: 380px;
+                        .userLine {
+                            border-bottom: 1px solid #e6e6e7;
+                            .userContent {
+                                padding: 14px 20px;
+                                display: flex;
+                                justify-content: space-between;
+                                line-height: 48px;
+                                .ucLeft {
+                                    display: flex;
+                                    .notou {
+                                        width: 48px;
+                                        height: 48px;
+                                        border-radius: 50%;
+                                        margin-right: 30px;
+                                        background-color: #409eff;
+                                        text-align: center;
+                                        color: #fff;
+                                    }
+                                    .touPic {
+                                        width: 48px;
+                                        height: 48px;
+                                        border-radius: 50%;
+                                        margin-right: 30px;
+                                        overflow: hidden;
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+                                }
+                                i {
+                                    cursor: pointer;
+                                }
+                                .el-icon-delete {
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .el-dialog {
+            width: 500px;
+            .deleteRoleClass {
+                color: #409eef;
+            }
+        }
+    }
+}
+.garyDivColor {
+    color: #c0c4cc;
+}
+.bDivColor {
+    color: #000;
+}
+#appIndex {
+    width: 100%;
+    background-color: #f6f6f6;
+    // min-width: 1100px;
+    // overflow-y: auto;
+    .main {
+        padding-top: 20px !important;
+        height: 100%;
+        background-color: #f6f6f6;
+        .appMain {
+            // width: 90%;
+            margin: 0 auto;
+            height: 100%;
+            background-color: #f6f6f6;
+            .appML {
+                background-color: #f6f6f6;
+                padding-bottom: 20px;
+
+                .appMLDiv {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 40px;
+                    .appmll {
+                        width: 60%;
+                        padding: 10px 10px 0 10px;
+                        border-radius: 10px;
+                        background-color: #fff;
+                        .title {
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+
+                            text-align: center;
+                            // margin-bottom: 40px;
+                            padding: 60px 0;
+
+                            > .el-col {
+                                position: relative;
+                                cursor: pointer;
+                                .num {
+                                    position: absolute;
+                                    right: -18px;
+                                    top: -14px;
+                                    width: 24px;
+                                    height: 24px;
+                                    background-color: red;
+                                    border-radius: 50%;
+                                    line-height: 24px;
+                                    text-align: center;
+                                    color: #fff;
+                                    font-size: 12px;
+                                }
+                                img {
+                                    width: 60px;
+                                }
+                                div {
+                                    width: 100%;
+                                    div:last-child {
+                                        margin-top: 10px;
+                                    }
+                                }
+                            }
+                            > .el-col:nth-child(1),
+                            > .el-col:nth-child(2),
+                            > .el-col:nth-child(3) {
+                                border-right: 1px solid #eee;
+                            }
+                            .el-col:hover {
+                                color: #409eef;
+                            }
+                        }
+                    }
+                    .appmlr {
+                        width: 34%;
+
+                        height: 226px;
+                        border-radius: 10px;
+                        background-color: #fff;
+
+                        h2 {
+                            width: 100%;
+                            line-height: 50px;
+                            height: 50px;
+                            border-top-left-radius: 10px;
+                            border-top-right-radius: 10px;
+                            text-align: center;
+                            background-color: #409eff;
+                            color: #fff;
+                            i {
+                                font-size: 16px;
+                                margin-right: 6px;
+                            }
+                        }
+                        > div {
+                            height: 150px;
+                            padding: 10px;
+                            > div {
+                                height: 100%;
+                            }
+                            .four-text {
+                                height: 100%;
+                                color: #999d99;
+                                // border-radius: 0.1rem;
+                                font-size: 16px;
+                                background-color: #ffffff;
+                                // height: 2.4rem;
+                                // padding: 10px;
+                                position: relative;
+                                overflow: hidden;
+                                .center-tile {
+                                    display: flex;
+                                    span {
+                                        display: inline-block;
+                                        width: 10px;
+                                        height: 10px;
+                                        background: #f58205;
+                                        border-radius: 50%;
+                                        margin: 4px 10px 0 0;
+                                    }
+                                }
+                                .text-box {
+                                    padding-left: 50px;
+                                    font-size: 16px;
+                                    p {
+                                        margin-top: 8px;
+                                    }
+                                }
+                                .more {
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    font-size: 14px;
+                                    color: #409eff;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+                .bottomTable {
+                    .appIndexMain {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .rightMain {
+                            width: 34%;
+
+                            border-radius: 10px;
+                            background-color: #fff;
+                            max-height: 400px;
+                            > div {
+                                padding: 10px;
+                            }
+                            .lmt {
+                                display: flex;
+                                line-height: 40px;
+                                padding-left: 10px;
+                                margin-bottom: 20px;
+                                h3 {
+                                    font-size: 18px;
+                                    margin-right: 16px;
+                                }
+                            }
+                        }
+                    }
+
+                    // background-color: #fff;
+                    // padding: 30px;
+                    // border-radius: 10px;
+                    // .el-table {
+                    //     border: 1px solid #ebeef5;
+                    //     border-bottom: 0;
+                    //     border-top-left-radius: 10px;
+                    //     border-top-right-radius: 10px;
+                    //     .aiFa {
+                    //         img,
+                    //         .aifas {
+                    //             width: 50px;
+                    //             height: 50px;
+                    //             border-radius: 50%;
+                    //             overflow: hidden;
+                    //             vertical-align: middle;
+                    //         }
+                    //         .aifas {
+                    //             display: inline-block;
+                    //             line-height: 50px;
+                    //             text-align: center;
+                    //             background-color: #409eef;
+                    //             color: #fff;
+                    //             font-size: 16px;
+                    //         }
+                    //         span {
+                    //             vertical-align: middle;
+                    //         }
+                    //         .aistext {
+                    //             margin-left: 10px;
+                    //         }
+                    //     }
+                    // }
+                }
+            }
+            .appMr {
+                width: 222px;
+                height: 200px;
+                margin-top: 24px;
+                background-color: #fff;
+                border-radius: 10px;
+                overflow: hidden;
+                padding-bottom: 20px;
+                position: relative;
+                .textTitle {
+                    text-align: center;
+                    height: 30px;
+                    line-height: 30px;
+                    background-color: #409eef;
+                    color: #fff;
+                    font-size: 15px;
+                    i {
+                        margin-right: 6px;
+                    }
+                }
+                .text {
+                    height: 150px;
+                    padding: 6px;
+                    p {
+                        height: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: #797474;
+                    }
+                }
+                .el-button {
+                    position: absolute;
+                    bottom: 0;
+                    right: 8px;
+                }
+            }
+        }
+    }
+    .bottomTable,
+    .allmoreType {
+        .leftMain {
+            width: 60%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            .lmt {
+                display: flex;
+                // line-height: 40px;
+                padding-left: 10px;
+                h3,
+                h2 {
+                    font-size: 18px;
+                    margin-right: 16px;
+                }
+            }
+            .lmb {
+                // padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                .lmblist {
+                    // display: flex;
+                    // line-height: 40px;
+                    margin: 12px;
+                    width: 160px;
+                    cursor: pointer;
+                    text-align: center;
+                    .lmbp {
+                        width: 40px;
+                        height: 40px;
+                        margin: 0 auto;
+                        margin-bottom: 20px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    p {
+                        margin-left: 8px;
+                        font-size: 14px;
+                        color: #5f5f5f;
+                    }
+                }
+            }
+        }
+    }
+    .allmoreType {
+        .leftMain {
+            width: 100%;
+            padding-left: 0;
+            .lmt {
+                flex-wrap: wrap;
+                margin: 10px 0;
+                padding-left: 0;
+                h3 {
+                    width: 100%;
+                }
+            }
+            .lmb {
+                .useIcon {
+                    display: none;
+                }
+                .lmblist {
+                    padding: 10px 16px;
+                    border: 1px solid #fff;
+                    width: 161px;
+                }
+                .useClass {
+                    background-color: #e0ecf9;
+                    border: 1px solid #409eff;
+                    position: relative;
+                    .useIcon {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 0;
+                        height: 0;
+                        border-top: 10px solid #409eff;
+                        border-right: 10px solid #409eff;
+                        border-bottom: 10px solid transparent;
+                        border-left: 10px solid transparent;
+                        i {
+                            position: absolute;
+                            top: -11px;
+                            right: -10px;
+                            color: #fff;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .noUse {
+                    .useIcon {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+#appIndex2 {
+    // width: 100%;
+    // background-color: #fff;
+    // overflow-y: auto;
+    .main {
+        padding: 20px;
+
+        text-align: center;
+        .content {
+            width: 90%;
+            margin: 0 auto;
+            h3 {
+                margin: 20px 0 30px 0;
+            }
+            .sec {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                .div:nth-child(1) {
+                    display: flex;
+                }
+                .el-select {
+                    width: 300px;
+                    margin-right: 30px;
+                }
+            }
+            .el-table {
+                margin-bottom: 20px;
+                .aiFa {
+                    img,
+                    .aifas {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        vertical-align: middle;
+                    }
+                    .aifas {
+                        display: inline-block;
+                        line-height: 50px;
+                        text-align: center;
+                        background-color: #409eef;
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                    span {
+                        vertical-align: middle;
+                    }
+                    .aistext {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

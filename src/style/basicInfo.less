@@ -1,0 +1,301 @@
+#basicInfo,
+#system {
+    #contactCorp,
+    #materialBasic {
+        .pb_third {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .projectBasic {
+            .el-tag {
+                margin: 10px;
+            }
+        }
+        .phDialog {
+            .el-dialog__body {
+                padding-top: 10px;
+                .phdMain {
+                    height: 600px;
+                    overflow-y: auto;
+                    .el-form {
+                        width: 720px;
+                        margin: 0 auto;
+
+                        .dBasicInfo {
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+
+                            h2 {
+                                text-align: center;
+                                width: 100%;
+                                font-size: 20px;
+                                margin-bottom: 30px;
+                            }
+                            > .el-form-item {
+                                width: 45%;
+                                .el-select,
+                                .el-date-editor {
+                                    width: 100%;
+                                }
+                            }
+                            .dRemarkList {
+                                width: 98%;
+                                .el-textarea__inner {
+                                    min-height: 80px !important;
+                                }
+                            }
+                            .dbasicList {
+                                margin-right: 8%;
+                            }
+                            .securityInfo {
+                                width: 100%;
+                                .securityList {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    flex-wrap: wrap;
+                                    h3 {
+                                        margin-bottom: 10px;
+                                        padding-left: 20px;
+                                        width: 100%;
+                                        i {
+                                            color: #ff0000;
+                                        }
+                                    }
+                                    > .el-form-item {
+                                        width: 45%;
+                                        .el-select,
+                                        .el-date-editor {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                                .securityBtn {
+                                    width: 100%;
+                                    text-align: center;
+                                    margin-bottom: 26px;
+                                }
+                            }
+                        }
+                        .el-input-number {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #materialBasic {
+        .upOrg {
+            .el-form-item__label:before {
+                content: '*';
+                color: #f56c6c;
+                margin-right: 4px;
+            }
+            .el-button {
+                width: 100%;
+                text-align: left;
+                > span {
+                    display: inline-block;
+                    width: 100%;
+                    span {
+                        display: inline-block;
+                        width: 94%;
+                    }
+                }
+            }
+            .addNewDiv {
+                border: 1px solid #ccc;
+                width: 100%;
+                position: absolute;
+                background: #fff;
+                z-index: 3;
+                left: 0;
+                top: 48px;
+                max-height: 196px;
+                overflow-y: auto;
+                .addNewList {
+                    padding-left: 10px;
+                    li {
+                        div {
+                            line-height: 26px;
+                            cursor: pointer;
+                        }
+                        ul {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .basicProject {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+    }
+}
+.basicCreate {
+    display: flex;
+    justify-content: flex-start;
+    .bcLeft {
+        width: 200px;
+        height: 600px;
+        overflow-y: auto;
+        border: 1px solid #409eef;
+    }
+    .bcRight {
+        width: calc(100% - 200px);
+        border: 1px solid #409eef;
+        text-align: center;
+    }
+}
+#cockpit {
+    width: 100%;
+    height: 100vh !important;
+    background-color: #0c103c;
+    color: #fff;
+    overflow-y: auto;
+    .el-container {
+        padding: 0 24px;
+        .el-header {
+            // display: flex;
+            // justify-content: space-between;
+            height: 80px !important;
+            line-height: 80px;
+            margin-bottom: 10px;
+            .el-row {
+                .el-col:nth-child(1) {
+                    font-size: 20px;
+                    text-align: left;
+                    background: url(../assets/cockpit/hleft.png) no-repeat 0
+                        bottom;
+                    background-size: 100% 3px;
+                    // background-image: url(../assets/cockpit/hleft.png);
+                }
+                .el-col:nth-child(2) {
+                    text-align: center;
+                    font-size: 36px;
+                    background: url(../assets/cockpit/header.png) no-repeat 0
+                        bottom;
+                    background-size: 100%;
+                }
+                .el-col:nth-child(3) {
+                    font-size: 20px;
+                    text-align: right;
+                    background: url(../assets/cockpit/rleft.png) no-repeat 0
+                        bottom;
+                    background-size: 100% 3px;
+                    // background-image: url(../assets/cockpit/rleft.png);
+                }
+            }
+        }
+        .el-main {
+            overflow: hidden;
+            .crow {
+                height: 400px;
+                background: url(../assets/cockpit/clittle.png) no-repeat;
+                background-size: 100% 100%;
+                margin-bottom: 10px;
+                > div {
+                    padding: 10px;
+                    .crimg {
+                        margin: 34px 0 20px 35px;
+                    }
+                    #topLeft,
+                    #topRight,
+                    #bottomRight {
+                        height: 360px;
+                        margin-top: -70px;
+                    }
+                    #bottomLeft {
+                        height: 294px;
+                        .bllist {
+                            padding: 10px;
+                            > div {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 12px;
+                                div {
+                                    width: 50%;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                }
+                                div:nth-child(2) {
+                                    text-align: right;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .cmrow {
+                height: 860px;
+                background: url(../assets/cockpit/cmain.png) no-repeat;
+                background-size: 100% 812px;
+                .map {
+                    height: 600px;
+                }
+                .mapProvince {
+                    // padding: 0 34px;
+                    .mplist {
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        text-align: center;
+                        > div {
+                            width: 17.7%;
+                            padding: 10px 0;
+                            background-color: rgba(0, 186, 255, 0.1);
+                            position: relative;
+                            margin: 10px 3.6%;
+                            overflow: hidden;
+                            p {
+                                margin-bottom: 10px;
+                            }
+                            .hmll {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 10px;
+                                height: 10px;
+                                border-left: 1px solid #09bdc6;
+                                border-top: 1px solid #09bdc6;
+                            }
+                            .hmlr {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 10px;
+                                height: 10px;
+                                border-right: 1px solid #09bdc6;
+                                border-top: 1px solid #09bdc6;
+                            }
+                            .hmllb {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 10px;
+                                height: 10px;
+                                border-left: 1px solid #09bdc6;
+                                border-bottom: 1px solid #09bdc6;
+                            }
+                            .hmlrb {
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                width: 10px;
+                                height: 10px;
+                                border-right: 1px solid #09bdc6;
+                                border-bottom: 1px solid #09bdc6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

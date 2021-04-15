@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="wpk-bid" content="dta_2_58708" />
+        <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <script src="<%= BASE_URL %>config/serverconfig.js"></script>
+        <script
+            src="https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js"
+            charset="utf-8"
+        ></script>
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
+    <script>
+        !(function(c, i, e, b) {
+            var h = i.createElement('script');
+            var f = i.getElementsByTagName('script')[0];
+            h.type = 'text/javascript';
+            h.crossorigin = true;
+            h.onload = function() {
+                c[b] || (c[b] = new c.wpkReporter({ bid: 'dta_2_58708' }));
+                c[b].installAll();
+            };
+            f.parentNode.insertBefore(h, f);
+            h.src = e;
+        })(
+            window,
+            document,
+            'https://g.alicdn.com/woodpeckerx/jssdk??wpkReporter.js',
+            '__wpk'
+        );
+    </script>
+    <script src="<%= BASE_URL %>static/js/plupload-2.1.2/js/plupload.full.min.js"></script>
+</html>

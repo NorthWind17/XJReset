@@ -1,0 +1,565 @@
+//进度管理
+body {
+    .viewOpen {
+        .addMList:last-child {
+            .mdnPlus {
+                display: none;
+            }
+        }
+    }
+    #projectProgress {
+        .main {
+            .content {
+                padding: 0.2rem 0.1rem 0 0.1rem;
+                .ppHerder {
+                    display: flex;
+                    justify-content: space-between;
+                    > div {
+                        display: flex;
+                        .el-input,
+                        .el-select {
+                            margin-right: 0.2rem;
+                        }
+                    }
+                }
+                .fourLicheng {
+                    padding: 0.2rem 0 0.4rem 0;
+                    > div {
+                        padding: 0 0.2rem;
+                        overflow-x: auto;
+                        overflow-y: hidden;
+                        display: flex;
+                        height: 6rem;
+                        width: 100%;
+                        // background-color: rgb(155, 198, 253);
+                        background: url('../assets/workbench/pbac.png') repeat;
+                        // background-size: 100% 100%;
+                        .proFdiv {
+                            display: flex;
+                            height: 2rem;
+                            margin-top: 2rem;
+                            position: relative;
+                            .prostartdiv {
+                                position: relative;
+                                width: 68px;
+                                img {
+                                    position: absolute;
+                                    bottom: 0;
+                                }
+                            }
+                        }
+                        .prodiv {
+                            display: flex;
+                            height: 2rem;
+                            margin-top: 2rem;
+                            position: relative;
+
+                            .proldiv {
+                                width: 290px;
+                                position: relative;
+                                img {
+                                    width: 100%;
+                                    position: absolute;
+                                    bottom: 0;
+                                }
+                            }
+                            .promtdiv {
+                                position: relative;
+                                width: 68px;
+                                .tcimg {
+                                    position: absolute;
+                                    top: -0.5rem;
+                                    width: 100%;
+                                }
+                                .tclockimg {
+                                    position: absolute;
+                                    width: 0.3rem;
+                                    left: 25%;
+                                    top: -0.36rem;
+                                }
+                                .mbContent {
+                                    position: absolute;
+                                    width: 2rem;
+                                    top: 0.34rem;
+                                    left: -0.33rem;
+                                    color: #fff;
+                                    > div {
+                                        font-size: 0.16rem;
+                                        margin-bottom: 0.03rem;
+                                    }
+                                }
+                            }
+                            .prombdiv {
+                                position: relative;
+                                width: 68px;
+                                .tcimg {
+                                    position: absolute;
+                                    bottom: 0;
+                                    width: 100%;
+                                }
+                                .tclockimg {
+                                    position: absolute;
+                                    width: 0.3rem;
+                                    left: 25%;
+                                    bottom: 0.2rem;
+                                }
+                                .mbContent {
+                                    position: absolute;
+                                    width: 2rem;
+                                    bottom: -1rem;
+                                    left: -0.33rem;
+                                    color: #fff;
+                                    > div {
+                                        font-size: 0.16rem;
+                                        margin-bottom: 0.03rem;
+                                    }
+                                }
+                            }
+                            .prordiv {
+                                width: 290px;
+                                position: relative;
+                                img {
+                                    width: 100%;
+                                    position: absolute;
+                                    right: 0;
+                                    bottom: 0;
+                                    transform: rotateX(180deg);
+                                }
+                            }
+                        }
+                    }
+                }
+                .ppcontent {
+                    .panelList {
+                        margin: 0.1rem 0;
+                        display: flex;
+                        width: 96%;
+                        margin: 0 auto;
+                        padding-top: 0.1rem;
+                        flex-wrap: wrap;
+                        padding: 0.2rem 0;
+                    }
+                    .progress {
+                        font-size: 0.16rem;
+                        position: relative;
+                        background-color: #f9f9f9;
+                        width: 30%;
+                        margin: 0.25rem 0.2rem;
+                        border: 1px solid #ffffff;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        .proDark {
+                            position: absolute;
+                            text-align: center;
+                            width: 100%;
+                            height: 100%;
+                            top: -0.17rem;
+                            background-color: rgba(0, 0, 0, 0.5);
+                            padding-top: 0.17rem;
+                            i {
+                                color: #ff1e1e;
+                                position: absolute;
+                                top: 35%;
+                                left: 44%;
+                                font-size: 0.6rem;
+                            }
+                        }
+                    }
+                    .progress > .biao {
+                        position: absolute;
+                        left: 0.15rem;
+                        top: -0.17rem;
+                        width: 0.5rem;
+                        height: 0.5rem;
+                    }
+                    .project-title {
+                        padding: 0.1rem 0;
+                        font-size: 0.16rem;
+                        border-bottom: 0.01rem solid #dadada;
+                        text-align: center;
+                        // padding-left: 0.75rem;
+                        box-sizing: border-box;
+                        width: 100%;
+                        // height: 0.2rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .circle {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0.1rem;
+                    }
+                }
+                .pprogressChart {
+                    padding: 0.2rem 0 0.4rem 0;
+                    .pchart {
+                        display: flex;
+                        justify-content: space-between;
+                        #progressBar {
+                            width: 35%;
+                        }
+                        .prchart {
+                            width: 60%;
+                        }
+                    }
+                }
+                .left-container {
+                    height: 6rem;
+                }
+                #pane-second {
+                    padding-bottom: 0.2rem;
+                    overflow-y: auto;
+                }
+                .gantBtn {
+                    text-align: center;
+                    margin: 0.2rem 0 0.3rem 0;
+                }
+            }
+            .el-dialog {
+                .el-date-editor,
+                .el-select {
+                    width: 100%;
+                }
+                // .newmember {
+                //     width: 500px;
+                //     margin: 0 auto;
+                .upOrg {
+                    .el-form-item__label:before {
+                        content: '*';
+                        color: #f56c6c;
+                        margin-right: 0.04rem;
+                    }
+                    .el-button {
+                        width: 100%;
+                        text-align: left;
+                        > span {
+                            display: inline-block;
+                            width: 100%;
+                            span {
+                                display: inline-block;
+                                width: 94%;
+                            }
+                        }
+                    }
+                    .addNewDiv {
+                        border: 1px solid #ccc;
+                        width: 100%;
+                        position: absolute;
+                        background: #fff;
+                        z-index: 3;
+                        left: 0;
+                        top: 48px;
+                        max-height: 196px;
+                        overflow-y: auto;
+                        .addNewList {
+                            padding-left: 10px;
+                            li {
+                                div {
+                                    line-height: 26px;
+                                    cursor: pointer;
+                                }
+                                ul {
+                                    padding-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .ctype {
+                    .el-select {
+                        width: 100%;
+                    }
+                }
+                // }
+            }
+            .uploadExcel {
+                .el-form-item__label:before {
+                    content: '*';
+                    color: #f56c6c;
+                    margin-right: 0.04rem;
+                }
+                .newExcel {
+                    width: 80%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    .el-date-editor.el-input {
+                        width: 100%;
+                    }
+                    .leftForm {
+                        width: 50%;
+                        min-width: 400px;
+                        border: 1px solid #d9d9d9;
+                        padding: 30px;
+                        border-radius: 10px;
+                        .el-select {
+                            width: 100%;
+                        }
+                        .newtijiao {
+                            .newcom {
+                                text-align: center;
+                                border: 1px dashed #d9d9d9;
+                                background-color: #f5f5f5;
+                                border-radius: 5px;
+                                padding: 20px 0;
+                            }
+                            .el-form-item__content {
+                                margin-left: 80px;
+                            }
+                        }
+                    }
+                    .rightPic {
+                        img {
+                            width: 320px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #projectQuality,
+    #projectContract,
+    #projectCost,
+    #projectSafe {
+        .main {
+            .content {
+                .comeSearch {
+                    .el-form {
+                        display: flex;
+                        justify-content: space-between;
+                        .searchLeft {
+                            width: 100%;
+                            // display: flex;
+                            .slContent {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                .searchInput {
+                                    display: flex;
+                                    .el-input {
+                                        width: 5rem;
+                                        margin-right: 0.2rem;
+                                    }
+                                    .el-input__prefix {
+                                        height: 0.4rem;
+                                    }
+                                }
+                                .searchRight {
+                                    .el-form-item__content {
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                            .srbContent {
+                                width: 100%;
+                                display: flex;
+                                .el-form-item__content {
+                                    width: 150px;
+                                }
+                                // .srbcs {
+                                //     .el-form-item__label {
+                                //         width: 70px;
+                                //     }
+                                //     .el-form-item__content {
+                                //         margin-left: 70px;
+                                //     }
+                                // }
+                            }
+                        }
+                    }
+                }
+                .pb_third {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 0 0 0.2rem 0;
+                }
+                //基础设置
+                .projectBasic {
+                    padding-bottom: 0.4rem;
+                    .el-tag {
+                        border: 0;
+                        background-color: #fff;
+                        color: #9ea0a3;
+                        margin-right: 0.2rem;
+                        font-size: 0.16rem;
+                        padding: 0.04rem 0;
+                        .el-icon-close {
+                            top: -0.07rem;
+                            border: 0.01rem solid #9ea0a3;
+                            color: #9ea0a3;
+                            height: 0.14rem;
+                            width: 0.14rem;
+                            line-height: 0.14rem;
+                        }
+                    }
+                }
+                .qualityChart {
+                    padding: 0.2rem 0 0.4rem 0;
+                    .qualityChartTop {
+                        text-align: center;
+                        margin-bottom: 0.2rem;
+                        .el-button {
+                            margin-left: 0.3rem;
+                        }
+                    }
+                    .qchart {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 5rem;
+                        #qualityLX,
+                        #qualityDJ {
+                            width: 46%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #complexPicker {
+        .pickerMain {
+            height: 5rem;
+            display: flex;
+            justify-content: space-between;
+            .pickerLeft {
+                width: 49%;
+
+                border-right: 1px solid #d6d6d6;
+                > div {
+                    height: 100%;
+                    overflow-y: auto;
+                    padding: 0 0.2rem;
+                }
+                .prSearch {
+                    display: inline-block;
+                    width: 0.5rem;
+                    border: 0;
+                    margin-left: 0.06rem;
+                }
+                .prSearch:focus {
+                    outline: none;
+                }
+                .el-tag {
+                    margin: 0.04rem 0.06rem;
+                }
+                .search-list {
+                    display: inline-block;
+                    position: relative;
+                    .active {
+                        color: #fff;
+                        background: #409eff;
+                        border: 1px solid #409eff;
+                    }
+                    .search-select {
+                        width: 3rem;
+                        height: 2rem;
+                        // border: 1px solid #eee;
+                        position: absolute;
+                        overflow-y: auto;
+                        top: 25px;
+                        ul {
+                            height: 100%;
+                            li {
+                                cursor: pointer;
+                                height: 0.4rem;
+                                font-size: 0.14rem;
+                                padding: 0.06rem;
+                                display: flex;
+                                background-color: rgba(214, 210, 210, 0.47);
+                                > div:nth-child(1) {
+                                    margin-right: 0.06rem;
+                                    img,
+                                    span {
+                                        height: 0.4rem;
+                                        width: 0.4rem;
+                                        border-radius: 50%;
+                                    }
+                                    span {
+                                        background-color: #409eef;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pickerRight {
+                width: 50%;
+                position: relative;
+                > div {
+                    height: 100%;
+                    padding: 0 0.2rem;
+                    overflow-y: auto;
+                }
+                .prTitle {
+                    position: absolute;
+                    top: 0;
+                    left: 0.2rem;
+                    height: 0.3rem;
+                    font-size: 0.18rem;
+                    font-weight: 700;
+                }
+                .breadContent {
+                    position: relative;
+                    margin-top: 0.3rem;
+                    > i {
+                        position: absolute;
+                        bottom: 0;
+                        cursor: pointer;
+                        font-size: 0.16rem;
+                    }
+                    .el-breadcrumb {
+                        margin: 0.2rem 0;
+                        padding-left: 0.22rem;
+                        .el-breadcrumb__item {
+                            span {
+                                cursor: pointer;
+                                color: #409eef;
+                            }
+                        }
+                        .el-breadcrumb__item:last-child {
+                            span {
+                                color: #606266;
+                            }
+                        }
+                    }
+                }
+                .pickerBottomMain {
+                    .pbPeopleList {
+                        position: relative;
+                        margin: 0.08rem 0;
+                        .youPic,
+                        .noPic {
+                            width: 0.4rem;
+                            height: 0.4rem;
+                            border-radius: 50%;
+                            img {
+                                width: 0.4rem;
+                                height: 0.4rem;
+                                border-radius: 50%;
+                                vertical-align: middle;
+                            }
+                        }
+                        .youPic {
+                            margin-right: 0.08rem;
+                        }
+                        .noPic {
+                            background-color: #409eef;
+                        }
+                        .pbpR {
+                            position: absolute;
+                            right: 0;
+                            top: 25%;
+                            color: #409eef;
+                            cursor: pointer;
+                        }
+                        .lockNext {
+                            color: #d6d6d6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,309 @@
+body {
+    overflow-y: hidden;
+    padding-right: 0 !important;
+    .el-textarea__inner {
+        min-height: 100px !important;
+    }
+    #home {
+        .uploadExcel {
+            .el-form-item__label:before {
+                content: '*';
+                color: #f56c6c;
+                margin-right: 0.04rem;
+            }
+            .newcom {
+                text-align: center;
+                border: 1px dashed #d9d9d9;
+                background-color: #f5f5f5;
+                border-radius: 5px;
+                padding: 20px 0;
+            }
+        }
+        .el-submenu {
+            .el-menu-item {
+                padding-right: 20px;
+            }
+        }
+        .homeContain {
+            border: 0 !important;
+            .homeHeader {
+                display: flex;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 99;
+                width: 100%;
+                justify-content: space-between;
+                // background-image: linear-gradient(90deg, #409efe, #458cfe);
+                font-size: 18px;
+                height: 80px !important;
+                line-height: 80px;
+                background-color: #fff;
+                color: #000;
+                padding: 0 20px 0 0;
+                .workbench-img {
+                    width: 220px;
+                    height: 100%;
+                    background-color: #3296fa;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .workbench_main {
+                    width: calc(100% - 220px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #f6f6f6;
+                    .workbench-center {
+                        width: 50%;
+                        min-width: 400px;
+                        padding-left: 10px;
+                        height: 78px;
+                        line-height: 78px;
+                        // line-height: 90px;
+                        ul {
+                            display: flex;
+                            justify-content: space-around;
+                            height: 100%;
+                            li {
+                                padding: 0 12px;
+                                text-align: center;
+                                cursor: pointer;
+                                position: relative;
+                                overflow: hidden;
+                                img,
+                                span {
+                                    vertical-align: middle;
+                                }
+                                span {
+                                    margin-left: 8px;
+                                }
+                                img {
+                                    width: 22px;
+                                }
+                            }
+                            li:hover {
+                                color: #fb8103;
+                            }
+                            .colorName {
+                                color: #fb8103;
+                                border-bottom: 2px solid #fb8103;
+                            }
+                        }
+                    }
+                    .workbench_right {
+                        display: flex;
+                        justify-content: space-between;
+                        .relation-box {
+                            // line-height: 90px;
+                            ul {
+                                display: flex;
+                                li {
+                                    padding: 0 10px;
+                                    text-align: center;
+                                    cursor: pointer;
+                                    img {
+                                        vertical-align: middle;
+                                    }
+                                }
+                            }
+                        }
+                        .admin {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-left: 20px;
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                            }
+                            span {
+                                font-size: 20px;
+                                color: #fff;
+                                margin-left: 20px;
+                            }
+                        }
+                    }
+                }
+                @media screen and (min-width: 1120px) and (max-width: 1500px) {
+                    .workbench_main {
+                        .workbench-center {
+                            min-width: 650px;
+                        }
+                    }
+                }
+                @media screen and (min-width: 980px) and (max-width: 1119px) {
+                    .workbench_main {
+                        .workbench-center {
+                            min-width: 500px;
+                            li {
+                                img {
+                                    display: none;
+                                }
+                                span {
+                                    margin-left: 0;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+                @media screen and (min-width: 897px) and (max-width: 979px) {
+                    .workbench_main {
+                        .workbench-center {
+                            min-width: 400px;
+                            li {
+                                img {
+                                    display: inline-block;
+                                }
+                                span {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .homeBottomMenu::-webkit-scrollbar {
+                width: 0;
+                display: none;
+            }
+            .homeBottomContain {
+                height: calc(100vh - 80px);
+                margin-top: 80px;
+                .commonMain {
+                    width: 100%;
+                    display: flex;
+                    .homeBottomMenu {
+                        width: 220px !important;
+                        height: calc(100vh - 80px);
+                        background-color: #3296fa;
+                        overflow-x: hidden;
+                        .hbmMain {
+                            .el-menu {
+                                border-right: 0;
+                                height: 100%;
+                                font-size: 14px;
+                                span {
+                                    font-size: 14px;
+                                }
+                                .el-tooltip {
+                                    display: inline-block;
+                                    width: 100%;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+
+                                i {
+                                    color: #fff;
+                                }
+                                .el-menu-item.is-active {
+                                    background-color: rgb(
+                                        21,
+                                        126,
+                                        204
+                                    ) !important;
+                                    i {
+                                        color: #ffd04b;
+                                    }
+                                }
+                                .el-menu-item,
+                                .el-submenu__title {
+                                    height: 50px;
+                                    line-height: 50px;
+                                }
+                                .el-menu-item-group__title {
+                                    display: none;
+                                }
+                            }
+                        }
+                        // .hbmMain::-webkit-scrollbar {
+                        //     width: 0;
+                        //     display: none;
+                        // }
+                        // .hbmMain {
+                        //     > div::-webkit-scrollbar {
+                        //         width: 0;
+                        //         display: none;
+                        //     }
+                        // }
+                    }
+                    .uploadFileList {
+                        // font-size: 12px;
+                        .ufsTop {
+                            display: flex;
+
+                            .ufstext {
+                                color: #409eef;
+                                font-size: 12px;
+                                cursor: pointer;
+                            }
+                        }
+                        .dingFilesClass {
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+                            padding-left: 20px;
+                            > div {
+                                width: 80%;
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 14px;
+                                > div {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    .fileIcon {
+                                        width: 40px;
+                                        i {
+                                            font-size: 40px;
+                                        }
+                                    }
+                                    .filesTitle {
+                                        margin-left: 6px;
+                                        div {
+                                            height: 20px;
+                                            line-height: 20px;
+                                            width: 300px;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                        }
+                                        p {
+                                            height: 20px;
+                                            line-height: 20px;
+                                            font-size: 12px;
+                                            color: #d6d6d6;
+                                        }
+                                    }
+                                    .watchBtn {
+                                        width: 30px;
+                                        border: 1px solid #d6d6d6;
+                                        padding: 1px 4px;
+                                        height: 20px;
+                                        line-height: 20px;
+                                        border-radius: 4px;
+                                        cursor: pointer;
+                                    }
+                                    .fileIcon2 {
+                                        margin-left: 10px;
+                                        height: 22px;
+                                        line-height: 22px;
+                                        i {
+                                            font-size: 16px;
+                                            color: red;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

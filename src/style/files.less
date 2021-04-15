@@ -56,470 +56,455 @@
 
 //资料less
 #files {
-    .files-right {
-        overflow-y: auto;
-        overflow-x: hidden;
-        #domId {
-            width: 100%;
-            height: 6rem;
-            position: relative;
-        }
-        #filesCurrent,
-        #filesImg {
-            width: 16.4rem;
-            height: 8.5rem;
-            position: relative;
-            .main {
-                .middleContent {
-                    // margin: 0.15rem auto 0rem auto;
-                    padding: 0.15rem 0.15rem 0 0.15rem;
-                    width: 15.53rem;
-                    height: auto;
-                    background-color: #ffffff;
-                    .fileTitle {
-                        font-size: 0.2rem;
-                        display: flex;
-                        justify-content: space-between;
-                        .fileTitleLeft {
-                            display: flex;
-                            .closeUpload {
-                                position: fixed;
-                                bottom: 3rem;
-                                line-height: 0.3rem;
-                                right: 0.2rem;
-                                z-index: 999;
-                                color: red;
-                                width: 4rem;
-                                height: 0.3rem;
-                                background-color: #5b5c5e;
-                                color: #fff;
-                                font-size: 0.16rem;
-                                display: flex;
-                                padding: 0.1rem 0.2rem;
-                                justify-content: space-between;
-                                i {
-                                    color: #fff;
-                                    line-height: 0.3rem;
-                                    cursor: pointer;
-                                }
-                            }
-                            .el-upload-list {
-                                position: fixed;
-                                bottom: 0;
-                                width: 4rem;
-                                right: 0.2rem;
-                                height: 2.6rem;
-                                padding: 0.2rem;
-                                background-color: #fff;
-                                z-index: 99;
-                                color: #000;
-                                overflow-y: auto;
-                                display: none;
-                                .el-upload-list__item {
-                                    margin-bottom: 0.2rem;
-                                    a {
-                                        color: #000;
-                                        i {
-                                            color: #000;
-                                        }
-                                    }
-                                }
-                                .el-upload-list__item:hover {
-                                    background-color: #fff;
-                                }
-                                .el-upload-list__item:hover .el-icon-close {
-                                    display: none;
-                                }
-                                .el-upload-list__item:hover .el-progress__text {
-                                    display: block;
-                                }
-                            }
-                            .el-upload-list::-webkit-scrollbar {
-                                width: 4px;
-                                height: 4px; /*对水平流动条有效*/
-                            }
-                            .el-upload-list::-webkit-scrollbar-track {
-                                -webkit-box-shadow: inset 0 0 6px
-                                    rgba(0, 0, 0, 0.3);
-                                background-color: #409eef;
-                                border-radius: 3px;
-                            }
-                            .el-upload-list::-webkit-scrollbar-thumb {
-                                // 　　border-radius: 5px;
-                                -webkit-box-shadow: inset005pxrgba(
-                                    0,
-                                    0,
-                                    0,
-                                    0.2
-                                );
-                                background: #409eef;
-                            }
-                            .el-upload-list::-webkit-scrollbar-track {
-                                -webkit-box-shadow: inset005pxrgba(
-                                    0,
-                                    0,
-                                    0,
-                                    0.2
-                                );
-                                border-radius: 0;
-                                background: rgba(0, 0, 0, 0.1);
-                            }
-                            .el-upload-list::-webkit-scrollbar-corner {
-                                background: rgba(0, 0, 0, 0.3);
-                            }
-                        }
-                        .fileTitleRight {
-                            display: flex;
-                            .el-input {
-                                input {
-                                    height: 100%;
-                                    line-height: 0.32rem;
-                                }
-                            }
-                            .el-button {
-                                margin-left: 0.2rem;
-                                margin-right: 0;
-                            }
-                        }
-                        .el-button {
-                            margin-right: 0.2rem;
-                        }
-
-                        .uploadBtn {
-                            width: 0.4rem;
-                            height: 0.4rem;
-                            overflow: hidden;
-                            border-radius: 50%;
-                            position: relative;
-                            img {
-                                width: 100%;
-                                height: 100%;
-                                position: absolute;
-                            }
-                            input {
-                                display: inline-block;
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-                        .el-button--danger {
-                            margin-left: 0;
-                        }
-                    }
-                    .breadContent {
-                        position: relative;
-                        > i {
-                            position: absolute;
-                            bottom: 0;
-                            cursor: pointer;
-                            font-size: 0.16rem;
-                        }
-                        .el-breadcrumb {
-                            margin: 0.2rem 0;
-                            padding-left: 0.22rem;
-                            .el-breadcrumb__item {
-                                span {
-                                    cursor: pointer;
-                                    color: #409eef;
-                                }
-                            }
-                            .el-breadcrumb__item:last-child {
-                                span {
-                                    color: #606266;
-                                }
-                            }
-                        }
-                    }
-                    .tableFiles {
-                        position: relative;
-                    }
-                    .tableTopEdit {
-                        width: 2rem;
-                        position: absolute;
-                        top: 0.12rem;
-                        left: 1.4rem;
-                        z-index: 99;
-                        display: flex;
-                        .el-button {
-                            margin-right: 0.2rem;
-                        }
-                    }
-                    .el-table {
-                        .activeCollet {
-                            width: 0.27rem;
-                            height: 0.27rem;
-                            cursor: pointer;
-                        }
-                        .deadCollet {
-                            width: 0.22rem;
-                            height: 0.22rem;
-                            cursor: pointer;
-                        }
-                    }
-                    .preview {
-                        background: aqua;
-                        display: inline-block;
-                        width: 0.6rem;
-                        height: 0.4rem;
-                        line-height: 0.4rem;
-                        border-radius: 0.1rem;
-                        text-align: center;
-                    }
-                }
-                .left {
-                    display: flex;
-                    align-items: center;
-                }
-            }
-            .moveDialog {
-                .moveClass {
-                    margin-bottom: 0.2rem;
-                }
-                .moveBtn {
-                    width: 80%;
-                    margin: 0 auto;
-                    display: flex;
-                    justify-content: space-around;
-                }
-            }
-            .fixWarn {
-                position: fixed;
-                right: 0;
-                bottom: 0;
-                width: 3rem;
-                height: 2rem;
-                div {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-        #filesCurrent {
-            display: block;
-            .topContent {
+    #domId {
+        width: 100%;
+        height: 6rem;
+        position: relative;
+    }
+    #filesCurrent,
+    #filesImg {
+        width: 16.4rem;
+        height: 8.5rem;
+        position: relative;
+        .main {
+            .middleContent {
                 // margin: 0.15rem auto 0rem auto;
                 padding: 0.15rem 0.15rem 0 0.15rem;
-                display: flex;
-                // width: 97%;
-                width: 15.53rem;
-                flex-wrap: wrap;
+                // width: 15.53rem;
+                height: auto;
                 background-color: #ffffff;
-                .piccontent {
-                    width: 12%;
+                .fileTitle {
+                    font-size: 0.2rem;
                     display: flex;
-                    height: 0.5rem;
-                    border: 1px solid #f0f0f0;
-                    align-items: center;
-                    padding-left: 0.1rem;
-                    margin-right: 0.3rem;
-                    margin-bottom: 0.15rem;
-                    cursor: pointer;
-                    .img {
+                    justify-content: space-between;
+                    .fileTitleLeft {
+                        display: flex;
+                        .closeUpload {
+                            position: fixed;
+                            bottom: 3rem;
+                            line-height: 0.3rem;
+                            right: 0.2rem;
+                            z-index: 999;
+                            color: red;
+                            width: 4rem;
+                            height: 0.3rem;
+                            background-color: #5b5c5e;
+                            color: #fff;
+                            font-size: 0.16rem;
+                            display: flex;
+                            padding: 0.1rem 0.2rem;
+                            justify-content: space-between;
+                            i {
+                                color: #fff;
+                                line-height: 0.3rem;
+                                cursor: pointer;
+                            }
+                        }
+                        .el-upload-list {
+                            position: fixed;
+                            bottom: 0;
+                            width: 4rem;
+                            right: 0.2rem;
+                            height: 2.6rem;
+                            padding: 0.2rem;
+                            background-color: #fff;
+                            z-index: 99;
+                            color: #000;
+                            overflow-y: auto;
+                            display: none;
+                            .el-upload-list__item {
+                                margin-bottom: 0.2rem;
+                                a {
+                                    color: #000;
+                                    i {
+                                        color: #000;
+                                    }
+                                }
+                            }
+                            .el-upload-list__item:hover {
+                                background-color: #fff;
+                            }
+                            .el-upload-list__item:hover .el-icon-close {
+                                display: none;
+                            }
+                            .el-upload-list__item:hover .el-progress__text {
+                                display: block;
+                            }
+                        }
+                        .el-upload-list::-webkit-scrollbar {
+                            width: 4px;
+                            height: 4px; /*对水平流动条有效*/
+                        }
+                        .el-upload-list::-webkit-scrollbar-track {
+                            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                            background-color: #409eef;
+                            border-radius: 3px;
+                        }
+                        .el-upload-list::-webkit-scrollbar-thumb {
+                            // 　　border-radius: 5px;
+                            -webkit-box-shadow: inset005pxrgba(0, 0, 0, 0.2);
+                            background: #409eef;
+                        }
+                        .el-upload-list::-webkit-scrollbar-track {
+                            -webkit-box-shadow: inset005pxrgba(0, 0, 0, 0.2);
+                            border-radius: 0;
+                            background: rgba(0, 0, 0, 0.1);
+                        }
+                        .el-upload-list::-webkit-scrollbar-corner {
+                            background: rgba(0, 0, 0, 0.3);
+                        }
+                    }
+                    .fileTitleRight {
+                        display: flex;
+                        .el-input {
+                            input {
+                                height: 100%;
+                                line-height: 0.32rem;
+                            }
+                        }
+                        .el-button {
+                            margin-left: 0.2rem;
+                            margin-right: 0;
+                        }
+                    }
+                    .el-button {
+                        margin-right: 0.2rem;
+                    }
+
+                    .uploadBtn {
                         width: 0.4rem;
-                        margin-right: 0.1rem;
                         height: 0.4rem;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        position: relative;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                        }
+                        input {
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
-                    span {
-                        font-size: 0.14rem;
+                    .el-button--danger {
+                        margin-left: 0;
                     }
                 }
-            }
-            .main {
-                .middleContent {
-                    padding-bottom: 0.24rem;
+                .breadContent {
+                    position: relative;
+                    > i {
+                        position: absolute;
+                        bottom: 0;
+                        cursor: pointer;
+                        font-size: 0.16rem;
+                    }
+                    .el-breadcrumb {
+                        margin: 0.2rem 0;
+                        padding-left: 0.22rem;
+                        .el-breadcrumb__item {
+                            span {
+                                cursor: pointer;
+                                color: #409eef;
+                            }
+                        }
+                        .el-breadcrumb__item:last-child {
+                            span {
+                                color: #606266;
+                            }
+                        }
+                    }
                 }
-                .el-pagination {
+                .tableFiles {
+                    position: relative;
+                }
+                .tableTopEdit {
+                    width: 2rem;
+                    position: absolute;
+                    top: 0.12rem;
+                    left: 1.4rem;
+                    z-index: 99;
+                    display: flex;
+                    .el-button {
+                        margin-right: 0.2rem;
+                    }
+                }
+                .el-table {
+                    .activeCollet {
+                        width: 0.27rem;
+                        height: 0.27rem;
+                        cursor: pointer;
+                    }
+                    .deadCollet {
+                        width: 0.22rem;
+                        height: 0.22rem;
+                        cursor: pointer;
+                    }
+                }
+                .preview {
+                    background: aqua;
+                    display: inline-block;
+                    width: 0.6rem;
+                    height: 0.4rem;
+                    line-height: 0.4rem;
+                    border-radius: 0.1rem;
                     text-align: center;
                 }
             }
-        }
-        #filesImg {
-            .fimgMsg {
-                span {
-                    color: #929191;
-                    i {
-                        color: #929191;
-                    }
-                }
-            }
-            .PowerDialog {
-                .PowerBtn {
-                    width: 50%;
-                    margin: 0 auto;
-                }
-                .PowerClass {
-                    margin-bottom: 0.2rem;
-                    .pfname {
-                        margin-bottom: 0.2rem;
-                    }
-                    .powerTopBtn {
-                        display: flex;
-                        margin-bottom: 0.2rem;
-                        .el-button {
-                            margin: 0 0.12rem;
-                        }
-                    }
-                    .pOneTable {
-                        .el-table__header-wrapper {
-                            display: none;
-                        }
-                    }
-                    .pdddInfo {
-                        display: flex;
-                        margin-right: 30px;
-                        width: 130px;
-                        img,
-                        span {
-                            width: 40px;
-                            height: 40px;
-                            overflow: hidden;
-                            border-radius: 50%;
-                            display: block;
-                        }
-                        span {
-                            line-height: 40px;
-                            text-align: center;
-                            background-color: #409eef;
-                            color: #fff;
-                        }
-                        div {
-                            margin-left: 20px;
-                            width: 70px;
-                            line-height: 40px;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
-                        }
-                    }
-                    .pdPeopleList {
-                        height: 400px;
-                        overflow-y: auto;
-                        > div {
-                            display: flex;
-                            line-height: 40px;
-                            margin-bottom: 20px;
-                            > div:nth-child(1) {
-                                display: flex;
-                                margin-right: 30px;
-                                width: 130px;
-                                img,
-                                span {
-                                    width: 40px;
-                                    height: 40px;
-                                    overflow: hidden;
-                                    border-radius: 50%;
-                                    display: block;
-                                }
-                                span {
-                                    line-height: 40px;
-                                    text-align: center;
-                                    background-color: #409eef;
-                                    color: #fff;
-                                }
-                                div {
-                                    margin-left: 20px;
-                                    width: 70px;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                    white-space: nowrap;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .upviewTMain {
+            .left {
                 display: flex;
-                justify-content: space-between;
-                .upViewTClass {
+                align-items: center;
+            }
+        }
+        .moveDialog {
+            .moveClass {
+                margin-bottom: 0.2rem;
+            }
+            .moveBtn {
+                width: 80%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        .fixWarn {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 3rem;
+            height: 2rem;
+            div {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    #filesCurrent {
+        display: block;
+        .topContent {
+            // margin: 0.15rem auto 0rem auto;
+            padding: 0.15rem 0.15rem 0 0.15rem;
+            display: flex;
+            // width: 97%;
+            width: 15.53rem;
+            flex-wrap: wrap;
+            background-color: #ffffff;
+            .piccontent {
+                width: 12%;
+                display: flex;
+                height: 0.5rem;
+                border: 1px solid #f0f0f0;
+                align-items: center;
+                padding-left: 0.1rem;
+                margin-right: 0.3rem;
+                margin-bottom: 0.15rem;
+                cursor: pointer;
+                .img {
+                    width: 0.4rem;
+                    margin-right: 0.1rem;
+                    height: 0.4rem;
+                }
+                span {
+                    font-size: 0.14rem;
+                }
+            }
+        }
+        .main {
+            .middleContent {
+                padding-bottom: 0.24rem;
+            }
+            .el-pagination {
+                text-align: center;
+            }
+        }
+    }
+    #filesImg {
+        .fimgMsg {
+            span {
+                color: #929191;
+                i {
+                    color: #929191;
+                }
+            }
+        }
+        .PowerDialog {
+            .PowerBtn {
+                width: 50%;
+                margin: 0 auto;
+            }
+            .PowerClass {
+                margin-bottom: 0.2rem;
+                .pfname {
+                    margin-bottom: 0.2rem;
+                }
+                .powerTopBtn {
                     display: flex;
-                    margin-top: 140px;
-                    margin-bottom: 20px;
-                    font-size: 16px;
-                    > div:nth-child(1) {
-                        margin-right: 10px;
-                    }
-                    .el-radio__label {
-                        font-size: 16px;
+                    margin-bottom: 0.2rem;
+                    .el-button {
+                        margin: 0 0.12rem;
                     }
                 }
-                .upViewBClass {
-                    margin-left: 90px;
-
-                    .closeUpload {
-                        position: fixed;
-                        bottom: 3rem;
-                        line-height: 0.3rem;
-                        right: 0.2rem;
-                        z-index: 999;
-                        color: red;
-                        width: 4rem;
-                        height: 0.3rem;
-                        background-color: #5b5c5e;
-                        color: #fff;
-                        font-size: 0.16rem;
-                        display: flex;
-                        padding: 0.1rem 0.2rem;
-                        justify-content: space-between;
-                        i {
-                            color: #fff;
-                            line-height: 0.3rem;
-                            cursor: pointer;
-                        }
-                    }
-                    .el-upload-list {
-                        position: fixed;
-                        bottom: 0;
-                        width: 4rem;
-                        right: 0.2rem;
-                        height: 2.6rem;
-                        padding: 0.2rem;
-                        background-color: #fff;
-                        z-index: 99;
-                        color: #000;
-                        overflow-y: auto;
+                .pOneTable {
+                    .el-table__header-wrapper {
                         display: none;
-                        .el-upload-list__item {
-                            margin-bottom: 0.2rem;
-                            a {
-                                color: #000;
-                                i {
-                                    color: #000;
-                                }
+                    }
+                }
+                .pdddInfo {
+                    display: flex;
+                    margin-right: 30px;
+                    width: 130px;
+                    img,
+                    span {
+                        width: 40px;
+                        height: 40px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        display: block;
+                    }
+                    span {
+                        line-height: 40px;
+                        text-align: center;
+                        background-color: #409eef;
+                        color: #fff;
+                    }
+                    div {
+                        margin-left: 20px;
+                        width: 70px;
+                        line-height: 40px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+                .pdPeopleList {
+                    height: 400px;
+                    overflow-y: auto;
+                    > div {
+                        display: flex;
+                        line-height: 40px;
+                        margin-bottom: 20px;
+                        > div:nth-child(1) {
+                            display: flex;
+                            margin-right: 30px;
+                            width: 130px;
+                            img,
+                            span {
+                                width: 40px;
+                                height: 40px;
+                                overflow: hidden;
+                                border-radius: 50%;
+                                display: block;
+                            }
+                            span {
+                                line-height: 40px;
+                                text-align: center;
+                                background-color: #409eef;
+                                color: #fff;
+                            }
+                            div {
+                                margin-left: 20px;
+                                width: 70px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
                             }
                         }
-                        .el-upload-list__item:hover {
-                            background-color: #fff;
+                    }
+                }
+            }
+        }
+        .upviewTMain {
+            display: flex;
+            justify-content: space-between;
+            .upViewTClass {
+                display: flex;
+                margin-top: 140px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                > div:nth-child(1) {
+                    margin-right: 10px;
+                }
+                .el-radio__label {
+                    font-size: 16px;
+                }
+            }
+            .upViewBClass {
+                margin-left: 90px;
+
+                .closeUpload {
+                    position: fixed;
+                    bottom: 3rem;
+                    line-height: 0.3rem;
+                    right: 0.2rem;
+                    z-index: 999;
+                    color: red;
+                    width: 4rem;
+                    height: 0.3rem;
+                    background-color: #5b5c5e;
+                    color: #fff;
+                    font-size: 0.16rem;
+                    display: flex;
+                    padding: 0.1rem 0.2rem;
+                    justify-content: space-between;
+                    i {
+                        color: #fff;
+                        line-height: 0.3rem;
+                        cursor: pointer;
+                    }
+                }
+                .el-upload-list {
+                    position: fixed;
+                    bottom: 0;
+                    width: 4rem;
+                    right: 0.2rem;
+                    height: 2.6rem;
+                    padding: 0.2rem;
+                    background-color: #fff;
+                    z-index: 99;
+                    color: #000;
+                    overflow-y: auto;
+                    display: none;
+                    .el-upload-list__item {
+                        margin-bottom: 0.2rem;
+                        a {
+                            color: #000;
+                            i {
+                                color: #000;
+                            }
                         }
-                        .el-upload-list__item:hover .el-icon-close {
-                            display: none;
-                        }
-                        .el-upload-list__item:hover .el-progress__text {
-                            display: block;
-                        }
                     }
-                    .el-upload-list::-webkit-scrollbar {
-                        width: 4px;
-                        height: 4px; /*对水平流动条有效*/
+                    .el-upload-list__item:hover {
+                        background-color: #fff;
                     }
-                    .el-upload-list::-webkit-scrollbar-track {
-                        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-                        background-color: #409eef;
-                        border-radius: 3px;
+                    .el-upload-list__item:hover .el-icon-close {
+                        display: none;
                     }
-                    .el-upload-list::-webkit-scrollbar-thumb {
-                        // 　　border-radius: 5px;
-                        -webkit-box-shadow: inset005pxrgba(0, 0, 0, 0.2);
-                        background: #409eef;
+                    .el-upload-list__item:hover .el-progress__text {
+                        display: block;
                     }
-                    .el-upload-list::-webkit-scrollbar-track {
-                        -webkit-box-shadow: inset005pxrgba(0, 0, 0, 0.2);
-                        border-radius: 0;
-                        background: rgba(0, 0, 0, 0.1);
-                    }
-                    .el-upload-list::-webkit-scrollbar-corner {
-                        background: rgba(0, 0, 0, 0.3);
-                    }
+                }
+                .el-upload-list::-webkit-scrollbar {
+                    width: 4px;
+                    height: 4px; /*对水平流动条有效*/
+                }
+                .el-upload-list::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                    background-color: #409eef;
+                    border-radius: 3px;
+                }
+                .el-upload-list::-webkit-scrollbar-thumb {
+                    // 　　border-radius: 5px;
+                    -webkit-box-shadow: inset005pxrgba(0, 0, 0, 0.2);
+                    background: #409eef;
+                }
+                .el-upload-list::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset005pxrgba(0, 0, 0, 0.2);
+                    border-radius: 0;
+                    background: rgba(0, 0, 0, 0.1);
+                }
+                .el-upload-list::-webkit-scrollbar-corner {
+                    background: rgba(0, 0, 0, 0.3);
                 }
             }
         }

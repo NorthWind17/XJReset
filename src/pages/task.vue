@@ -1,11 +1,23 @@
 <template>
-    <div id="task">
+    <!-- <div id="task">
         <div class="task-left">
             <menuS :viewMenu="viewMenu" />
         </div>
         <div ref="elementS" class="task-right">
             <router-view />
         </div>
+    </div> -->
+    <div class="commonMain">
+        <el-aside class="homeBottomMenu">
+            <div class="hbmMain">
+                <menuS ref="projectMenu" :viewMenu="viewMenu"></menuS>
+            </div>
+        </el-aside>
+        <el-main class="homeMain">
+            <div id="task">
+                <router-view />
+            </div>
+        </el-main>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <userinfo />
+        <!-- <userinfo /> -->
         <router-view class="app-bottom" />
         <!-- <menuS/> -->
         <!-- <div class="app-right">
@@ -16,34 +16,13 @@ export default {
     name: 'app',
     data() {
         return {
-            widthS: { width: '18.5rem' },
-            schedule: '',
-            scheduleNumber: ''
         };
     },
     methods: {},
     created() {},
     computed: {
-        styleS() {
-            //  alert(this.widthS.Width)
-            return this.widthS;
-        }
     },
     mounted() {
-        const that = this;
-        window.onresize = () => {
-            let WidthT =
-                document.documentElement.clientWidth ||
-                document.body.clientWidth;
-            let SS = WidthT / 100;
-            if (SS > 19.2 || SS == 19.2) {
-                let TS = 19.2 + 'rem';
-                that.$set(that.widthS, 'width', TS);
-            } else {
-                let TSS = 18.5 + 'rem';
-                that.$set(that.widthS, 'width', TSS);
-            }
-        };
     },
     created() {},
 

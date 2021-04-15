@@ -2,17 +2,16 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-// import Rem from './config/rem';
 import './style/initialize.css';
 import './config/rem.js';
 import axios from './config/https.js';
-// import axios from 'axios';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import echarts from 'echarts';
 import * as dd from 'dingtalk-jsapi';
 import Print from 'vue-print-nb';
 import './style/index.less';
+import './style/home.less';
 import './style/files.less';
 import './style/project.less';
 import './style/task.less';
@@ -53,7 +52,7 @@ function formatDate(date, fmt) {
         'd+': date.getDate(),
         'H+': date.getHours(),
         'm+': date.getMinutes(),
-        's+': date.getSeconds(),
+        's+': date.getSeconds()
     };
     for (let k in o) {
         if (new RegExp(`(${k})`).test(fmt)) {
@@ -70,7 +69,7 @@ function formatDate(date, fmt) {
 new Vue({
     router,
     store,
-    render: (h) => h(App),
+    render: (h) => h(App)
 }).$mount('#app');
 
 // Rem.setFontSize();

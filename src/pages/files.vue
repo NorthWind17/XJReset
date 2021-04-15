@@ -1,11 +1,23 @@
 <template>
-    <div id="files">
+    <!-- <div id="files">
         <div class="files-left">
             <menuS :viewMenu="viewMenu" />
         </div>
         <div class="files-right">
             <router-view />
         </div>
+    </div> -->
+    <div class="commonMain">
+        <el-aside class="homeBottomMenu">
+            <div class="hbmMain">
+                <menuS ref="projectMenu" :viewMenu="viewMenu"></menuS>
+            </div>
+        </el-aside>
+        <el-main class="homeMain">
+            <div id="files">
+                <router-view />
+            </div>
+        </el-main>
     </div>
 </template>
 <script>

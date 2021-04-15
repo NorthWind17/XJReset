@@ -1130,9 +1130,9 @@ body {
     }
 }
 .workbench-title {
-    // width: 19.2rem;
+    width: 100%;
     height: 0.9rem;
-    background-image: linear-gradient(to right, #409efe, #458cfe);
+    // background-image: linear-gradient(to right, #409efe, #458cfe);
     line-height: 0.9rem;
     display: flex;
     justify-content: space-around;

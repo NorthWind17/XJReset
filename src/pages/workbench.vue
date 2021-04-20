@@ -214,7 +214,7 @@
                                         style="
                                             color: #409eff;
                                             font-size: 32rpx;
-                                            margin-left: 0.1rem;
+                                            margin-left: 10px;
                                         "
                                         >{{ Sum }}</span
                                     >
@@ -225,7 +225,7 @@
                                         style="
                                             color: #fb8103;
                                             font-size: 32rpx;
-                                            margin-left: 0.1rem;
+                                            margin-left: 10px;
                                         "
                                         >{{ SumMoney }}</span
                                     >
@@ -246,7 +246,7 @@
                                         style="
                                             color: #409eff;
                                             font-size: 32rpx;
-                                            margin-left: 0.1rem;
+                                            margin-left: 10px;
                                         "
                                         >{{ construction }}</span
                                     >
@@ -257,7 +257,7 @@
                                         style="
                                             color: #fb8103;
                                             font-size: 32rpx;
-                                            margin-left: 0.1rem;
+                                            margin-left: 10px;
                                         "
                                         >{{ constructionMoney }}</span
                                     >
@@ -278,7 +278,7 @@
                                         style="
                                             color: #409eff;
                                             font-size: 32rpx;
-                                            margin-left: 0.1rem;
+                                            margin-left: 10px;
                                         "
                                         >{{ newly }}</span
                                     >
@@ -289,7 +289,7 @@
                                         style="
                                             color: #fb8103;
                                             font-size: 32rpx;
-                                            margin-left: 0.1rem;
+                                            margin-left: 10px;
                                         "
                                         >{{ newlyMoney }}</span
                                     >
@@ -310,7 +310,7 @@
                                         style="
                                             color: #409eff;
                                             font-size: 32rpx;
-                                            margin-left: 0.1rem;
+                                            margin-left: 10px;
                                         "
                                         >{{ present }}</span
                                     >
@@ -321,7 +321,7 @@
                                         style="
                                             color: #fb8103;
                                             font-size: 32rpx;
-                                            margin-left: 0.1rem;
+                                            margin-left: 10px;
                                         "
                                         >{{ presentMoney }}</span
                                     >
@@ -385,14 +385,14 @@
                         </div>
                         <div
                             v-else
-                            style="text-align: center; padding: 0.3rem 0"
+                            style="text-align: center; padding: 30px 0"
                         >
                             <img
-                                style="width: 1.4rem; height: 1.4rem"
+                                style="width: 140px; height: 140px"
                                 src="https://dingyunlaowu.oss-cn-hangzhou.aliyuncs.com/user-dir/NG4ZDG6eBM1600655909495.jpg"
                                 alt
                             />
-                            <p style="font-size: 0.16rem">暂时还没有数据哦</p>
+                            <p style="font-size: 16px">暂时还没有数据哦</p>
                         </div>
                     </div>
                 </div>
@@ -672,13 +672,13 @@ export default {
     overflow: hidden;
     .scroll-content {
         height: 90vh;
-        width: 19.2rem;
+        width: 1920px;
         overflow-y: auto;
         .scroll-item {
             width: 96%;
             margin: 0 auto;
             p {
-                font-size: 0.16rem;
+                font-size: 16px;
             }
             .appxmtj {
                 display: flex;
@@ -692,15 +692,15 @@ export default {
                 }
                 > div:nth-child(2) {
                     background-color: #fff;
-                    border-radius: 0.1rem;
+                    border-radius: 10px;
                 }
                 .project-title {
                     display: flex;
                     justify-content: space-between;
-                    height: 0.5rem;
-                    line-height: 0.5rem;
-                    border-bottom: 0.01rem solid #efefef;
-                    padding: 0 0.2rem;
+                    height: 50px;
+                    line-height: 50px;
+                    border-bottom: 1px solid #efefef;
+                    padding: 0 20px;
                 }
             }
             .el-table {
@@ -714,13 +714,13 @@ export default {
         .line {
             color: #9ea0a3;
             text-align: center;
-            margin: 0.3rem 0;
-            font-size: 0.2rem;
+            margin: 30px 0;
+            font-size: 20px;
             font-family: 'SourceHanSansCN-Light';
             font-weight: normal;
             font-stretch: normal;
-            line-height: 0.3rem;
-            letter-spacing: 0rem;
+            line-height: 30px;
+            letter-spacing: 0px;
             color: #9ea0a3;
         }
         .xmtj {
@@ -846,11 +846,11 @@ export default {
             }
         }
         #xiangmu {
-            font-size: 0.2rem;
+            font-size: 20px;
         }
     }
     .operation-btn {
-        width: 2.8rem;
+        width: 280px;
         height: 90vh;
         background-color: #fff;
         > div {
@@ -859,12 +859,12 @@ export default {
             line-height: 60px;
             text-align: center;
             cursor: pointer;
-            padding: 0 0.2rem;
+            padding: 0 20px;
             display: flex;
 
             .rightWord {
                 // padding-left: 5%;
-                margin-left: 0.3rem;
+                margin-left: 30px;
             }
             img {
                 vertical-align: middle;
@@ -883,71 +883,71 @@ export default {
     justify-content: space-between;
 }
 .content-right {
-    margin-top: 0.2rem;
+    margin-top: 20px;
     width: 21%;
-    height: 3.7rem;
+    height: 370px;
     position: relative;
 }
 .content1 {
-    margin-top: 0.2rem;
+    margin-top: 20px;
     width: 70%;
-    padding: 0 0.4rem;
+    padding: 0 40px;
     background-color: #ffffff;
-    height: 3.5rem;
-    border-radius: 0.1rem;
+    height: 350px;
+    border-radius: 10px;
 }
 
 .content-one {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    /* margin: 0.2rem 0rem; */
+    /* margin: 20px 0px; */
 }
 .content-one > div {
     position: relative;
     width: 22%;
-    height: 2.1rem;
+    height: 210px;
     background-color: #409eff;
-    border-radius: 0.1rem;
-    margin-top: 0.24rem;
+    border-radius: 10px;
+    margin-top: 24px;
 }
 .wtitle {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #eef5f8;
-    height: 0.7rem;
-    line-height: 0.7rem;
-    font-size: 0.18rem;
+    height: 70px;
+    line-height: 70px;
+    font-size: 18px;
 }
 .content-text {
     display: flex;
     justify-content: space-around;
-    margin-top: 0.25rem;
+    margin-top: 25px;
 }
 .db-title {
     display: flex;
     flex-direction: column;
     color: white;
-    font-size: 0.25rem;
+    font-size: 25px;
     font-weight: blod;
     align-items: center;
 }
 .tite-numb {
-    margin-top: 0.2rem;
+    margin-top: 02px;
 }
 .content-one > div > .bottom {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 0.5rem;
-    line-height: 0.5rem;
+    height: 50px;
+    line-height: 50px;
     background-color: #ffffff;
-    border-radius: 0px 0px 0.1rem 0.1rem;
+    border-radius: 0px 0px 10px 10px;
     opacity: 0.2;
     text-align: right;
     display: block;
-    font-size: 0.18rem;
+    font-size: 18px;
     cursor: pointer;
 }
 
@@ -956,8 +956,8 @@ export default {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 0.7rem;
-    line-height: 0.7rem;
+    height: 70px;
+    line-height: 70px;
     text-align: center;
     background-color: #409eff;
     border-radius: 10px 10px 0px 0px;
@@ -966,15 +966,15 @@ export default {
     color: #ffffff;
 }
 .text-center {
-    margin-bottom: 0.2rem;
+    margin-bottom: 20px;
 }
 .four-text {
     color: #999d99;
-    border-radius: 0.1rem;
-    font-size: 0.18rem;
+    border-radius: 10px;
+    font-size: 18px;
     background-color: #ffffff;
-    height: 2.4rem;
-    padding: 0.2rem 0.2rem;
+    height: 240px;
+    padding: 20px 20px;
     position: relative;
     overflow: hidden;
 }
@@ -983,83 +983,83 @@ export default {
 }
 .center-tile span {
     display: inline-block;
-    width: 0.1rem;
-    height: 0.1rem;
+    width: 10px;
+    height: 10px;
     background: #f58205;
     border-radius: 50%;
-    margin: 0.04rem 0.1rem 0rem 0rem;
+    margin: 4px 10px 0px 0px;
 }
 .text-box {
-    padding-left: 0.5rem;
-    font-size: 0.16rem;
+    padding-left: 50px;
+    font-size: 16px;
 }
 .text-box p {
-    margin-top: 0.08rem;
+    margin-top: 8px;
 }
 .Imga-W {
-    width: 0.63rem;
-    height: 0.77rem;
+    width: 63px;
+    height: 77px;
 }
 .more {
     position: absolute;
-    top: 2.5rem;
+    top: 250px;
     right: 0;
-    font-size: 0.16rem;
+    font-size: 16px;
     color: #409eff;
     cursor: pointer;
 }
 .kuai {
     width: 46%;
-    margin: 0.1rem 0.3rem 0.15rem 0;
-    height: 1.6rem;
-    border-radius: 0.1rem;
+    margin: 10px 30px 15px 0;
+    height: 160px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     // justify-content: space-around;
     flex-wrap: wrap;
     background-color: #ffffff;
     .kuai-two {
-        width: 0.9rem;
-        margin-left: 0.2rem;
+        width: 90px;
+        margin-left: 20px;
     }
     .kuai-right {
-        margin-left: 0.2rem;
+        margin-left: 20px;
         .total {
-            margin-bottom: 0.3rem;
+            margin-bottom: 30px;
         }
     }
 }
 .prolist {
-    height: 2.5rem;
+    height: 250px;
     // overflow: auto;
     .manage-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 92%;
-        margin: 0.2rem auto;
-        height: 0.25rem;
-        padding: 0.18rem;
+        margin: 20px auto;
+        height: 25px;
+        padding: 18px;
         background-color: #f7f7f7;
         position: relative;
-        border-radius: 0.1rem;
+        border-radius: 10px;
         .title {
             display: inline-block;
-            width: 3rem;
-            margin-left: 0.5rem;
+            width: 300px;
+            margin-left: 50px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
         }
         img {
-            width: 0.48rem;
-            height: 0.42rem;
+            width: 48px;
+            height: 42px;
         }
     }
     .manageright {
         display: flex;
         .progress-box {
-            width: 2rem;
+            width: 200px;
         }
     }
 }

@@ -144,7 +144,7 @@
                                     >
                                     </el-input>
                                     <!-- <div class="cjTypeClass">
-                                        <div style="font-size: 0.14rem">
+                                        <div style="font-size: 14px">
                                             单位类型：
                                         </div>
                                         <el-select
@@ -194,7 +194,7 @@
                                     ref="singleTable"
                                     :data="tableData"
                                     highlight-current-row
-                                    style="width: 7rem"
+                                    style="width: 700px"
                                     border
                                     max-height="250"
                                 >
@@ -220,7 +220,7 @@
                 </div>
             </div>
         </div>
-        <el-dialog title="提示" :visible.sync="quitVisible" width="5rem">
+        <el-dialog title="提示" :visible.sync="quitVisible" width="500px">
             <span>确认退出该企业？</span>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="quitVisible = false">取 消</el-button>
@@ -433,8 +433,8 @@ export default {
 </script>
 <style lang="less">
 .poPic {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 240px;
+    height: 240px;
     img {
         width: 100%;
         height: 100%;

@@ -61,7 +61,7 @@
                                 <el-checkbox  :label="item" >
                                     <span>{{item.name}}</span>
                                 </el-checkbox>
-                                <span @click="goNext(item)" style="font-size: 0.14rem;">下一级</span>
+                                <span @click="goNext(item)" style="font-size: 14px;">下一级</span>
                             </div>
                         </el-checkbox-group> -->
                         <el-checkbox
@@ -91,7 +91,7 @@
                                 <span class="noPic" v-if="!item.avatar && item.leixing ==2"></span>
                                 <span>{{ item.name }}</span>
                             </el-checkbox>
-                            <span class="pbpR" v-if="item.leixing == 1" :class="item.checkAll?'lockNext':''" @click="goNext(item)" style="font-size: 0.14rem;"><i class="el-icon-share"></i> 下一级</span>
+                            <span class="pbpR" v-if="item.leixing == 1" :class="item.checkAll?'lockNext':''" @click="goNext(item)" style="font-size: 14px;"><i class="el-icon-share"></i> 下一级</span>
                         </div>
 
                     </div>

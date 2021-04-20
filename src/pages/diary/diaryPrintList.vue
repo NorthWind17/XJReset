@@ -635,7 +635,7 @@ export default {
             this.activeConIndex = index;
         },
         tableHeaderClass({ row, rowIndex }) {
-            return 'font-weight:500;font-size: 0.15rem;color:#272727;background-color:#f9f9f9;';
+            return 'font-weight:500;font-size: 15px;color:#272727;background-color:#f9f9f9;';
         },
         diaryPrintChange(val) {
             this.multiplePDiary = val;

@@ -39,7 +39,7 @@ export default {
         background: white;
     }
     .files-right {
-        width: 16.4rem;
+        width: 1640px;
         height: 90vh;
     }
 }

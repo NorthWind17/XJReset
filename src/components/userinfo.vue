@@ -65,11 +65,11 @@
                         </div>
                         <div class="down" style="text-align: center">
                             <img
-                                style="width: 2.2rem; height: 2.2rem"
+                                style="width: 220px; height: 220px"
                                 src="../assets/workbench/erweima.jpg"
                                 alt
                             />
-                            <div style="margin: 0.06rem 0" @click="goMobil">
+                            <div style="margin: 6px 0" @click="goMobil">
                                 手机钉钉扫描二维码加入“用户服务群”
                             </div>
                             <div>联系电话：0371-56775558</div>
@@ -87,7 +87,7 @@
                         </div>
                         <div class="down" style="text-align: center">
                             <p
-                                style="margin-bottom: 0.12rem; cursor: pointer"
+                                style="margin-bottom:12px; cursor: pointer"
                                 @click="goHelp"
                             >
                                 帮助文档
@@ -117,7 +117,7 @@
                 </div>
                 <div class="down">
                     <!-- <div class="topPhone">
-                        <div style="line-height: 0.4rem; width: 0.74rem">
+                        <div style="line-height: 0.4px; width: 0.74px">
                             手机号:
                         </div>
                         <el-input
@@ -129,7 +129,7 @@
                             @focus="addPhone"
                         ></el-input>
                     </div> -->
-                    <div style="margin: 0.06rem 0; line-height: 0.4rem">
+                    <div style="margin: 6px 0; line-height: px">
                         用户ID：{{ uuid }}
                     </div>
                     <div>公司ID：{{ ucid }}</div>
@@ -194,10 +194,10 @@
                                         <div
                                             style="
                                                 color: gray;
-                                                margin-right: 0.2rem;
+                                                margin-right: 20px;
                                             "
                                         >
-                                            <div style="margin-bottom: 0.2rem">
+                                            <div style="margin-bottom: 20px">
                                                 负责人：{{ item.puseridname }}
                                             </div>
                                             <div>
@@ -1123,86 +1123,86 @@ body {
         .down {
             text-align: center;
             img {
-                width: 2.4rem;
-                height: 2.4rem;
+                width: 240px;
+                height: 240px;
             }
         }
     }
 }
 .workbench-title {
     width: 100%;
-    height: 0.9rem;
+    height: 90px;
     // background-image: linear-gradient(to right, #409efe, #458cfe);
-    line-height: 0.9rem;
+    line-height: 90px;
     display: flex;
     justify-content: space-around;
     .sendBackDialog {
         .el-dialog {
-            width: 6rem;
+            width: 600px;
         }
     }
     .feedBackClass {
         .el-textarea {
             .el-textarea__inner {
-                height: 1rem;
+                height: 100px;
             }
         }
     }
     .carouselDialog {
         .el-dialog {
-            width: 7.2rem !important;
+            width: 720px !important;
         }
     }
     .workbench-img {
-        width: 2.8rem;
-        height: 0.9rem;
+        width: 280px;
+        height: 09px;
         img {
-            width: 2.51rem;
-            height: 0.8rem;
-            margin-left: -0.16rem;
+            width: 251px;
+            height: 80px;
+            margin-left: -16px;
         }
     }
     .title-left {
-        font-size: 0.22rem;
+        font-size: 22px;
         font-family: SourceHanSansCN-Light;
         font-weight: normal;
         font-stretch: normal;
-        line-height: 0.9rem;
-        letter-spacing: 0rem;
+        line-height: 90px;
+        letter-spacing: 0px;
         color: white;
     }
     .workbench-center {
-        width: 6.5rem;
-        height: 0.9rem;
-        font-size: 0.2rem;
+        width: 650px;
+        height: 90px;
+        font-size: 20px;
         ul {
-            width: 6.5rem;
-            height: 0.9rem;
+            width: 650px;
+            height: 90px;
             display: flex;
             // margin: 0 auto;
-            margin-left: 0.5rem;
+            margin-left: 50px;
             li {
-                width: 1.3rem;
-                height: 0.9rem;
+                width: 130px;
+                height: 90px;
                 text-align: center;
                 color: white;
                 cursor: pointer;
                 position: relative;
                 .proTips {
                     position: absolute;
-                    bottom: -0.12rem;
-                    left: -0.48rem;
+                    bottom: -12px;
+                    left: -48px;
                     line-height: 1;
                     background-color: #409efe;
                     z-index: 99;
-                    font-size: 0.14rem;
-                    padding: 0.1rem 0.2rem;
-                    width: 2rem;
+                    font-size: 14px;
+                    padding: 10px 20px;
+                    width: 200px;
                     color: #fff !important;
                     i {
                         position: absolute;
-                        top: -0.14rem;
-                        left: 1rem;
+                        top: -14px;
+                        left: 100px;
                         color: red;
                     }
                 }
@@ -1214,21 +1214,21 @@ body {
         }
     }
     .relation-box {
-        height: 0.9rem;
-        line-height: 0.9rem;
+        height: 90px;
+        line-height: 90px;
         // background: red;
-        font-size: 0.18rem;
+        font-size: 18px;
         font-family: SourceHanSansCN-Light;
         font-weight: normal;
         font-stretch: normal;
-        letter-spacing: 0rem;
+        letter-spacing: 0px;
         color: white;
-        margin-left: 0.5rem;
+        margin-left: 50px;
         ul {
             display: flex;
             height: 100%;
             li {
-                padding: 0 0.19rem;
+                padding: 0 19px;
                 text-align: center;
 
                 img {
@@ -1250,43 +1250,43 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        // margin-left: 1.5rem;
+        // margin-left: 150px;
         img {
-            width: 0.6rem;
-            height: 0.6rem;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
         }
         span {
-            font-size: 0.2rem;
+            font-size: 20px;
             color: white;
-            margin-left: 0.2rem;
+            margin-left: 20px;
         }
     }
     .switch {
-        width: 3rem;
-        height: 0.9rem;
-        font-size: 0.16rem;
+        width: 300px;
+        height: 90px;
+        font-size: 16px;
         color: aliceblue;
         display: flex;
-        // margin-left: 0.5rem;
+        // margin-left: 50px;
         .switch-box {
-            width: 2rem;
-            height: 0.9rem;
+            width: 200px;
+            height: 90px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
         .switch-button {
-            width: 1rem;
-            height: 0.9rem;
-            margin-left: 0.3rem;
+            width: 100px;
+            height: 90px;
+            margin-left: 30px;
         }
     }
     .el-dialog {
-        font-size: 0.2rem;
+        font-size: 20px;
         .el-dialog__header {
-            height: 0.24rem;
-            line-height: 0.24rem;
+            height: 24px;
+            line-height: 24px;
         }
         .content {
             .panelContent {
@@ -1294,52 +1294,52 @@ body {
                 margin: 0 auto;
                 background-color: #fff;
                 .panelList {
-                    margin: 0.1rem 0;
+                    margin: 10px 0;
                     display: flex;
                     width: 96%;
                     margin: 0 auto;
-                    padding-top: 0.1rem;
+                    padding-top: 10px;
                     flex-wrap: wrap;
                 }
                 .progress {
-                    font-size: 0.16rem;
+                    font-size: 16px;
                     position: relative;
                     background-color: #f9f9f9;
                     width: 44%;
-                    margin: 0.25rem 0.2rem;
+                    margin: 25px 20px;
                     border: 1px solid #fff;
                     border-radius: 10px;
                     cursor: pointer;
                 }
                 .progress > .biao {
                     position: absolute;
-                    left: 0.15rem;
-                    top: -0.17rem;
-                    width: 0.5rem;
-                    height: 0.5rem;
+                    left: 15px;
+                    top: -17px;
+                    width: 50px;
+                    height: 50px;
                 }
                 .project-title {
-                    padding: 0.1rem 0;
-                    font-size: 0.16rem;
-                    border-bottom: 0.01rem solid #dadada;
+                    padding: 10px 0;
+                    font-size: 16px;
+                    border-bottom: 1px solid #dadada;
                     text-align: center;
-                    padding-left: 0.75rem;
+                    padding-left: 75px;
                     box-sizing: border-box;
                     width: 100%;
-                    // height: 0.2rem;
+                    // height: 20px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
-                    line-height: 0.24rem;
+                    line-height: 24px;
                 }
                 .circle {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    padding: 0.1rem;
+                    padding: 10px;
                     div {
                         div {
-                            line-height: 0.24rem;
+                            line-height: 24px;
                         }
                     }
                 }
@@ -1348,21 +1348,21 @@ body {
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
-                height: 6rem;
+                height: 600px;
                 overflow: auto;
                 .projectItem-centerS {
-                    width: 5.5rem;
-                    margin: 0.05rem auto;
+                    width: 550px;
+                    margin: 5px auto;
                     display: flex;
-                    border: 0.01rem solid rgba(12, 12, 12, 0.3);
-                    padding: 0.1rem 0.1rem;
-                    height: 0.2rem;
-                    line-height: 0.2rem;
+                    border: 1px solid rgba(12, 12, 12, 0.3);
+                    padding: 10px 10px;
+                    height: 20px;
+                    line-height: 20px;
                     cursor: pointer;
                     p {
-                        width: 5.5rem;
-                        height: 0.3rem;
-                        font-size: 0.14rem;
+                        width: 550px;
+                        height: 30px;
+                        font-size: 14px;
                         color: #999b9e;
                         overflow: hidden;
                         text-overflow: ellipsis;
@@ -1370,51 +1370,51 @@ body {
                     }
                 }
                 .progress {
-                    font-size: 0.16rem;
+                    font-size: 16px;
                     position: relative;
                     background-color: #f9f9f9;
                     width: 43%;
-                    height: 1.8rem;
-                    margin: 0.25rem 0.2rem;
-                    margin-bottom: 0rem;
+                    height: 180px;
+                    margin: 25px 20px;
+                    margin-bottom: 0px;
                     border: 1px solid #ffffff;
                     border-radius: 10px;
                 }
                 .progress > .biao {
                     position: absolute;
-                    left: 0.15rem;
-                    top: -0.17rem;
-                    width: 0.6rem;
-                    height: 0.6rem;
+                    left: 15px;
+                    top: -17px;
+                    width: 60px;
+                    height: 60px;
                 }
                 .project-title {
-                    padding: 0.1rem 0;
-                    font-size: 0.16rem;
-                    border-bottom: 0.01rem solid #dadada;
+                    padding: 10px 0;
+                    font-size: 16px;
+                    border-bottom: 1px solid #dadada;
                     text-align: center;
                     width: 100%;
-                    height: 0.2rem;
+                    height: 20px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
-                    line-height: 0.2rem;
+                    line-height: 20px;
                 }
                 .circle {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
 
-                    // padding:0.1rem ;
+                    // padding:10px ;
                 }
                 .projectItem-No {
-                    margin: 1rem auto;
+                    margin: 100px auto;
                     .buttonimg {
                         display: block;
-                        width: 2rem;
-                        height: 2rem;
+                        width: 200px;
+                        height: 200px;
                     }
                     .buttonP {
-                        font-size: 0.16rem;
+                        font-size: 16px;
                         text-align: center;
                     }
                 }
@@ -1422,15 +1422,15 @@ body {
         }
         .headerWarn {
             display: flex;
-            line-height: 0.24rem;
+            line-height: 24px;
             div {
                 color: #000;
-                padding: 0 0.2rem 0.1rem 0.2rem;
+                padding: 0 20px 10px 20px;
                 border-bottom: 0;
                 cursor: pointer;
             }
             div:nth-child(1) {
-                margin-right: 0.2rem;
+                margin-right: 20px;
             }
             .activeConClass {
                 color: #3296fa;

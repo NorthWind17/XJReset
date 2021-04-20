@@ -1341,7 +1341,7 @@ export default {
                 });
         },
         tableHeaderClass({ row, rowIndex }) {
-            return 'font-weight:500;font-size: 0.15rem;color:#272727;background-color:#f9f9f9;';
+            return 'font-weight:500;font-size: 15px;color:#272727;background-color:#f9f9f9;';
         },
         searchQC() {
             console.log(this.qcTime);

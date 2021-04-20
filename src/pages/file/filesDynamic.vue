@@ -2,7 +2,7 @@
     <div id="filesCurrent">
         <div class="main">
             <div class="middleContent">
-                <div class="file" style="margin-bottom: 0.2rem">
+                <div class="file" style="margin-bottom: 20px">
                     文件操作动态
                 </div>
                 <div>

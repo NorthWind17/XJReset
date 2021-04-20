@@ -199,7 +199,7 @@
                     ></el-pagination>
                 </div>
             </div>
-            <el-dialog title="提示" :visible.sync="deleteVisible" width="5rem">
+            <el-dialog title="提示" :visible.sync="deleteVisible" width="500px">
                 <span>确认删除？一旦删除数据无法找回</span>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="deleteVisible = false">取 消</el-button>
@@ -311,7 +311,7 @@
                         <!-- <el-form-item
                             class="taskDrawTalk"
                             label="评论"
-                            style="margin-top: 0.46rem"
+                            style="margin-top: 46px"
                         >
                             <el-input v-model="taskcomment"></el-input>
                             <div class="taskDTBtn">
@@ -329,7 +329,7 @@
                         <el-form-item label="评论记录">
                             <div
                                 v-if="talkList.length > 0"
-                                style="margin-top: 0.1rem"
+                                style="margin-top: 10px"
                             >
                                 <div
                                     class="pljilu"
@@ -817,7 +817,7 @@
                         <el-form-item
                             class="taskDrawTalk"
                             label="评论"
-                            style="margin-top: 0.46rem"
+                            style="margin-top: 46px"
                         >
                             <el-input v-model="taskcomment"></el-input>
                             <div class="taskDTBtn">
@@ -835,7 +835,7 @@
                         <el-form-item label="评论记录">
                             <div
                                 v-if="talkList.length > 0"
-                                style="margin-top: 0.1rem"
+                                style="margin-top: 10px"
                             >
                                 <div
                                     class="pljilu"
@@ -1384,7 +1384,7 @@ export default {
             this.viewSendVisible = true;
         },
         tableHeaderClass({ row, rowIndex }) {
-            return 'font-weight:500;font-size: 0.15rem;color:#272727;background-color:#f9f9f9;';
+            return 'font-weight:500;font-size: 15px;color:#272727;background-color:#f9f9f9;';
         },
         goBackFile() {
             this.innerDrawer = true;

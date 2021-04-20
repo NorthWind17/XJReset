@@ -131,23 +131,23 @@ export default {
 <style lang="less" scoped>
 #applicationOrder {
     .content {
-        padding: 0.2rem 0.1rem 0.4rem 0.1rem;
+        padding: 20px 10px 40px 01px;
         .searchMlist {
             display: flex;
             justify-content: flex-start;
             flex-wrap: wrap;
-            margin-bottom: 0.2rem;
-            font-size: 0.16rem;
+            margin-bottom: 20px;
+            font-size: 16px;
             > div {
-                // margin: 0 0.06rem 0.06rem 0.06rem;
-                margin: 0 0.24rem 0.2rem 0.24rem;
+                // margin: 0 0.06px 0.06px 0.06px;
+                margin: 0 24px 20px 24px;
                 cursor: pointer;
-                padding: 0.12rem;
+                padding: 12px;
                 border: 1px dashed #409eff;
                 position: relative;
                 .sebor {
-                    width: 1rem;
-                    height: 1rem;
+                    width: 100px;
+                    height: 100px;
                     border: 1px solid #d6d6d6;
                     border-radius: 50%;
                     position: relative;
@@ -166,7 +166,7 @@ export default {
                         text-align: center;
                         color: #fff;
                         top: 0;
-                        line-height: 1rem;
+                        line-height: 100px;
                         background-color: rgba(0, 0, 0, 0.5);
                         i {
                             font-size: 24px;
@@ -175,7 +175,7 @@ export default {
                 }
                 p {
                     width: 120px;
-                    margin-top: 0.08rem;
+                    margin-top:8px;
                     text-align: center;
                     white-space: nowrap;
                     overflow: hidden;

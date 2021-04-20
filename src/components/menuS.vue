@@ -175,7 +175,7 @@
                                 <el-cascader
                                     :options="options"
                                     @change="addressChange"
-                                    style="width: 3rem"
+                                    style="width: 300px"
                                     :placeholder="projectAddress"
                                     :clearable="true"
                                     v-model="addForm.city"
@@ -2265,55 +2265,55 @@ export default {
 
 <style lang="less">
 .menuS {
-    font-size: 0rem;
-    width: 2.8rem;
-    // height: 8.26rem;
+    font-size: 0px;
+    width: 280px;
+    // height: 826px;
     .cebian {
         .menuProject {
-            width: 2.2rem;
-            margin: 0.2rem auto;
-            height: 0.5rem;
-            line-height: 0.5rem;
+            width: 220px;
+            margin: 20px auto;
+            height: 50px;
+            line-height: 5px;
             background-color: #f78008;
             color: #fff;
-            font-size: 0.18rem;
-            border-radius: 0.1rem;
-            padding: 0 0.1rem;
+            font-size: 18px;
+            border-radius: 10px;
+            padding: 0 10px;
             text-align: center;
             position: relative;
             cursor: pointer;
             img {
                 vertical-align: middle;
-                width: 0.3rem;
-                height: 0.3rem;
+                width: 30px;
+                height: 30px;
             }
             .mpTips {
                 position: absolute;
-                right: -1.8rem;
+                right: -180px;
                 top: 0;
                 z-index: 99;
                 background-color: #409eef;
-                font-size: 0.14rem;
-                padding: 0 0.2rem;
+                font-size: 14px;
+                padding: 0 20px;
                 i {
                     position: absolute;
-                    left: -0.14rem;
-                    top: 0.18rem;
+                    left: -14px;
+                    top: 18px;
                     color: red;
                 }
             }
         }
         .mensViewNum {
             position: absolute;
-            right: 0.18rem;
-            width: 0.18rem;
-            height: 0.18rem;
-            top: 0.2rem;
+            right: 18px;
+            width: 18px;
+            height: 18px;
+            top: 20px;
             background-color: red;
             border-radius: 50%;
-            line-height: 0.18rem;
+            line-height: 18px;
             text-align: center;
-            font-size: 0.12rem !important;
+            font-size: 12px !important;
             color: #fff;
         }
         .el-menu-vertical-demo {
@@ -2321,16 +2321,16 @@ export default {
             .el-menu-item {
                 span,
                 i {
-                    font-size: 0.18rem;
+                    font-size: 18px;
                 }
             }
             .el-submenu {
                 span,
                 i {
-                    font-size: 0.18rem;
+                    font-size: 18px;
                 }
                 .el-menu-item {
-                    font-size: 0.18rem;
+                    font-size: 18px;
                 }
             }
         }
@@ -2343,24 +2343,24 @@ export default {
             }
         }
         .qymanage {
-            height: 5rem;
+            height: 500px;
             overflow-y: auto;
             .cjcorp {
                 width: 100%;
                 .el-button {
-                    margin-left: 2rem;
+                    margin-left: 200px;
                 }
                 .cjjs {
-                    padding-left: 0.2rem;
+                    padding-left: 200px;
                     .cjc {
-                        margin: 0 0.06rem 0.1rem 0.06rem;
+                        margin: 0 6px 10px 6px;
                         display: flex;
                         > div:nth-child(1) {
-                            width: 0.8rem;
-                            line-height: 0.4rem;
+                            width: 80px;
+                            line-height: 40px;
                         }
                         .el-input {
-                            width: 3rem;
+                            width: 300px;
                         }
                     }
                 }
@@ -2370,68 +2370,64 @@ export default {
             .cjSearch,
             .cjTypeClass {
                 display: flex;
-                margin-right: 0.1rem;
+                margin-right: 10px;
             }
             .cjSearch {
-                margin: 0.1rem 0;
+                margin: 10px 0;
                 .cjTypeClass {
                     > div:nth-child(1) {
-                        line-height: 0.4rem;
+                        line-height: 40px;
                     }
                 }
                 .el-input {
-                    width: 2rem;
-                    margin-right: 0.1rem;
+                    width: 200px;
+                    margin-right: 0.1px;
                 }
             }
         }
     }
     .menuS-img {
-        width: 2.8rem;
-        height: 0.7rem;
+        width: 280px;
+        height: 70px;
         // background: red;
-        padding: 0.1rem 0.2rem;
+        padding: 10px 20px;
         box-sizing: border-box;
         // box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
-        line-height: 0.52rem;
-        // img{
-        //     width: 2.51rem;
-        //     height: 0.3rem;
-        //     margin-left: 0.16rem;
-        // }
+        line-height: 52px;
+   
         div {
             width: 100%;
             height: 100%;
             background: #f78008;
-            border-radius: 0.15rem;
+            border-radius: 15px;
             cursor: pointer;
             // line-height: 100%;
             img {
-                width: 0.2rem;
-                height: 0.2rem;
-                margin-left: 0.65rem;
+                width: 20px;
+                height: 20px;
+                margin-left: 65px;
                 vertical-align: middle;
             }
             span {
-                font-size: 0.18rem;
+                font-size: 18px;
                 color: white;
-                margin-left: 0.15rem;
+                margin-left: 15px;
                 vertical-align: middle;
             }
         }
     }
     .menuS-center {
-        padding: 0rem 0.2rem;
+        padding: 0px 20px;
         .tab {
-            margin-top: 0.15rem;
-            font-size: 0.2rem;
+            margin-top: 15px;
+            font-size: 20px;
         }
     }
     .typeTitle {
         width: 100%;
         > div:nth-child(1) {
-            margin-top: 0.06rem;
-            margin-bottom: 0.1rem;
+            margin-top: 6px;
+            margin-bottom: 10px;
         }
         .tagTitle {
             .el-tag + .el-tag {
@@ -2457,9 +2453,9 @@ export default {
             justify-content: space-between;
 
             .touPic {
-                height: 0.4rem;
-                width: 0.4rem;
-                margin-left: 0.1rem;
+                height: 40px;
+                width: 40px;
+                margin-left: 10px;
             }
         }
     }
@@ -2467,9 +2463,9 @@ export default {
         width: 50%;
         > div {
             display: flex;
-            line-height: 0.4rem;
+            line-height: 40px;
             justify-content: space-between;
-            margin-bottom: 0.2rem;
+            margin-bottom: 20px;
         }
     }
     .el-dialog {
@@ -2479,7 +2475,7 @@ export default {
             flex-wrap: wrap;
             .el-form-item {
                 width: 45%;
-                margin-bottom: 0.08rem;
+                margin-bottom: 8px;
                 .el-form-item__label {
                     padding: 0;
                 }
@@ -2487,7 +2483,7 @@ export default {
         }
 
         .userClass {
-            width: 0.4rem;
+            width: 40px;
             .puserClass {
                 position: relative;
                 .mdren {
@@ -2522,12 +2518,12 @@ export default {
                 }
                 @media screen and (max-width: 1740px) {
                     p {
-                        min-width: 0.5rem;
+                        min-width: 50px;
                     }
                 }
                 @media screen and (max-width: 1400px) {
                     p {
-                        min-width: 0.6rem;
+                        min-width: 60px;
                     }
                 }
                 .el-icon-error {
@@ -2547,19 +2543,19 @@ export default {
             .el-form-item__label:before {
                 content: '*';
                 color: #f56c6c;
-                margin-right: 0.04rem;
+                margin-right: 4px;
             }
         }
         .menuSPower {
             .mpName {
-                margin-bottom: 0.2rem;
+                margin-bottom: 20px;
                 span {
                     color: rgb(146, 146, 146);
                 }
             }
             .el-checkbox-group {
-                margin-bottom: 0.2rem;
-                padding-left: 0.2rem;
+                margin-bottom: 20px;
+                padding-left: 20px;
             }
         }
     }
@@ -2569,10 +2565,10 @@ export default {
                 display: flex;
                 .el-input {
                     width: 80%;
-                    margin-right: 0.1rem;
+                    margin-right: 10px;
                 }
                 > i {
-                    line-height: 0.4rem;
+                    line-height: 40px;
                     color: red;
                     cursor: pointer;
                 }

@@ -37,7 +37,7 @@
                             style="
                                 display: flex;
                                 justify-content: flex-end;
-                                margin: 0.2rem 0;
+                                margin: 20px 0;
                             "
                         >
                             <el-select
@@ -92,12 +92,12 @@
                                             <div
                                                 style="
                                                     color: gray;
-                                                    margin-right: 0.2rem;
+                                                    margin-right: 20px;
                                                 "
                                             >
                                                 <div
                                                     style="
-                                                        margin-bottom: 0.2rem;
+                                                        margin-bottom: 20px;
                                                     "
                                                 >
                                                     负责人：{{ item.jduser }}
@@ -148,13 +148,13 @@
                             </div>
                             <div
                                 v-else
-                                style="text-align: center; padding: 0.3rem 0"
+                                style="text-align: center; padding: 30px 0"
                             >
                                 <img
                                     src="https://dingyunlaowu.oss-cn-hangzhou.aliyuncs.com/user-dir/NG4ZDG6eBM1600655909495.jpg"
                                     alt
                                 />
-                                <p style="font-size: 0.16rem">
+                                <p style="font-size: 16px">
                                     暂时还没有数据哦
                                 </p>
                             </div>
@@ -297,7 +297,7 @@
                     <el-tab-pane label="里程碑事件" name="four">
                         <div style="display: flex">
                             <el-select
-                                style="margin-right: 0.2rem"
+                                style="margin-right: 20px"
                                 v-model="searchLCId"
                                 placeholder="请选择子项目"
                             >
@@ -328,8 +328,8 @@
                                         <div
                                             style="
                                                 position: absolute;
-                                                bottom: -0.33rem;
-                                                right: 0.2rem;
+                                                bottom: -33px;
+                                                right: 20px;
                                                 color: #fff;
                                             "
                                         >

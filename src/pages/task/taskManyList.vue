@@ -562,7 +562,7 @@
                         <el-form-item
                             class="taskDrawTalk"
                             label="评论"
-                            style="margin-top:0.46rem;"
+                            style="margin-top:46px;"
                         >
                             <el-input v-model="taskcomment"></el-input>
                             <div class="taskDTBtn">
@@ -580,7 +580,7 @@
                         <el-form-item label="评论记录">
                             <div
                                 v-if="talkList.length > 0"
-                                style="margin-top:0.1rem;"
+                                style="margin-top:10px;"
                             >
                                 <div
                                     class="pljilu"

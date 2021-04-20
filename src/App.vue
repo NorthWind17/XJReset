@@ -35,7 +35,6 @@ export default {
 <style lang="less" scoped>
 #app {
     background: #f6f6f6;
-    // width: 18.5rem;
     width: 100%;
     height: 100%;
 
@@ -44,7 +43,7 @@ export default {
     }
     .app-right {
         display: flex;
-        width: 15.73rem;
+        width: 1573px;
     }
     // font-family: Avenir, Helvetica, Arial, sans-serif;
     // -webkit-font-smoothing: antialiased;

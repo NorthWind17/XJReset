@@ -306,16 +306,16 @@ export default {
 
 #applicationPower {
     .content {
-        padding: 0.2rem 0.1rem 0 0.1rem;
+        padding: 20px 10px 0 10px;
         .appPC {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 0.3rem;
+            margin-bottom: 30px;
             .apcS {
                 display: flex;
                 justify-content: flex-start;
                 .el-button {
-                    margin-left: 0.2rem;
+                    margin-left: 20px;
                 }
             }
         }
@@ -323,19 +323,19 @@ export default {
             display: flex;
             img,
             span {
-                width: 0.4rem;
-                height: 0.4rem;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
-                margin-right: 0.2rem;
+                margin-right: 20px;
             }
             span {
                 background-color: #409eef;
                 color: #fff;
                 text-align: center;
-                line-height: 0.4rem;
+                line-height: 40px;
             }
             div {
-                line-height: 0.4rem;
+                line-height: 40px;
             }
         }
     }

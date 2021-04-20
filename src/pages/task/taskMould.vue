@@ -179,12 +179,12 @@
                                     @click="goUpload"
                                     style="
                                         text-align: center;
-                                        line-height: 1.8rem;
+                                        line-height: 180px;
                                     "
                                 >
                                     <i
                                         class="el-icon-plus"
-                                        style="font-size: 0.6rem"
+                                        style="font-size: 60px"
                                     ></i>
                                 </div>
                             </div> -->

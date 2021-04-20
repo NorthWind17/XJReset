@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './style/initialize.css';
-import './config/rem.js';
+// import './config/rem.js';
 import axios from './config/https.js';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';

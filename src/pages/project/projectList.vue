@@ -64,7 +64,7 @@
                                         <el-cascader
                                             :options="options"
                                             @change="addressChange"
-                                            style="width: 3rem"
+                                            style="width: 300px"
                                             :placeholder="请选择"
                                             :clearable="true"
                                             v-model="searchForm.xmcity"
@@ -193,7 +193,7 @@
                     <el-dialog
                         title="提示"
                         :visible.sync="deleteVisible"
-                        width="5rem"
+                        width="500px"
                     >
                         <span>确认删除？一旦删除数据无法找回</span>
                         <span slot="footer" class="dialog-footer">
@@ -211,7 +211,7 @@
                     <el-dialog
                         title="提示"
                         :visible.sync="quitVisible"
-                        width="5rem"
+                        width="500px"
                     >
                         <span>确认退出该项目？</span>
                         <span slot="footer" class="dialog-footer">
@@ -308,7 +308,7 @@ export default {
 
     methods: {
         tableHeaderClass({ row, rowIndex }) {
-            return 'font-weight:500;font-size: 0.15rem;color:#272727;background-color:#f9f9f9;';
+            return 'font-weight:500;font-size: 15px;color:#272727;background-color:#f9f9f9;';
         },
         //退出项目
         quitClick() {
@@ -880,7 +880,7 @@ export default {
 
 <style lang="less">
 #projectList {
-    width: 16.4rem;
+    width: 1640px;
     .el-pagination {
         text-align: center;
         padding: 20px 0;
@@ -890,7 +890,7 @@ export default {
         text-align: center;
     }
     span {
-        font-size: 0.14rem;
+        font-size: 14px;
     }
     .table {
         width: 100%;
@@ -901,22 +901,22 @@ export default {
     > div {
         width: 96%;
         background-color: #fff;
-        margin: 0.2rem auto;
+        margin: 20px auto;
     }
     .bg {
-        padding: 0 0.1rem;
+        padding: 0 10px;
         .headerWarn {
             display: flex;
-            padding-top: 0.2rem;
-            padding-bottom: 0.3rem;
+            padding-top: 20px;
+            padding-bottom: 30px;
             div {
                 color: #000;
-                padding: 0 0.2rem 0.1rem 0.2rem;
+                padding: 0 20px 10px 20px;
                 border-bottom: 0;
                 cursor: pointer;
             }
             div:nth-child(1) {
-                margin-right: 0.2rem;
+                margin-right: 20px;
             }
             .activeConClass {
                 color: #3296fa;
@@ -928,7 +928,7 @@ export default {
             .el-form {
                 .searchInput {
                     width: 100%;
-                    margin-bottom: 0.2rem;
+                    margin-bottom: 20px;
                     .el-input {
                         width: 50%;
                     }
@@ -944,12 +944,12 @@ export default {
         }
         .middle {
             display: flex;
-            line-height: 0.5rem;
+            line-height: 50px;
             .middle-search {
-                width: 3rem;
+                width: 300px;
             }
             .middle-text {
-                margin-left: 0.2rem;
+                margin-left: 20px;
             }
         }
         .bj {
@@ -962,17 +962,17 @@ export default {
                 line-height: 40px;
             }
             .el-form-item {
-                margin-left: 0.15rem;
+                margin-left: 15px;
                 width: 100%;
             }
         }
         .el-table {
-            margin-top: 0.2rem;
+            margin-top: 20px;
             .editBtn,
             .someBtn {
-                font-size: 0.2rem;
+                font-size: 20px;
                 color: #409eef;
-                margin: 0 0.08rem;
+                margin: 0 8px;
             }
             .someBtn {
                 color: rgb(251, 129, 3);
@@ -1070,18 +1070,18 @@ export default {
         align-items: center;
         justify-content: space-around;
         .kuai-one {
-            width: 0.6rem;
+            width: 60px;
         }
         .kuai-two {
-            width: 0.9rem;
+            width: 90px;
         }
     }
     .table {
-        width: 16.4rem;
+        width: 1640px;
         border-color: #d5d5d5;
         border-collapse: collapse;
         border: 1;
-        height: 7rem;
+        height: 700px;
     }
 }
 </style>

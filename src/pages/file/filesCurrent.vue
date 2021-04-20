@@ -42,8 +42,8 @@
                                         <img
                                             :src="scope.row.gurl"
                                             style="
-                                                height: 0.4rem;
-                                                width: 0.4rem;
+                                                height: 40px;
+                                                width: 40px;
                                             "
                                         />
                                     </el-col>
@@ -51,8 +51,8 @@
                                         <img
                                             src="../../assets/management/guidang.png"
                                             style="
-                                                height: 0.34rem;
-                                                width: 0.38rem;
+                                                height: 34px;
+                                                width: 38px;
                                             "
                                             v-show="
                                                 scope.row.type == 'file'
@@ -63,8 +63,8 @@
                                         <img
                                             src="../../assets/management/TZ.png"
                                             style="
-                                                height: 0.4rem;
-                                                width: 0.4rem;
+                                                height: 40px;
+                                                width: 40px;
                                             "
                                             v-show="
                                                 scope.row.filetype == '2' &&
@@ -76,8 +76,8 @@
                                         <img
                                             src="../../assets/management/MX.png"
                                             style="
-                                                height: 0.4rem;
-                                                width: 0.4rem;
+                                                height: 40px;
+                                                width: 40px;
                                             "
                                             v-show="
                                                 scope.row.filetype == '3' &&
@@ -89,8 +89,8 @@
                                         <img
                                             src="../../assets/management/GX.png"
                                             style="
-                                                height: 0.4rem;
-                                                width: 0.4rem;
+                                                height: 40px;
+                                                width: 40px;
                                             "
                                             v-show="
                                                 scope.row.filetype == '4' &&
@@ -102,8 +102,8 @@
                                         <img
                                             src="../../assets/management/BD.png"
                                             style="
-                                                height: 0.4rem;
-                                                width: 0.4rem;
+                                                height: 40px;
+                                                width: 40px;
                                             "
                                             v-show="
                                                 scope.row.filetype == '5' &&
@@ -115,8 +115,8 @@
                                         <img
                                             src="../../assets/management/GF.png"
                                             style="
-                                                height: 0.4rem;
-                                                width: 0.4rem;
+                                                height: 40px;
+                                                width: 40px;
                                             "
                                             v-show="
                                                 scope.row.filetype == '6' &&
@@ -128,8 +128,8 @@
                                         <img
                                             src="../../assets/management/SC.png"
                                             style="
-                                                height: 0.4rem;
-                                                width: 0.4rem;
+                                                height: 40px;
+                                                width: 40px;
                                             "
                                             v-show="
                                                 scope.row.filetype == '7'

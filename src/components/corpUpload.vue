@@ -329,13 +329,13 @@ export default {
 }
 #cupload {
     #container {
-        width: 0.4rem;
-        height: 0.4rem;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         overflow: hidden;
         img {
-            width: 0.4rem;
-            height: 0.4rem;
+            width: 40px;
+            height: 40px;
         }
     }
 }

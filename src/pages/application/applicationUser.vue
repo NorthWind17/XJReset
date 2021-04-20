@@ -117,7 +117,7 @@
                 </div>
             </div>
             <div class="set-bottom">
-                <p style="padding-top: 0.3rem; padding-bottom: 0.2rem">
+                <p style="padding-top: 30px; padding-bottom: 20px">
                     软件版本：1.8.1 （官方开发版本）
                 </p>
             </div>
@@ -125,7 +125,7 @@
         <el-dialog
             title="分配点数"
             :visible.sync="ebVisible"
-            width="5rem"
+            width="500px"
             @close="drawClose('ebRef')"
             class="auDialog"
         >
@@ -169,7 +169,7 @@
         <el-dialog
             title="分配空间"
             :visible.sync="esVisible"
-            width="5rem"
+            width="500px"
             @close="esClose('esRef')"
             class="auDialog"
         >
@@ -517,12 +517,12 @@ export default {
 }
 
 #applicationUser {
-    // width: 18rem;
+    // width: 1800px;
     // height: 90vh;
     // background: #fff;
-    // // margin: 0rem auto;
+    // // margin: 0px auto;
     // margin: 0 auto;
-    // border-radius: 0.1rem;
+    // border-radius: 10px;
     .auDialog {
         .el-select,
         .el-input-number {
@@ -531,44 +531,44 @@ export default {
     }
     .set-top {
         width: 100%;
-        height: 2.3rem;
+        height: 230px;
         display: flex;
         img {
-            margin: 0.5rem 0rem 0rem 0.5rem;
+            margin: 50px 0px 0px 50px;
             display: inline-block;
-            width: 0.5rem;
-            height: 0.5rem;
-            border-radius: 0.1rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
         }
         .top-box {
-            margin: 0.5rem 0rem 0rem 0.2rem;
-            font-size: 0.2rem;
+            margin: 50px 0px 0px 20px;
+            font-size: 20px;
             p {
                 &:nth-child(1) {
                     font-family: SourceHanSansCN-Normal;
-                    font-size: 0.2rem;
+                    font-size: 20px;
                     font-weight: normal;
                     font-stretch: normal;
-                    line-height: 0.45rem;
+                    line-height: 45px;
                     letter-spacing: 0px;
                     color: #575b60;
                 }
                 &:nth-child(2) {
                     font-family: SourceHanSansCN-Normal;
-                    font-size: 0.16rem;
+                    font-size: 16px;
                     font-weight: normal;
                     font-stretch: normal;
-                    line-height: 0.45rem;
-                    letter-spacing: 0rem;
+                    line-height: 45px;
+                    letter-spacing: 0px;
                     color: #9ea0a3;
                 }
                 &:nth-child(3) {
                     font-family: SourceHanSansCN-Normal;
-                    font-size: 0.16rem;
+                    font-size: 16px;
                     font-weight: normal;
                     font-stretch: normal;
-                    line-height: 0.45rem;
-                    letter-spacing: 0rem;
+                    line-height: 45px;
+                    letter-spacing: 0px;
                     color: #9ea0a3;
                 }
             }
@@ -576,74 +576,74 @@ export default {
     }
     .set-bottom {
         p {
-            margin-left: 0.5rem;
+            margin-left: 50px;
             font-family: SourceHanSansCN-Normal;
-            font-size: 0.18rem;
+            font-size: 180px;
             font-weight: normal;
             font-stretch: normal;
-            line-height: 0.45rem;
+            line-height: 45px;
             letter-spacing: 0px;
             color: #575b60;
         }
         .bottom-box {
             display: flex;
             justify-content: space-around;
-            margin-top: 1rem;
+            margin-top: 100px;
         }
         .box-one {
-            width: 3.4rem;
-            height: 3.6rem;
-            box-shadow: 0rem 0.01rem 0.08rem 0px rgba(20, 20, 20, 0.17);
-            border-radius: 0.06rem;
+            width: 340px;
+            height: 360px;
+            box-shadow: 0px 1px 8px 0px rgba(20, 20, 20, 0.17);
+            border-radius: 6px;
             position: relative;
             img {
-                width: 0.7rem;
-                height: 0.7rem;
+                width: 70px;
+                height: 70px;
                 position: absolute;
-                top: -0.35rem;
-                left: -0.35rem;
+                top: -35px;
+                left: -35px;
             }
             .boxone {
                 width: 100%;
-                height: 0.5rem;
-                margin-left: 0rem;
+                height: 50px;
+                margin-left: 0px;
                 background-color: #ff943e;
                 font-family: AdobeHeitiStd-Regular;
-                font-size: 0.22rem;
+                font-size: 22px;
                 font-weight: normal;
                 font-stretch: normal;
-                line-height: 0.5rem;
-                letter-spacing: 0rem;
+                line-height:50px;
+                letter-spacing: 0px;
                 color: #ffffff;
                 text-align: center;
-                border-radius: 0.06rem 0.06rem 0px 0px;
+                border-radius: 6px 6px 0px 0px;
             }
             .one-center {
                 width: 100%;
-                height: 3.2rem;
-                border-radius: 0px 0px 0.06rem 0.06rem;
+                height: 320px;
+                border-radius: 0px 0px 6px 6px;
                 .time-box {
                     width: 100%;
-                    height: 2.3rem;
+                    height: 230px;
                     position: relative;
                     .timeStrip {
-                        margin-top: 0.4rem;
-                        margin-left: 0.9rem;
+                        margin-top: 40px;
+                        margin-left: 90px;
                     }
                     .Strip-center {
                         position: absolute;
-                        top: 1.05rem;
-                        left: 0.9rem;
+                        top: 105px;
+                        left: 90px;
                         p {
-                            width: 1.6rem;
+                            width: 160px;
                             &:nth-child(1) {
-                                margin-left: 0rem;
+                                margin-left: 0px;
                                 font-family: AdobeHeitiStd-Regular;
-                                font-size: 0.32rem;
+                                font-size: 32px;
                                 font-weight: normal;
                                 font-stretch: normal;
-                                line-height: 0.35rem;
-                                letter-spacing: 0rem;
+                                line-height: 35px;
+                                letter-spacing: 0px;
                                 color: #191f25;
                                 text-align: center;
                                 overflow: hidden;
@@ -651,13 +651,13 @@ export default {
                                 white-space: nowrap;
                             }
                             &:nth-child(2) {
-                                margin-left: 0rem;
+                                margin-left: 0px;
                                 font-family: AdobeHeitiStd-Regular;
-                                font-size: 0.18rem;
+                                font-size: 18px;
                                 font-weight: normal;
                                 font-stretch: normal;
-                                line-height: 0.3rem;
-                                letter-spacing: 0rem;
+                                line-height: 3px;
+                                letter-spacing: 0px;
                                 color: #7a7d81;
                                 text-align: center;
                             }
@@ -666,80 +666,80 @@ export default {
                 }
                 .time {
                     width: 100%;
-                    height: 0.8rem;
+                    height: 80px;
                     background-color: #f2f6f9;
                     display: flex;
                     font-family: SourceHanSansCN-Normal;
-                    font-size: 0.16rem;
+                    font-size: 16px;
                     font-weight: normal;
                     font-stretch: normal;
-                    line-height: 0.4rem;
-                    letter-spacing: 0rem;
+                    line-height: 40px;
+                    letter-spacing: 0px;
                     color: #575b60;
                     span {
                         display: block;
-                        width: 1.7rem;
-                        height: 0.4rem;
-                        line-height: 0.4rem;
+                        width: 1.7px;
+                        height: 0.4px;
+                        line-height: 0.4px;
                         text-align: center;
                     }
                 }
             }
         }
         .box-two {
-            width: 3.4rem;
-            height: 3.6rem;
-            box-shadow: 0px 0.01rem 0.08rem 0px rgba(20, 20, 20, 0.17);
-            border-radius: 0.06rem;
+            width: 340px;
+            height: 360px;
+            box-shadow: 0px 1px 8px 0px rgba(20, 20, 20, 0.17);
+            border-radius: 6px;
             position: relative;
             img {
-                width: 0.7rem;
-                height: 0.7rem;
+                width: 70px;
+                height: 70px;
                 position: absolute;
-                top: -0.35rem;
-                left: -0.35rem;
+                top: -35px;
+                left: -35px;
             }
             .boxtwo {
                 width: 100%;
-                margin-left: 0rem;
-                height: 0.5rem;
+                margin-left: 0px;
+                height: 50px;
                 background-color: #3296fa;
                 font-family: AdobeHeitiStd-Regular;
-                font-size: 0.22rem;
+                font-size: 22px;
                 font-weight: normal;
                 font-stretch: normal;
-                line-height: 0.5rem;
-                letter-spacing: 0rem;
+                line-height: 50px;
+                letter-spacing: 0px;
                 color: #ffffff;
                 text-align: center;
-                border-radius: 0.06rem 0.06rem 0px 0px;
+                border-radius: 6px 6px 0px 0px;
             }
             .two-center {
                 width: 100%;
-                height: 3.2rem;
-                border-radius: 0px 0px 0.06rem 0.06rem;
+                height: 320px;
+                border-radius: 0px 0px 6px 6px;
                 .personnel-box {
                     width: 100%;
-                    height: 2.3rem;
+                    height: 230px;
                     position: relative;
                     .personnelStrip {
-                        margin-top: 0.4rem;
-                        margin-left: 0.9rem;
+                        margin-top: 40px;
+                        margin-left: 90px;
                     }
                     .personnel-center {
                         position: absolute;
-                        top: 1.05rem;
-                        left: 0.9rem;
+                        top: 105px;
+                        left: 90px;
                         p {
-                            width: 1.6rem;
+                            width: 160px;
                             &:nth-child(1) {
-                                margin-left: 0rem;
+                                margin-left: 0px;
                                 font-family: AdobeHeitiStd-Regular;
-                                font-size: 0.32rem;
+                                font-size: 32px;
                                 font-weight: normal;
                                 font-stretch: normal;
-                                line-height: 0.35rem;
-                                letter-spacing: 0rem;
+                                line-height: 35px;
+                                letter-spacing: 0px;
                                 color: #191f25;
                                 text-align: center;
                                 overflow: hidden;
@@ -747,13 +747,13 @@ export default {
                                 white-space: nowrap;
                             }
                             &:nth-child(2) {
-                                margin-left: 0rem;
+                                margin-left: 0px;
                                 font-family: AdobeHeitiStd-Regular;
-                                font-size: 0.18rem;
+                                font-size: 18px;
                                 font-weight: normal;
                                 font-stretch: normal;
-                                line-height: 0.3rem;
-                                letter-spacing: 0rem;
+                                line-height: 30px;
+                                letter-spacing: 0px;
                                 color: #7a7d81;
                                 text-align: center;
                             }
@@ -762,21 +762,21 @@ export default {
                 }
                 .personnel {
                     width: 100%;
-                    height: 0.8rem;
+                    height: 80px;
                     background-color: #f2f6f9;
                     display: flex;
                     font-family: SourceHanSansCN-Normal;
-                    font-size: 0.16rem;
+                    font-size: 16px;
                     font-weight: normal;
                     font-stretch: normal;
-                    line-height: 0.4rem;
-                    letter-spacing: 0rem;
+                    line-height: 40px;
+                    letter-spacing: 0px;
                     color: #575b60;
                     span {
                         display: block;
-                        width: 1.7rem;
-                        height: 0.4rem;
-                        line-height: 0.4rem;
+                        width: 170px;
+                        height: 40px;
+                        line-height: 40px;
                         text-align: center;
                     }
                 }

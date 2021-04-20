@@ -140,7 +140,7 @@
                     ></el-pagination>
                 </div>
             </div>
-            <el-dialog title="提示" :visible.sync="deleteVisible" width="5rem">
+            <el-dialog title="提示" :visible.sync="deleteVisible" width="500px">
                 <span>确认删除？一旦删除数据无法找回</span>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="deleteVisible = false">取 消</el-button>
@@ -943,7 +943,7 @@ export default {
     },
     methods: {
         tableHeaderClass({ row, rowIndex }) {
-            return 'font-weight:500;font-size: 0.15rem;color:#272727;background-color:#f9f9f9;';
+            return 'font-weight:500;font-size: 0.15px;color:#272727;background-color:#f9f9f9;';
         },
         addNewCe() {
             this.ceVisible = true;

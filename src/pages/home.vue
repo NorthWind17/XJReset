@@ -55,7 +55,7 @@
                                                 alt
                                             />
                                             <div
-                                                style="margin: 0.06rem 0"
+                                                style="margin: 6px 0"
                                                 @click="gophone"
                                             >
                                                 手机钉钉扫描二维码加入“用户服务群”

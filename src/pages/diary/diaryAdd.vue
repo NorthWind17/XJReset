@@ -565,7 +565,7 @@
                     </el-form-item>
                 </el-form>
             </el-dialog>
-            <el-dialog title="提示" :visible.sync="deleteVisible" width="5rem">
+            <el-dialog title="提示" :visible.sync="deleteVisible" width="500px">
                 <span>确认删除？一旦删除数据无法找回</span>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="deleteVisible = false">取 消</el-button>

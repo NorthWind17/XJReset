@@ -98,8 +98,8 @@ export default {
 <style lang="less" >
 #projectError {
     .content {
-        padding: 0.2rem 0.1rem 0 0.1rem;
-        min-height: 5rem;
+        padding: 20px 10px 0 10px;
+        min-height: 500px;
         text-align: center;
     }
 }

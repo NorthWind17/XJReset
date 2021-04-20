@@ -24,7 +24,7 @@
                                     style="
                                         color: #fb8103;
                                         font-size: 32rpx;
-                                        margin-left: 0.1rem;
+                                        margin-left: 10px;
                                     "
                                     >{{ SumMoney }}</span
                                 >
@@ -52,7 +52,7 @@
                                     style="
                                         color: #fb8103;
                                         font-size: 32rpx;
-                                        margin-left: 0.1rem;
+                                        margin-left: 10px;
                                     "
                                     >{{ constructionMoney }}</span
                                 >
@@ -80,7 +80,7 @@
                                     style="
                                         color: #fb8103;
                                         font-size: 32rpx;
-                                        margin-left: 0.1rem;
+                                        margin-left: 10px;
                                     "
                                     >{{ newlyMoney }}</span
                                 >
@@ -108,7 +108,7 @@
                                     style="
                                         color: #fb8103;
                                         font-size: 32rpx;
-                                        margin-left: 0.1rem;
+                                        margin-left: 10px;
                                     "
                                     >{{ presentMoney }}</span
                                 >
@@ -197,10 +197,10 @@
                                     <div
                                         style="
                                             color: gray;
-                                            margin-right: 0.2rem;
+                                            margin-right: 20px;
                                         "
                                     >
-                                        <div style="margin-bottom: 0.2rem">
+                                        <div style="margin-bottom: 20px">
                                             负责人：{{ item.puseridname }}
                                         </div>
                                         <div>总工期：{{ item.zongday }}天</div>
@@ -216,13 +216,13 @@
                         </div>
                         <div
                             v-else
-                            style="text-align: center; padding: 0.3rem 0"
+                            style="text-align: center; padding: 30px 0"
                         >
                             <img
                                 src="https://dingyunlaowu.oss-cn-hangzhou.aliyuncs.com/user-dir/NG4ZDG6eBM1600655909495.jpg"
                                 alt
                             />
-                            <p style="font-size: 0.16rem">暂时还没有数据哦</p>
+                            <p style="font-size: 16px">暂时还没有数据哦</p>
                         </div>
                     </div>
                     <div style="text-align: center">
@@ -437,29 +437,29 @@ export default {
 
 <style lang="less">
 #projectPanel {
-    width: 16.4rem;
+    width: 16.4px;
     margin: 0 auto;
     > div {
         width: 96%;
         display: flex;
         flex-direction: column;
-        margin: 0.2rem auto;
+        margin: 20px auto;
         // background-color: #fff;
     }
     .xg {
-        width: 0.2rem;
-        height: 0.2rem;
-        margin-left: 0.3rem;
+        width: 20px;
+        height: 20px;
+        margin-left: 30px;
     }
     span {
-        font-size: 0.14rem;
+        font-size: 14px;
     }
     .edit {
-        margin: 0 0.2rem;
+        margin: 0 20px;
     }
 
     .bg {
-        // padding: 0 0.1rem;
+        // padding: 0 10px;
         .addNew {
             font-size: 20px;
             height: 40px;
@@ -469,26 +469,26 @@ export default {
             justify-content: flex-end;
         }
         .content {
-            font-size: 0.2rem;
+            font-size: 20px;
             padding: 10px;
             background-color: #fff;
         }
         #middle {
             display: flex;
 
-            margin-left: 0.3rem;
+            margin-left: 30px;
             .middle-search {
-                width: 8rem;
-                margin-right: 0.3rem;
+                width: 800px;
+                margin-right: 30px;
                 // vertical-align:middle;
-                // height: 0.8rem;
+                // height: 800px;
             }
         }
         .bj {
             display: flex;
 
             .el-form-item {
-                margin: 0.15rem;
+                margin: 15px;
                 width: 100%;
             }
         }
@@ -575,32 +575,32 @@ export default {
         }
     }
     .project-content {
-        margin-top: 0.2rem;
+        margin-top: 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        font-size: 0.2rem;
-        padding-top: 0.2rem;
+        font-size: 20px;
+        padding-top: 20px;
     }
     .project-content > div {
         width: 21%;
 
         background-color: #f5f5f5;
-        height: 1.5rem;
+        height: 150px;
 
-        border-radius: 0.1rem;
+        border-radius: 10px;
     }
     .kuai {
         display: flex;
         align-items: center;
         justify-content: space-around;
         .kuai-two {
-            width: 0.9rem;
+            width: 90px;
             margin-left: 0;
         }
     }
     .total {
-        margin-bottom: 0.3rem;
+        margin-bottom: 30px;
     }
 
     .table {

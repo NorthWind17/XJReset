@@ -19,7 +19,7 @@
                         <el-form
                             ref="searchFormRef"
                             :model="searchForm"
-                            label-width="100px"
+                            :inline="true"
                         >
                             <div class="searchInput">
                                 <el-input
@@ -64,7 +64,6 @@
                                         <el-cascader
                                             :options="options"
                                             @change="addressChange"
-                                            style="width: 300px"
                                             :placeholder="请选择"
                                             :clearable="true"
                                             v-model="searchForm.xmcity"
@@ -104,6 +103,7 @@
                             prop="xmmoney"
                             label="金额（万元）"
                             align="center"
+                            show-overflow-tooltip="true"
                         ></el-table-column>
                         <el-table-column
                             prop="xmcity"
@@ -115,11 +115,13 @@
                             prop="xmstart"
                             label="开工时间"
                             align="center"
+                            show-overflow-tooltip="true"
                         ></el-table-column>
                         <el-table-column
                             prop="xmstop"
                             label="竣工时间"
                             align="center"
+                            show-overflow-tooltip="true"
                         ></el-table-column>
                         <el-table-column
                             label="标签"
@@ -136,6 +138,7 @@
                             prop="puseridname"
                             label="负责人"
                             align="center"
+                            show-overflow-tooltip="true"
                         ></el-table-column>
                         <el-table-column label="操作" align="center">
                             <template slot-scope="scope">
@@ -344,11 +347,11 @@ export default {
                             );
                             _this.$store.commit(
                                 'setPerctentage',
-                                _this.tableData[0].percentage
+                                _this.tableData[0].jindu
                             );
                             _this.$store.commit(
                                 'setPTag',
-                                _this.tableData[0].ptag
+                                _this.tableData[0].beian
                             );
                             _this.$store.commit(
                                 'setPStatus',
@@ -369,11 +372,11 @@ export default {
                             );
                             _this.$store.commit(
                                 'setPerctentage',
-                                _this.tableData[1].percentage
+                                _this.tableData[1].jindu
                             );
                             _this.$store.commit(
                                 'setPTag',
-                                _this.tableData[1].ptag
+                                _this.tableData[1].beian
                             );
                             _this.$store.commit(
                                 'setPStatus',
@@ -437,11 +440,11 @@ export default {
                             );
                             _this.$store.commit(
                                 'setPerctentage',
-                                _this.tableData[0].percentage
+                                _this.tableData[0].jindu
                             );
                             _this.$store.commit(
                                 'setPTag',
-                                _this.tableData[0].ptag
+                                _this.tableData[0].beian
                             );
                             _this.$store.commit(
                                 'setPStatus',
@@ -470,11 +473,11 @@ export default {
                             );
                             _this.$store.commit(
                                 'setPerctentage',
-                                _this.tableData[1].percentage
+                                _this.tableData[1].jindu
                             );
                             _this.$store.commit(
                                 'setPTag',
-                                _this.tableData[1].ptag
+                                _this.tableData[1].beian
                             );
                             _this.$store.commit(
                                 'setPStatus',
@@ -584,11 +587,12 @@ export default {
             this.getList();
         },
         //获取项目详情
-        getProjectInfo(id) {
+        //编辑项目
+        editProject(row) {
             const _this = this;
             _this.$axios
                 .post('/cy_xiezhu/ProjectContent', {
-                    id: id,
+                    id: row.id,
                     corp_id: _this.$store.state.cid
                 })
                 .then((res) => {
@@ -596,19 +600,16 @@ export default {
                         let newRow = JSON.parse(
                             JSON.stringify(res.data.content)
                         );
-                        _this.$parent.fatherViewDialog(newRow, 1);
+                        let sendRow = { row: newRow, type: 1 };
+                        // _this.$parent.fatherViewDialog(newRow, 1);
+                        _this.$emit('openD', sendRow);
                     } else {
                         _this.$message.warning(res.data.msg);
                     }
                 })
                 .catch(function (error) {
-                    _this.$message.error(error.data);
                     console.log(error);
                 });
-        },
-        //编辑项目
-        editProject(row) {
-            this.getProjectInfo(row.id);
         },
 
         //项目列表
@@ -628,54 +629,7 @@ export default {
                 })
                 .then((res) => {
                     if (res.data.code == 200) {
-                        //当前时间
-                        let currentTime = new Date();
-                        let nowTime = Date.parse(
-                            _this.$utils.timeChange(currentTime, 2)
-                        );
-                        let day = 24 * 60 * 60 * 1000;
-                        _this.tableData = res.data.content.list.map(function (
-                            item
-                        ) {
-                            return Object.assign(item, {
-                                waitTime: '',
-                                totalTime: '',
-                                percentage: '',
-                                ptag: ''
-                            });
-                        });
-                        //计算百分比
-                        _this.tableData.map(function (val) {
-                            let newStart = Date.parse(val.xmstart);
-                            let newStop = Date.parse(val.xmstop);
-                            val.totalTime = (newStop - newStart) / day;
-                            //当前时间超过开工时间
-                            if (nowTime > newStart && nowTime < newStop) {
-                                val.waitTime = (nowTime - newStart) / day;
-                                val.percentage =
-                                    (val.waitTime / val.totalTime) * 100;
-                                val.percentage = val.percentage.toFixed(1);
-                                val.ptag = '项目进行中';
-                            } else if (nowTime >= newStop) {
-                                //当前时间大于结束时间
-                                val.waitTime = (nowTime - newStart) / day;
-                                val.percentage = 100;
-                                val.ptag = '项目已结束';
-                            } else if (nowTime < newStart) {
-                                //当前时间小于开工时间
-                                val.waitTime = 0;
-                                val.percentage = 0;
-                                val.ptag = '项目筹建';
-                            } else {
-                                //当前时间和开工时间一致
-                                val.waitTime = 1;
-                                val.percentage =
-                                    (val.waitTime / val.totalTime) * 100;
-                                val.percentage = val.percentage.toFixed(1);
-                                val.ptag = '项目进行中';
-                            }
-                            return;
-                        });
+                        _this.tableData = res.data.content.list;
                         _this.total = res.data.content.total;
                         if (_this.total < 1 && _this.typeVal == '1') {
                             _this.$store.commit('setProjectName', '');
@@ -858,9 +812,9 @@ export default {
                         );
                         this.$store.commit(
                             'setPerctentage',
-                            this.tableData[0].percentage
+                            this.tableData[0].jindu
                         );
-                        this.$store.commit('setPTag', this.tableData[0].ptag);
+                        this.$store.commit('setPTag', this.tableData[0].beian);
                     }
                 } else {
                     if (this.typeVal == '1') {
@@ -880,7 +834,7 @@ export default {
 
 <style lang="less">
 #projectList {
-    width: 1640px;
+    width: 100%;
     .el-pagination {
         text-align: center;
         padding: 20px 0;
@@ -892,12 +846,12 @@ export default {
     span {
         font-size: 14px;
     }
-    .table {
-        width: 100%;
-        border-color: #d5d5d5;
-        border-collapse: collapse;
-        border: 1;
-    }
+    // .table {
+    //     width: 100%;
+    //     border-color: #d5d5d5;
+    //     border-collapse: collapse;
+    //     border: 1;
+    // }
     > div {
         width: 96%;
         background-color: #fff;
@@ -938,6 +892,7 @@ export default {
                     justify-content: space-between;
                     .searchLeft {
                         display: flex;
+                        flex-wrap: wrap;
                     }
                 }
             }
@@ -1064,24 +1019,6 @@ export default {
                 }
             }
         }
-    }
-    .kuai {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        .kuai-one {
-            width: 60px;
-        }
-        .kuai-two {
-            width: 90px;
-        }
-    }
-    .table {
-        width: 1640px;
-        border-color: #d5d5d5;
-        border-collapse: collapse;
-        border: 1;
-        height: 700px;
     }
 }
 </style>

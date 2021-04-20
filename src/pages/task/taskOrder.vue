@@ -109,7 +109,7 @@
                                 {{ item.type.typename }}
                                 <i
                                     class="header-icon el-icon-delete"
-                                    style="margin-left: 0.1rem; color: #ec4848"
+                                    style="margin-left: 10px; color: #ec4848"
                                     v-if="item.type.del != 11"
                                     @click.stop.prevent="
                                         deleteTaskMould(item, 1)
@@ -948,7 +948,7 @@
                     </div>
                 </div>
             </el-dialog>
-            <el-dialog title="提示" :visible.sync="deleteVisible" width="5rem">
+            <el-dialog title="提示" :visible.sync="deleteVisible" width="500px">
                 <span>确认删除？一旦删除数据无法找回</span>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="deleteVisible = false">取 消</el-button>

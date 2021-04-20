@@ -1,142 +1,178 @@
 <template>
     <div class="workbench-title">
-        <div class="workbench-img">
-            <img src="../assets/menu/logo.png" alt />
-        </div>
-        <div class="switch">
-            <div class="switch-box">
-                <span>项目名称：</span>
-                <span>{{ nameS }}</span>
+        <div class="workUser">
+            <div class="workbench-img">
+                <img src="../assets/menu/logo.png" alt />
             </div>
-            <div class="switch-button">
-                <span style="color: #fff; cursor: pointer" @click="switchover">
-                    <i class="el-icon-arrow-down"></i>
-                </span>
-            </div>
-        </div>
-        <div class="workbench-center">
-            <ul>
-                <li :class="cNameOneS" @click="buttonTop('/workbench')">
-                    首页
-                </li>
-                <li
-                    :class="cNameTwoS"
-                    @click="buttonTop('/project/projectPanel')"
-                >
-                    <span>项目</span>
-                    <div class="proTips" v-if="warnTipView">
-                        请点击此处进入项目页面
-                        <i class="el-icon-caret-top"></i>
+            <div class="workURight">
+                <div class="switch">
+                    <div class="switch-box">
+                        <span>项目名称：</span>
+                        <span>{{ nameS }}</span>
                     </div>
-                </li>
-                <li :class="cNameFourS" @click="buttonTop('/task/taskMould')">
-                    任务
-                </li>
-                <li
-                    :class="cNameThreeS"
-                    @click="buttonTop('/files/filesCurrent')"
-                >
-                    资料
-                </li>
-                <li :class="cNameTS" @click="buttonTop('/diary/diaryAdd')">
-                    日志
-                </li>
-            </ul>
-        </div>
-        <div class="relation-box">
-            <ul>
-                <!-- <li>版本：Dev</li> -->
-                <li>
-                    <img
-                        style="cursor: pointer"
-                        @click="takeMoney"
-                        src="../assets/menu/zsss.png"
-                        alt
-                    />
-                </li>
-                <li>
-                    <el-popover placement="bottom" width="290" trigger="hover">
-                        <div slot="reference">
-                            <img
-                                style="cursor: pointer"
-                                src="../assets/menu/kefu.jpg"
-                                alt
-                            />
-                        </div>
-                        <div class="down" style="text-align: center">
-                            <img
-                                style="width: 220px; height: 220px"
-                                src="../assets/workbench/erweima.jpg"
-                                alt
-                            />
-                            <div style="margin: 6px 0" @click="goMobil">
-                                手机钉钉扫描二维码加入“用户服务群”
+                    <div class="switch-button">
+                        <span
+                            style="color: #fff; cursor: pointer"
+                            @click="switchover"
+                        >
+                            <i class="el-icon-arrow-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="workbench-center">
+                    <ul>
+                        <li :class="cNameOneS" @click="buttonTop('/workbench')">
+                            首页
+                        </li>
+                        <li
+                            :class="cNameTwoS"
+                            @click="buttonTop('/project/projectPanel')"
+                        >
+                            <span>项目</span>
+                            <div class="proTips" v-if="warnTipView">
+                                请点击此处进入项目页面
+                                <i class="el-icon-caret-top"></i>
                             </div>
-                            <div>联系电话：0371-56775558</div>
-                        </div>
-                    </el-popover>
-                </li>
-                <li>
-                    <el-popover placement="bottom" width="150" trigger="hover">
-                        <div slot="reference">
-                            <img
-                                style="cursor: pointer"
-                                src="../assets/menu/bangzhu.jpg"
-                                alt
-                            />
-                        </div>
-                        <div class="down" style="text-align: center">
-                            <p
-                                style="margin-bottom:12px; cursor: pointer"
-                                @click="goHelp"
-                            >
-                                帮助文档
-                            </p>
-                            <p style="cursor: pointer" @click="backMsg">
-                                意见反馈
-                            </p>
-                        </div>
-                    </el-popover>
-                </li>
-                <li>
-                    <img
-                        style="cursor: pointer"
-                        @click="buttonTop('/application/applicationPower')"
-                        src="../assets/menu/shezhi.jpg"
-                        alt
-                    />
-                </li>
-            </ul>
-        </div>
-        <div class="admin">
-            <img src="../assets/menu/YH.png" v-if="ImageShow" />
-            <img :src="Image" v-else />
-            <el-popover placement="bottom" width="290" trigger="hover">
-                <div slot="reference">
-                    {{ uname }}
+                        </li>
+                        <li
+                            :class="cNameFourS"
+                            @click="buttonTop('/task/taskMould')"
+                        >
+                            任务
+                        </li>
+                        <li
+                            :class="cNameThreeS"
+                            @click="buttonTop('/files/filesCurrent')"
+                        >
+                            资料
+                        </li>
+                        <li
+                            :class="cNameTS"
+                            @click="buttonTop('/diary/diaryAdd')"
+                        >
+                            日志
+                        </li>
+                    </ul>
                 </div>
-                <div class="down">
-                    <!-- <div class="topPhone">
-                        <div style="line-height: 0.4px; width: 0.74px">
-                            手机号:
-                        </div>
-                        <el-input
-                            :class="inputPhone ? 'actiInput' : 'noneInput'"
-                            v-model="inputPhone"
-                            readonly
-                            id="addinput"
-                            placeholder="请输入手机号"
-                            @focus="addPhone"
-                        ></el-input>
-                    </div> -->
-                    <div style="margin: 6px 0; line-height: px">
-                        用户ID：{{ uuid }}
+                <div class="workURa">
+                    <div class="relation-box">
+                        <ul>
+                            <li>
+                                <img
+                                    style="cursor: pointer"
+                                    @click="takeMoney"
+                                    src="../assets/menu/zsss.png"
+                                    alt
+                                />
+                            </li>
+                            <li>
+                                <el-popover
+                                    placement="bottom"
+                                    width="290"
+                                    trigger="hover"
+                                >
+                                    <div slot="reference">
+                                        <img
+                                            style="cursor: pointer"
+                                            src="../assets/menu/kefu.jpg"
+                                            alt
+                                        />
+                                    </div>
+                                    <div
+                                        class="down"
+                                        style="text-align: center"
+                                    >
+                                        <img
+                                            style="width: 220px; height: 220px"
+                                            src="../assets/workbench/erweima.jpg"
+                                            alt
+                                        />
+                                        <div
+                                            style="margin: 6px 0"
+                                            @click="goMobil"
+                                        >
+                                            手机钉钉扫描二维码加入“用户服务群”
+                                        </div>
+                                        <div>联系电话：0371-56775558</div>
+                                    </div>
+                                </el-popover>
+                            </li>
+                            <li>
+                                <el-popover
+                                    placement="bottom"
+                                    width="150"
+                                    trigger="hover"
+                                >
+                                    <div slot="reference">
+                                        <img
+                                            style="cursor: pointer"
+                                            src="../assets/menu/bangzhu.jpg"
+                                            alt
+                                        />
+                                    </div>
+                                    <div
+                                        class="down"
+                                        style="text-align: center"
+                                    >
+                                        <p
+                                            style="
+                                                margin-bottom: 12px;
+                                                cursor: pointer;
+                                            "
+                                            @click="goHelp"
+                                        >
+                                            帮助文档
+                                        </p>
+                                        <p
+                                            style="cursor: pointer"
+                                            @click="backMsg"
+                                        >
+                                            意见反馈
+                                        </p>
+                                    </div>
+                                </el-popover>
+                            </li>
+                            <li>
+                                <img
+                                    style="cursor: pointer"
+                                    @click="
+                                        buttonTop(
+                                            '/application/applicationPower'
+                                        )
+                                    "
+                                    src="../assets/menu/shezhi.jpg"
+                                    alt
+                                />
+                            </li>
+                        </ul>
                     </div>
-                    <div>公司ID：{{ ucid }}</div>
+                    <div class="admin">
+                        <img src="../assets/menu/YH.png" v-if="ImageShow" />
+                        <img :src="Image" v-else />
+                        <el-popover
+                            placement="bottom"
+                            width="290"
+                            trigger="hover"
+                        >
+                            <div slot="reference">
+                                {{ uname }}
+                            </div>
+                            <div class="down">
+                                <div style="margin: 6px 0; line-height: px">
+                                    用户ID：{{ uuid }}
+                                </div>
+                                <div>公司ID：{{ ucid }}</div>
+                            </div>
+                        </el-popover>
+                    </div>
                 </div>
-            </el-popover>
+            </div>
         </div>
-        <el-dialog title="切换项目" :visible.sync="dialogFormVisible">
+        <el-dialog
+            title="切换项目"
+            :visible.sync="dialogFormVisible"
+            :modal-append-to-body="false"
+        >
             <div>
                 <div class="headerWarn">
                     <div
@@ -240,6 +276,7 @@
         <el-dialog
             title="意见反馈"
             :visible.sync="backFormVisible"
+            :modal-append-to-body="false"
             @close="backMsgCancel"
             class="sendBackDialog"
         >
@@ -280,6 +317,7 @@
         <el-dialog
             title="添加个人手机号"
             :visible.sync="sendFormVisible"
+            :modal-append-to-body="false"
             @close="sendMsgCancel"
             class="sendBackDialog"
         >
@@ -1134,8 +1172,17 @@ body {
     height: 90px;
     // background-image: linear-gradient(to right, #409efe, #458cfe);
     line-height: 90px;
-    display: flex;
-    justify-content: space-around;
+
+    .workUser,
+    .workURight,
+    .workURa {
+        display: flex;
+        justify-content: space-between;
+        height: 90px;
+    }
+    .workURight {
+        width: calc(100%-220px);
+    }
     .sendBackDialog {
         .el-dialog {
             width: 600px;
@@ -1154,16 +1201,15 @@ body {
         }
     }
     .workbench-img {
-        width: 280px;
-        height: 09px;
+        width: 220px;
+        height: 90px;
         img {
-            width: 251px;
-            height: 80px;
-            margin-left: -16px;
+            width: 220px;
+            height: 100%;
         }
     }
     .title-left {
-        font-size: 22px;
+        font-size: 18px;
         font-family: SourceHanSansCN-Light;
         font-weight: normal;
         font-stretch: normal;
@@ -1172,22 +1218,23 @@ body {
         color: white;
     }
     .workbench-center {
-        width: 650px;
+        // width: 650px;
         height: 90px;
-        font-size: 20px;
+        font-size: 18px;
         ul {
-            width: 650px;
+            // width: 650px;
             height: 90px;
             display: flex;
             // margin: 0 auto;
             margin-left: 50px;
             li {
-                width: 130px;
+                // width: 130px;
                 height: 90px;
                 text-align: center;
                 color: white;
                 cursor: pointer;
                 position: relative;
+                padding: 0 10px;
                 .proTips {
                     position: absolute;
                     bottom: -12px;
@@ -1216,19 +1263,14 @@ body {
     .relation-box {
         height: 90px;
         line-height: 90px;
-        // background: red;
         font-size: 18px;
-        font-family: SourceHanSansCN-Light;
-        font-weight: normal;
-        font-stretch: normal;
-        letter-spacing: 0px;
         color: white;
-        margin-left: 50px;
+        margin-right: 20px;
         ul {
             display: flex;
             height: 100%;
             li {
-                padding: 0 19px;
+                padding: 0 10px;
                 text-align: center;
 
                 img {
@@ -1248,38 +1290,38 @@ body {
     }
     .admin {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        // margin-left: 150px;
         img {
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
         }
         span {
-            font-size: 20px;
+            font-size: 18px;
             color: white;
-            margin-left: 20px;
+            display: inline-block;
+            margin: 0 10px;
         }
     }
     .switch {
-        width: 300px;
+        // width: 300px;
         height: 90px;
         font-size: 16px;
         color: aliceblue;
         display: flex;
         // margin-left: 50px;
         .switch-box {
-            width: 200px;
+            max-width: 200px;
             height: 90px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
         .switch-button {
-            width: 100px;
+            // width: 100px;
             height: 90px;
-            margin-left: 30px;
+            margin-left: 20px;
         }
     }
     .el-dialog {

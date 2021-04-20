@@ -251,7 +251,7 @@ export default {
 <style lang="less">
 #applicationOrder {
     .content {
-        padding: 20px 10px 40px 10em;
+        padding: 20px;
     }
 }
 </style>

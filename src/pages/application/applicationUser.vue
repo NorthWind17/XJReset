@@ -578,7 +578,7 @@ export default {
         p {
             margin-left: 50px;
             font-family: SourceHanSansCN-Normal;
-            font-size: 180px;
+            font-size: 18px;
             font-weight: normal;
             font-stretch: normal;
             line-height: 45px;
@@ -678,9 +678,9 @@ export default {
                     color: #575b60;
                     span {
                         display: block;
-                        width: 1.7px;
-                        height: 0.4px;
-                        line-height: 0.4px;
+                        width: 170px;
+                        height: 40px;
+                        line-height: 40px;
                         text-align: center;
                     }
                 }

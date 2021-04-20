@@ -943,7 +943,7 @@ export default {
     },
     methods: {
         tableHeaderClass({ row, rowIndex }) {
-            return 'font-weight:500;font-size: 0.15px;color:#272727;background-color:#f9f9f9;';
+            return 'font-weight:500;font-size: 15px;color:#272727;background-color:#f9f9f9;';
         },
         addNewCe() {
             this.ceVisible = true;

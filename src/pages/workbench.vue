@@ -1,421 +1,463 @@
 <template>
-    <div class="anchor-point">
-        <div class="scroll-content">
-            <div class="scroll-item" id="renwu">
-                <div class="homeLeft">
-                    <tab-bar class="tab">
-                        <tab-bar-item
-                            path="/workbench"
-                            textColor="#fb8103"
-                            v-if="workbenchS"
-                        >
-                            <img
-                                slot="item-img"
-                                src="../assets/menu/GZT-c.png"
-                                alt
-                            />
-                            <img
-                                slot="item-img-new"
-                                src="../assets/menu/GZT.png"
-                                alt
-                            />
-                            <div slot="item-text">首页</div>
-                        </tab-bar-item>
-                        <tab-bar-item
-                            path="/management/managementpanel"
-                            textColor="#fb8103"
-                            v-if="managementS"
-                        >
-                            <img
-                                slot="item-img"
-                                src="../assets/menu/XMGL-c.png"
-                                alt
-                            />
-                            <img
-                                slot="item-img-new"
-                                src="../assets/menu/XMGL.jpg"
-                                alt
-                            />
-                            <div slot="item-text">项目面板</div>
-                        </tab-bar-item>
-                        <tab-bar-item
-                            path="/management/managementAdd"
-                            textColor="#fb8103"
-                            v-if="managementS"
-                        >
-                            <img
-                                slot="item-img"
-                                src="../assets/menu/newprojectOne.jpg"
-                                alt
-                            />
-                            <img
-                                slot="item-img-new"
-                                src="../assets/menu/newprojectTwo.jpg"
-                                alt
-                            />
-                            <div slot="item-text">项目列表</div>
-                        </tab-bar-item>
-                    </tab-bar>
-                </div>
-                <div class="homeRight">
-                    <div class="workbench">
-                        <div class="content1">
-                            <div class="contentleft">
-                                <div class="wtitle">
-                                    <img src="../assets/workbench/ywc.png" />
-                                    <div>今日已完成</div>
-                                </div>
-                                <div class="content-one">
-                                    <div style="background-color: #409eff">
-                                        <div class="content-text">
-                                            <div class="db-title">
-                                                <span>待办任务</span>
-                                                <span class="tite-numb">{{
-                                                    taskNum.dzxtask
-                                                }}</span>
-                                            </div>
-                                            <img
-                                                src="../assets/workbench/DB.png"
-                                                class="Imga-W"
-                                            />
-                                        </div>
-                                        <div
-                                            class="bottom"
-                                            @click="goTask('7')"
-                                        >
-                                            立即查看>
-                                        </div>
-                                        <!-- <router-link
-                                            :to="{
-                                                path: '/task/taskList',
-                                                query: {
-                                                    status: '7'
-                                                }
-                                            }"
-                                            class="bottom"
-                                            >立即查看></router-link
-                                        > -->
-                                    </div>
-                                    <div style="background-color: #fb8103">
-                                        <div class="content-text">
-                                            <div class="db-title">
-                                                <span>抄送我的</span>
-                                                <span class="tite-numb">{{
-                                                    taskNum.cstask
-                                                }}</span>
-                                            </div>
-                                            <img
-                                                src="../assets/workbench/DB.png"
-                                                class="Imga-W"
-                                            />
-                                        </div>
-                                        <div
-                                            class="bottom"
-                                            @click="goTask('3')"
-                                        >
-                                            立即查看>
-                                        </div>
-                                        <!-- <router-link
-                                            :to="{
-                                                path: '/task/taskList',
-                                                query: {
-                                                    status: '3'
-                                                }
-                                            }"
-                                            class="bottom"
-                                            >立即查看></router-link
-                                        > -->
-                                    </div>
-                                    <div style="background-color: #35dacf">
-                                        <div class="content-text">
-                                            <div class="db-title">
-                                                <span>今日完成</span>
-                                                <span class="tite-numb">{{
-                                                    taskNum.ygdtask
-                                                }}</span>
-                                            </div>
-                                            <img
-                                                src="../assets/workbench/DB.png"
-                                                class="Imga-W"
-                                            />
-                                        </div>
-                                        <div
-                                            class="bottom"
-                                            @click="goTask('5')"
-                                        >
-                                            立即查看>
-                                        </div>
-                                    </div>
-                                    <div
-                                        style="
-                                            background-color: rgb(243, 77, 77);
-                                        "
-                                    >
-                                        <div class="content-text">
-                                            <div class="db-title">
-                                                <span>逾期任务</span>
-                                                <span class="tite-numb">{{
-                                                    taskNum.yuqi
-                                                }}</span>
-                                            </div>
-                                            <img
-                                                src="../assets/workbench/DB.png"
-                                                class="Imga-W"
-                                            />
-                                        </div>
-                                        <div
-                                            class="bottom"
-                                            @click="goTask('8')"
-                                        >
-                                            立即查看>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content-right">
-                            <div class="bottom-four">
-                                <img src="../assets/workbench/xx.png" />
-                                <div>消息通知</div>
-                            </div>
-                            <div class="four-text">
-                                <div class="text-center">
-                                    <div class="center-tile">
-                                        <span></span>
-                                        <p>{{ msgList[0].title }}</p>
-                                    </div>
-                                    <div class="text-box">
-                                        <p>{{ msgList[0].content }}</p>
-                                    </div>
-                                </div>
-                                <span class="more" @click="viewMore"
-                                    >查看更多》</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-item" id="xiangmu">
-                <div class="line">——————项目统计—————</div>
-                <div class="appxmtj">
-                    <div>
-                        <div class="kuai">
-                            <div>
-                                <img
-                                    src="../assets/project/c.png"
-                                    class="kuai-two"
-                                />
-                            </div>
-                            <div class="kuai-right">
-                                <div class="total">
-                                    <span>项目总数(个数):</span>
-                                    <span
-                                        style="
-                                            color: #409eff;
-                                            font-size: 32rpx;
-                                            margin-left: 10px;
-                                        "
-                                        >{{ Sum }}</span
-                                    >
-                                </div>
-                                <div>
-                                    <span>造价总额(万元):</span>
-                                    <span
-                                        style="
-                                            color: #fb8103;
-                                            font-size: 32rpx;
-                                            margin-left: 10px;
-                                        "
-                                        >{{ SumMoney }}</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="kuai">
-                            <div>
-                                <img
-                                    src="../assets/project/zj.png"
-                                    class="kuai-two"
-                                />
-                            </div>
-                            <div class="kuai-right">
-                                <div class="total">
-                                    <span>在建项目(个数):</span>
-                                    <span
-                                        style="
-                                            color: #409eff;
-                                            font-size: 32rpx;
-                                            margin-left: 10px;
-                                        "
-                                        >{{ construction }}</span
-                                    >
-                                </div>
-                                <div>
-                                    <span>造价总额(万元):</span>
-                                    <span
-                                        style="
-                                            color: #fb8103;
-                                            font-size: 32rpx;
-                                            margin-left: 10px;
-                                        "
-                                        >{{ constructionMoney }}</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="kuai">
-                            <div>
-                                <img
-                                    src="../assets/project/xz.png"
-                                    class="kuai-two"
-                                />
-                            </div>
-                            <div class="kuai-right">
-                                <div class="total">
-                                    <span>本年新增(个数):</span>
-                                    <span
-                                        style="
-                                            color: #409eff;
-                                            font-size: 32rpx;
-                                            margin-left: 10px;
-                                        "
-                                        >{{ newly }}</span
-                                    >
-                                </div>
-                                <div>
-                                    <span>造价总额(万元):</span>
-                                    <span
-                                        style="
-                                            color: #fb8103;
-                                            font-size: 32rpx;
-                                            margin-left: 10px;
-                                        "
-                                        >{{ newlyMoney }}</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="kuai">
-                            <div>
-                                <img
-                                    src="../assets/project/jg.png"
-                                    class="kuai-two"
-                                />
-                            </div>
-                            <div class="kuai-right">
-                                <div class="total">
-                                    <span>本年竣工(个数):</span>
-                                    <span
-                                        style="
-                                            color: #409eff;
-                                            font-size: 32rpx;
-                                            margin-left: 10px;
-                                        "
-                                        >{{ present }}</span
-                                    >
-                                </div>
-                                <div>
-                                    <span>造价总额(万元):</span>
-                                    <span
-                                        style="
-                                            color: #fb8103;
-                                            font-size: 32rpx;
-                                            margin-left: 10px;
-                                        "
-                                        >{{ presentMoney }}</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="project-title">
-                            <div>本月进度</div>
-                        </div>
-                        <div class="prolist" v-if="projectList.length > 0">
-                            <div
-                                class="manage-content"
-                                v-for="(item, index) in projectList"
-                                :key="index"
+    <el-main>
+        <div class="anchor-point">
+            <div class="scroll-content">
+                <div class="scroll-item" id="renwu">
+                    <div class="homeLeft">
+                        <tab-bar class="tab">
+                            <tab-bar-item
+                                path="/workbench"
+                                textColor="#fb8103"
+                                v-if="workbenchS"
                             >
-                                <div class="title">{{ item.name }}</div>
-                                <div class="manageright">
-                                    <div class="progress-box">
-                                        <el-progress
-                                            :percentage="item.jindu"
-                                        ></el-progress>
+                                <img
+                                    slot="item-img"
+                                    src="../assets/menu/GZT-c.png"
+                                    alt
+                                />
+                                <img
+                                    slot="item-img-new"
+                                    src="../assets/menu/GZT.png"
+                                    alt
+                                />
+                                <div slot="item-text">首页</div>
+                            </tab-bar-item>
+                            <tab-bar-item
+                                path="/management/managementpanel"
+                                textColor="#fb8103"
+                                v-if="managementS"
+                            >
+                                <img
+                                    slot="item-img"
+                                    src="../assets/menu/XMGL-c.png"
+                                    alt
+                                />
+                                <img
+                                    slot="item-img-new"
+                                    src="../assets/menu/XMGL.jpg"
+                                    alt
+                                />
+                                <div slot="item-text">项目面板</div>
+                            </tab-bar-item>
+                            <tab-bar-item
+                                path="/management/managementAdd"
+                                textColor="#fb8103"
+                                v-if="managementS"
+                            >
+                                <img
+                                    slot="item-img"
+                                    src="../assets/menu/newprojectOne.jpg"
+                                    alt
+                                />
+                                <img
+                                    slot="item-img-new"
+                                    src="../assets/menu/newprojectTwo.jpg"
+                                    alt
+                                />
+                                <div slot="item-text">项目列表</div>
+                            </tab-bar-item>
+                        </tab-bar>
+                    </div>
+                    <div class="homeRight">
+                        <div class="workbench">
+                            <div class="content1">
+                                <div>
+                                    <div class="contentleft">
+                                        <div class="wtitle">
+                                            <img
+                                                src="../assets/workbench/ywc.png"
+                                            />
+                                            <div>今日已完成</div>
+                                        </div>
+                                        <div class="content-one">
+                                            <div
+                                                style="
+                                                    background-color: #409eff;
+                                                "
+                                            >
+                                                <div>
+                                                    <div class="content-text">
+                                                        <div class="db-title">
+                                                            <span
+                                                                >待办任务</span
+                                                            >
+                                                            <span
+                                                                class="tite-numb"
+                                                                >{{
+                                                                    taskNum.dzxtask
+                                                                }}</span
+                                                            >
+                                                        </div>
+                                                        <img
+                                                            src="../assets/workbench/DB.png"
+                                                            class="Imga-W"
+                                                        />
+                                                    </div>
+                                                    <div
+                                                        class="bottom"
+                                                        @click="goTask('7')"
+                                                    >
+                                                        立即查看>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                style="
+                                                    background-color: #fb8103;
+                                                "
+                                            >
+                                                <div>
+                                                    <div class="content-text">
+                                                        <div class="db-title">
+                                                            <span
+                                                                >抄送我的</span
+                                                            >
+                                                            <span
+                                                                class="tite-numb"
+                                                                >{{
+                                                                    taskNum.cstask
+                                                                }}</span
+                                                            >
+                                                        </div>
+                                                        <img
+                                                            src="../assets/workbench/DB.png"
+                                                            class="Imga-W"
+                                                        />
+                                                    </div>
+                                                    <div
+                                                        class="bottom"
+                                                        @click="goTask('3')"
+                                                    >
+                                                        立即查看>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                style="
+                                                    background-color: #35dacf;
+                                                "
+                                            >
+                                                <div>
+                                                    <div class="content-text">
+                                                        <div class="db-title">
+                                                            <span
+                                                                >今日完成</span
+                                                            >
+                                                            <span
+                                                                class="tite-numb"
+                                                                >{{
+                                                                    taskNum.ygdtask
+                                                                }}</span
+                                                            >
+                                                        </div>
+                                                        <img
+                                                            src="../assets/workbench/DB.png"
+                                                            class="Imga-W"
+                                                        />
+                                                    </div>
+                                                    <div
+                                                        class="bottom"
+                                                        @click="goTask('5')"
+                                                    >
+                                                        立即查看>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                style="
+                                                    background-color: rgb(
+                                                        243,
+                                                        77,
+                                                        77
+                                                    );
+                                                "
+                                            >
+                                                <div>
+                                                    <div class="content-text">
+                                                        <div class="db-title">
+                                                            <span
+                                                                >逾期任务</span
+                                                            >
+                                                            <span
+                                                                class="tite-numb"
+                                                                >{{
+                                                                    taskNum.yuqi
+                                                                }}</span
+                                                            >
+                                                        </div>
+                                                        <img
+                                                            src="../assets/workbench/DB.png"
+                                                            class="Imga-W"
+                                                        />
+                                                    </div>
+                                                    <div
+                                                        class="bottom"
+                                                        @click="goTask('8')"
+                                                    >
+                                                        立即查看>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <img
-                                    class="biao"
-                                    src="../assets/workbench/chj.png"
-                                    v-if="item.beian == '筹建'"
-                                />
-                                <img
-                                    class="biao"
-                                    src="../assets/workbench/zaij.png"
-                                    v-else-if="item.beian == '在建'"
-                                />
-                                <img
-                                    class="biao"
-                                    src="../assets/workbench/tingj.png"
-                                    v-else-if="item.beian == '停工'"
-                                />
-                                <img
-                                    class="biao"
-                                    src="../assets/workbench/junj.png"
-                                    v-else-if="item.beian == '竣工'"
-                                />
-                                <img
-                                    class="biao"
-                                    src="../assets/workbench/zhongj.png"
-                                    v-else="item.beian == '中止'"
-                                />
                             </div>
-                            <div style="text-align: center">
-                                <el-pagination
-                                    @current-change="handleCurrentChange"
-                                    :current-page.sync="currentPage"
-                                    :page-size="pagesize"
-                                    layout="prev, pager, next, jumper"
-                                    :total="pageTotal"
-                                ></el-pagination>
+                            <div class="content-right">
+                                <div class="bottom-four">
+                                    <img src="../assets/workbench/xx.png" />
+                                    <div>消息通知</div>
+                                </div>
+                                <div class="four-text">
+                                    <div class="text-center">
+                                        <div class="center-tile">
+                                            <span></span>
+                                            <p>{{ msgList[0].title }}</p>
+                                        </div>
+                                        <div class="text-box">
+                                            <p>{{ msgList[0].content }}</p>
+                                        </div>
+                                    </div>
+                                    <span class="more" @click="viewMore"
+                                        >查看更多》</span
+                                    >
+                                </div>
                             </div>
                         </div>
-                        <div
-                            v-else
-                            style="text-align: center; padding: 30px 0"
-                        >
-                            <img
-                                style="width: 140px; height: 140px"
-                                src="https://dingyunlaowu.oss-cn-hangzhou.aliyuncs.com/user-dir/NG4ZDG6eBM1600655909495.jpg"
-                                alt
-                            />
-                            <p style="font-size: 16px">暂时还没有数据哦</p>
+                    </div>
+                </div>
+                <div class="scroll-item" id="xiangmu">
+                    <div class="line">——————项目统计—————</div>
+                    <div class="appxmtj">
+                        <div>
+                            <div class="kuai">
+                                <div>
+                                    <div>
+                                        <img
+                                            src="../assets/project/c.png"
+                                            class="kuai-two"
+                                        />
+                                    </div>
+                                    <div class="kuai-right">
+                                        <div class="total">
+                                            <span>项目总数(个数):</span>
+                                            <span
+                                                style="
+                                                    color: #409eff;
+                                                    font-size: 32rpx;
+                                                    margin-left: 10px;
+                                                "
+                                                >{{ Sum }}</span
+                                            >
+                                        </div>
+                                        <div>
+                                            <span>造价总额(万元):</span>
+                                            <span
+                                                style="
+                                                    color: #fb8103;
+                                                    font-size: 32rpx;
+                                                    margin-left: 10px;
+                                                "
+                                                >{{ SumMoney }}</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kuai">
+                                <div>
+                                    <div>
+                                        <img
+                                            src="../assets/project/zj.png"
+                                            class="kuai-two"
+                                        />
+                                    </div>
+                                    <div class="kuai-right">
+                                        <div class="total">
+                                            <span>在建项目(个数):</span>
+                                            <span
+                                                style="
+                                                    color: #409eff;
+                                                    font-size: 32rpx;
+                                                    margin-left: 10px;
+                                                "
+                                                >{{ construction }}</span
+                                            >
+                                        </div>
+                                        <div>
+                                            <span>造价总额(万元):</span>
+                                            <span
+                                                style="
+                                                    color: #fb8103;
+                                                    font-size: 32rpx;
+                                                    margin-left: 10px;
+                                                "
+                                                >{{ constructionMoney }}</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kuai">
+                                <div>
+                                    <div>
+                                        <img
+                                            src="../assets/project/xz.png"
+                                            class="kuai-two"
+                                        />
+                                    </div>
+                                    <div class="kuai-right">
+                                        <div class="total">
+                                            <span>本年新增(个数):</span>
+                                            <span
+                                                style="
+                                                    color: #409eff;
+                                                    font-size: 32rpx;
+                                                    margin-left: 10px;
+                                                "
+                                                >{{ newly }}</span
+                                            >
+                                        </div>
+                                        <div>
+                                            <span>造价总额(万元):</span>
+                                            <span
+                                                style="
+                                                    color: #fb8103;
+                                                    font-size: 32rpx;
+                                                    margin-left: 10px;
+                                                "
+                                                >{{ newlyMoney }}</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kuai">
+                                <div>
+                                    <div>
+                                        <img
+                                            src="../assets/project/jg.png"
+                                            class="kuai-two"
+                                        />
+                                    </div>
+                                    <div class="kuai-right">
+                                        <div class="total">
+                                            <span>本年竣工(个数):</span>
+                                            <span
+                                                style="
+                                                    color: #409eff;
+                                                    font-size: 32rpx;
+                                                    margin-left: 10px;
+                                                "
+                                                >{{ present }}</span
+                                            >
+                                        </div>
+                                        <div>
+                                            <span>造价总额(万元):</span>
+                                            <span
+                                                style="
+                                                    color: #fb8103;
+                                                    font-size: 32rpx;
+                                                    margin-left: 10px;
+                                                "
+                                                >{{ presentMoney }}</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workbenpro">
+                            <div class="project-title">
+                                <div>本月进度</div>
+                            </div>
+                            <div class="prolist" v-if="projectList.length > 0">
+                                <div
+                                    class="manage-content"
+                                    v-for="(item, index) in projectList"
+                                    :key="index"
+                                >
+                                    <div class="title">{{ item.name }}</div>
+                                    <div class="manageright">
+                                        <div class="progress-box">
+                                            <el-progress
+                                                :percentage="item.jindu"
+                                            ></el-progress>
+                                        </div>
+                                    </div>
+                                    <img
+                                        class="biao"
+                                        src="../assets/workbench/chj.png"
+                                        v-if="item.beian == '筹建'"
+                                    />
+                                    <img
+                                        class="biao"
+                                        src="../assets/workbench/zaij.png"
+                                        v-else-if="item.beian == '在建'"
+                                    />
+                                    <img
+                                        class="biao"
+                                        src="../assets/workbench/tingj.png"
+                                        v-else-if="item.beian == '停工'"
+                                    />
+                                    <img
+                                        class="biao"
+                                        src="../assets/workbench/junj.png"
+                                        v-else-if="item.beian == '竣工'"
+                                    />
+                                    <img
+                                        class="biao"
+                                        src="../assets/workbench/zhongj.png"
+                                        v-else="item.beian == '中止'"
+                                    />
+                                </div>
+                                <div style="text-align: center">
+                                    <el-pagination
+                                        @current-change="handleCurrentChange"
+                                        :current-page.sync="currentPage"
+                                        :page-size="pagesize"
+                                        layout="prev, pager, next, jumper"
+                                        :total="pageTotal"
+                                    ></el-pagination>
+                                </div>
+                            </div>
+                            <div
+                                v-else
+                                style="text-align: center; padding: 30px 0"
+                            >
+                                <img
+                                    style="width: 140px; height: 140px"
+                                    src="https://dingyunlaowu.oss-cn-hangzhou.aliyuncs.com/user-dir/NG4ZDG6eBM1600655909495.jpg"
+                                    alt
+                                />
+                                <p style="font-size: 16px">暂时还没有数据哦</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <el-dialog
+                title="消息通知"
+                :visible.sync="dialogVisible"
+                width="30%"
+            >
+                <div class="four-text">
+                    <div
+                        class="text-center"
+                        v-for="(item, index) in msgList"
+                        :key="index"
+                    >
+                        <div class="center-tile">
+                            <span></span>
+                            <p>{{ item.title }}</p>
+                        </div>
+                        <div class="text-box">
+                            <p>{{ item.content }}</p>
+                        </div>
+                    </div>
+                </div>
+            </el-dialog>
         </div>
-        <el-dialog title="消息通知" :visible.sync="dialogVisible" width="30%">
-            <div class="four-text">
-                <div
-                    class="text-center"
-                    v-for="(item, index) in msgList"
-                    :key="index"
-                >
-                    <div class="center-tile">
-                        <span></span>
-                        <p>{{ item.title }}</p>
-                    </div>
-                    <div class="text-box">
-                        <p>{{ item.content }}</p>
-                    </div>
-                </div>
-            </div>
-        </el-dialog>
-    </div>
+    </el-main>
 </template>
 
 <script>
@@ -669,11 +711,8 @@ export default {
 .anchor-point {
     flex-basis: 100%;
     display: flex;
-    overflow: hidden;
     .scroll-content {
-        height: 90vh;
-        width: 1920px;
-        overflow-y: auto;
+        min-width: 1000px;
         .scroll-item {
             width: 96%;
             margin: 0 auto;
@@ -689,6 +728,8 @@ export default {
                 > div:nth-child(1) {
                     display: flex;
                     flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
                 }
                 > div:nth-child(2) {
                     background-color: #fff;
@@ -701,6 +742,12 @@ export default {
                     line-height: 50px;
                     border-bottom: 1px solid #efefef;
                     padding: 0 20px;
+                }
+            }
+            .workbenpro {
+                max-height: 390px;
+                .prolist {
+                    padding: 0 10px;
                 }
             }
             .el-table {
@@ -846,7 +893,7 @@ export default {
             }
         }
         #xiangmu {
-            font-size: 20px;
+            font-size: 16px;
         }
     }
     .operation-btn {
@@ -876,6 +923,29 @@ export default {
             background-color: #f6f6f6;
         }
     }
+    .kuai {
+        width: 46%;
+        // margin: 10px 30px 15px 0;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        > div {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 40px 0;
+        }
+        .kuai-two {
+            width: 90px;
+            margin-left: 20px;
+        }
+        .kuai-right {
+            margin-left: 20px;
+            .total {
+                margin-bottom: 30px;
+            }
+        }
+    }
 }
 
 .workbench {
@@ -891,10 +961,13 @@ export default {
 .content1 {
     margin-top: 20px;
     width: 70%;
-    padding: 0 40px;
+
     background-color: #ffffff;
     height: 350px;
     border-radius: 10px;
+    > div {
+        padding: 0 40px;
+    }
 }
 
 .content-one {
@@ -906,10 +979,13 @@ export default {
 .content-one > div {
     position: relative;
     width: 22%;
-    height: 210px;
+    height: 194px;
     background-color: #409eff;
     border-radius: 10px;
     margin-top: 24px;
+    > div {
+        padding: 0 10px;
+    }
 }
 .wtitle {
     display: flex;
@@ -928,26 +1004,26 @@ export default {
     display: flex;
     flex-direction: column;
     color: white;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: blod;
     align-items: center;
 }
 .tite-numb {
     margin-top: 02px;
 }
-.content-one > div > .bottom {
+.content-one > div .bottom {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 50px;
     line-height: 50px;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 0px 0px 10px 10px;
     opacity: 0.2;
     text-align: right;
     display: block;
-    font-size: 18px;
+    font-size: 14px;
     cursor: pointer;
 }
 
@@ -995,10 +1071,14 @@ export default {
 }
 .text-box p {
     margin-top: 8px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
 }
 .Imga-W {
-    width: 63px;
-    height: 77px;
+    width: 59px;
+    height: 73px;
 }
 .more {
     position: absolute;
@@ -1008,29 +1088,9 @@ export default {
     color: #409eff;
     cursor: pointer;
 }
-.kuai {
-    width: 46%;
-    margin: 10px 30px 15px 0;
-    height: 160px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    // justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: #ffffff;
-    .kuai-two {
-        width: 90px;
-        margin-left: 20px;
-    }
-    .kuai-right {
-        margin-left: 20px;
-        .total {
-            margin-bottom: 30px;
-        }
-    }
-}
+
 .prolist {
-    height: 250px;
+    // height: 250px;
     // overflow: auto;
     .manage-content {
         display: flex;

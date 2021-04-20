@@ -1729,7 +1729,8 @@ export default {
                             })
                             .then((res) => {
                                 if (res.data.code == 200) {
-                                    _this.$parent.fatherMethod();
+                                    // _this.$parent.fatherMethod();
+                                    _this.$emit('updateL');
                                     _this.loading = false;
                                     _this.dialogFormVisible = false;
                                     _this.$refs[formName].resetFields();
@@ -1792,76 +1793,64 @@ export default {
                                 if (res.data.code == 200) {
                                     if (_this.editGoType == 1) {
                                         //从项目列表编辑
-                                        _this.$parent.fatherMethod();
+                                        // _this.$parent.fatherMethod();
+                                        _this.$emit('updateL', 1);
                                     } else if (_this.editGoType == 2) {
                                         //从项目详情编辑
-                                        _this.$parent.InfoMethod();
+                                        // _this.$parent.InfoMethod();
+                                        _this.$emit('updateL', 2);
                                     }
 
                                     if (
                                         newData.id ==
                                         _this.$store.state.projectInfo.pid
                                     ) {
-                                        _this.$store.commit(
-                                            'setProjectName',
-                                            newData.pcontent
-                                        );
-                                        let currPer, editPer, editPtag;
-                                        //当前时间
-                                        let currentTime = new Date();
-                                        let nowTime = Date.parse(
-                                            _this.$utils.timeChange(
-                                                currentTime,
-                                                2
-                                            )
-                                        );
-                                        let day = 24 * 60 * 60 * 1000;
-                                        let newStart = Date.parse(
-                                            newData.xmstart
-                                        );
-                                        let newStop = Date.parse(
-                                            newData.xmstop
-                                        );
-                                        let waitTime =
-                                            (nowTime - newStart) / day;
-                                        let totalTime =
-                                            (newStop - newStart) / day;
-                                        if (
-                                            nowTime > newStart &&
-                                            nowTime < newStop
-                                        ) {
-                                            currPer =
-                                                (waitTime / totalTime) * 100;
-                                            editPer = currPer.toFixed(1);
-                                            editPtag = '项目进行中';
-                                        } else if (nowTime >= newStop) {
-                                            currPer = 100;
-                                            editPtag = '项目已结束';
-                                        } else if (nowTime < newStart) {
-                                            //当前时间小于开工时间
-                                            waitTime = 0;
-                                            currPer = 0;
-                                            editPtag = '项目筹建';
-                                        } else {
-                                            //当前时间和开工时间一致
-                                            waitTime = 1;
-                                            currPer =
-                                                (waitTime / totalTime) * 100;
-                                            editPer = currPer.toFixed(1);
-                                            editPtag = '项目进行中';
-                                        }
-                                        _this.$store.commit(
-                                            'setProjectPurl',
-                                            newData.xmurl
-                                        );
-                                        _this.$store.commit(
-                                            'setPerctentage',
-                                            editPer
-                                        );
-                                        _this.$store.commit(
-                                            'setPTag',
-                                            editPtag
-                                        );
+                                        _this.getInfo(newData.id);
+
+                                        // let currPer, editPer, editPtag;
+                                        // //当前时间
+                                        // let currentTime = new Date();
+                                        // let nowTime = Date.parse(
+                                        //     _this.$utils.timeChange(
+                                        //         currentTime,
+                                        //         2
+                                        //     )
+                                        // );
+                                        // let day = 24 * 60 * 60 * 1000;
+                                        // let newStart = Date.parse(
+                                        //     newData.xmstart
+                                        // );
+                                        // let newStop = Date.parse(
+                                        //     newData.xmstop
+                                        // );
+                                        // let waitTime =
+                                        //     (nowTime - newStart) / day;
+                                        // let totalTime =
+                                        //     (newStop - newStart) / day;
+                                        // if (
+                                        //     nowTime > newStart &&
+                                        //     nowTime < newStop
+                                        // ) {
+                                        //     currPer =
+                                        //         (waitTime / totalTime) * 100;
+                                        //     editPer = currPer.toFixed(1);
+                                        //     editPtag = '项目进行中';
+                                        // } else if (nowTime >= newStop) {
+                                        //     currPer = 100;
+                                        //     editPtag = '项目已结束';
+                                        // } else if (nowTime < newStart) {
+                                        //     //当前时间小于开工时间
+                                        //     waitTime = 0;
+                                        //     currPer = 0;
+                                        //     editPtag = '项目筹建';
+                                        // } else {
+                                        //     //当前时间和开工时间一致
+                                        //     waitTime = 1;
+                                        //     currPer =
+                                        //         (waitTime / totalTime) * 100;
+                                        //     editPer = currPer.toFixed(1);
+                                        //     editPtag = '项目进行中';
+                                        // }
                                     }
 
                                     _this.loading = false;
@@ -1904,6 +1893,29 @@ export default {
         },
         showUrl(url) {
             this.addForm.xmurl = url;
+        },
+        getInfo(id) {
+            const _this = this;
+            _this.$axios
+                .post('/cy_xiezhu/ProjectContent', {
+                    id: id,
+                    corp_id: _this.$store.state.cid
+                })
+                .then((res) => {
+                    if (res.data.code == 200) {
+                        let infoData = res.data.content;
+                        _this.$store.commit(
+                            'setProjectName',
+                            infoData.pcontent
+                        );
+                        _this.$store.commit('setProjectPurl', infoData.xmurl);
+                        _this.$store.commit('setPerctentage', infoData.jindu);
+                        _this.$store.commit('setPTag', infoData.beian);
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
         },
         //删除成员
         peopleClose(tag, index) {
@@ -2266,14 +2278,14 @@ export default {
 <style lang="less">
 .menuS {
     font-size: 0px;
-    width: 280px;
+    width: 220px;
     // height: 826px;
     .cebian {
         .menuProject {
-            width: 220px;
+            width: 180px;
             margin: 20px auto;
             height: 50px;
-            line-height: 5px;
+            line-height: 50px;
             background-color: #f78008;
             color: #fff;
             font-size: 18px;
@@ -2381,7 +2393,7 @@ export default {
                 }
                 .el-input {
                     width: 200px;
-                    margin-right: 0.1px;
+                    margin-right: 10px;
                 }
             }
         }
@@ -2394,7 +2406,7 @@ export default {
         box-sizing: border-box;
         // box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
         line-height: 52px;
-   
+
         div {
             width: 100%;
             height: 100%;

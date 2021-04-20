@@ -327,7 +327,9 @@ export default {
         edit() {
             const _this = this;
             let newData = JSON.parse(JSON.stringify(_this.proData));
-            _this.$parent.fatherViewDialog(newData, 2);
+            // _this.$parent.fatherViewDialog(newData, 2);
+            let sendRow = { row: newData, type: 2 };
+            _this.$emit('openD', sendRow);
         },
         typeFort(row, column) {
             switch (row.type) {

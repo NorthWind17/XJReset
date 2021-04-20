@@ -5,128 +5,135 @@
                 <div class="topTitle">
                     <div class="kuai">
                         <div>
-                            <img
-                                src="../../assets/project/c.png"
-                                class="kuai-two"
-                            />
-                        </div>
-                        <div>
-                            <div class="total">
-                                <span>项目总数(个数):</span>
-                                <span
-                                    style="color: #409eff; font-size: 32rpx"
-                                    >{{ Sum }}</span
-                                >
+                            <div>
+                                <img
+                                    src="../../assets/project/c.png"
+                                    class="kuai-two"
+                                />
                             </div>
                             <div>
-                                <span>造价总额(万元):</span>
-                                <span
-                                    style="
-                                        color: #fb8103;
-                                        font-size: 32rpx;
-                                        margin-left: 10px;
-                                    "
-                                    >{{ SumMoney }}</span
-                                >
+                                <div class="total">
+                                    <span>项目总数(个数):</span>
+                                    <span
+                                        style="color: #409eff; font-size: 32rpx"
+                                        >{{ Sum }}</span
+                                    >
+                                </div>
+                                <div>
+                                    <span>造价总额(万元):</span>
+                                    <span
+                                        style="
+                                            color: #fb8103;
+                                            font-size: 32rpx;
+                                            margin-left: 10px;
+                                        "
+                                        >{{ SumMoney }}</span
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="kuai">
                         <div>
-                            <img
-                                src="../../assets/project/zj.png"
-                                class="kuai-two"
-                            />
-                        </div>
-                        <div>
-                            <div class="total">
-                                <span>在建项目(个数):</span>
-                                <span
-                                    style="color: #409eff; font-size: 32rpx"
-                                    >{{ construction }}</span
-                                >
+                            <div>
+                                <img
+                                    src="../../assets/project/zj.png"
+                                    class="kuai-two"
+                                />
                             </div>
                             <div>
-                                <span>造价总额(万元):</span>
-                                <span
-                                    style="
-                                        color: #fb8103;
-                                        font-size: 32rpx;
-                                        margin-left: 10px;
-                                    "
-                                    >{{ constructionMoney }}</span
-                                >
+                                <div class="total">
+                                    <span>在建项目(个数):</span>
+                                    <span
+                                        style="color: #409eff; font-size: 32rpx"
+                                        >{{ construction }}</span
+                                    >
+                                </div>
+                                <div>
+                                    <span>造价总额(万元):</span>
+                                    <span
+                                        style="
+                                            color: #fb8103;
+                                            font-size: 32rpx;
+                                            margin-left: 10px;
+                                        "
+                                        >{{ constructionMoney }}</span
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="kuai">
                         <div>
-                            <img
-                                src="../../assets/project/xz.png"
-                                class="kuai-two"
-                            />
-                        </div>
-                        <div>
-                            <div class="total">
-                                <span>本年新增(个数):</span>
-                                <span
-                                    style="color: #409eff; font-size: 32rpx"
-                                    >{{ newly }}</span
-                                >
+                            <div>
+                                <img
+                                    src="../../assets/project/xz.png"
+                                    class="kuai-two"
+                                />
                             </div>
                             <div>
-                                <span>造价总额(万元):</span>
-                                <span
-                                    style="
-                                        color: #fb8103;
-                                        font-size: 32rpx;
-                                        margin-left: 10px;
-                                    "
-                                    >{{ newlyMoney }}</span
-                                >
+                                <div class="total">
+                                    <span>本年新增(个数):</span>
+                                    <span
+                                        style="color: #409eff; font-size: 32rpx"
+                                        >{{ newly }}</span
+                                    >
+                                </div>
+                                <div>
+                                    <span>造价总额(万元):</span>
+                                    <span
+                                        style="
+                                            color: #fb8103;
+                                            font-size: 32rpx;
+                                            margin-left: 10px;
+                                        "
+                                        >{{ newlyMoney }}</span
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="kuai">
                         <div>
-                            <img
-                                src="../../assets/project/jg.png"
-                                class="kuai-two"
-                            />
-                        </div>
-                        <div>
-                            <div class="total">
-                                <span>本年竣工(个数):</span>
-                                <span
-                                    style="color: #409eff; font-size: 32rpx"
-                                    >{{ present }}</span
-                                >
+                            <div>
+                                <img
+                                    src="../../assets/project/jg.png"
+                                    class="kuai-two"
+                                />
                             </div>
                             <div>
-                                <span>造价总额(万元):</span>
-                                <span
-                                    style="
-                                        color: #fb8103;
-                                        font-size: 32rpx;
-                                        margin-left: 10px;
-                                    "
-                                    >{{ presentMoney }}</span
-                                >
+                                <div class="total">
+                                    <span>本年竣工(个数):</span>
+                                    <span
+                                        style="color: #409eff; font-size: 32rpx"
+                                        >{{ present }}</span
+                                    >
+                                </div>
+                                <div>
+                                    <span>造价总额(万元):</span>
+                                    <span
+                                        style="
+                                            color: #fb8103;
+                                            font-size: 32rpx;
+                                            margin-left: 10px;
+                                        "
+                                        >{{ presentMoney }}</span
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="comeSearch">
-                    <el-form ref="form" :model="searchForm" label-width="100px">
+                    <el-form ref="form" :model="searchForm" :inline="true">
                         <div class="searchLeft">
-                            <div class="searchInput">
+                            <el-form-item class="searchTime" label="项目简称：">
                                 <el-input
                                     placeholder="请输入项目简称"
-                                    prefix-icon="el-icon-search"
                                     v-model="searchForm.name"
                                     @keyup.enter.native="searchClick"
                                 ></el-input>
-                            </div>
+                            </el-form-item>
                             <el-form-item class="searchTime" label="开始时间：">
                                 <el-date-picker
                                     v-model="searchForm.starttime"
@@ -195,10 +202,7 @@
                                 </div>
                                 <div class="circle">
                                     <div
-                                        style="
-                                            color: gray;
-                                            margin-right: 20px;
-                                        "
+                                        style="color: gray; margin-right: 20px"
                                     >
                                         <div style="margin-bottom: 20px">
                                             负责人：{{ item.puseridname }}
@@ -214,10 +218,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div
-                            v-else
-                            style="text-align: center; padding: 30px 0"
-                        >
+                        <div v-else style="text-align: center; padding: 30px 0">
                             <img
                                 src="https://dingyunlaowu.oss-cn-hangzhou.aliyuncs.com/user-dir/NG4ZDG6eBM1600655909495.jpg"
                                 alt
@@ -422,9 +423,12 @@ export default {
                         );
                         this.$store.commit(
                             'setPerctentage',
-                            this.projectList[0].percentage
+                            this.projectList[0].jindu
                         );
-                        this.$store.commit('setPTag', this.projectList[0].ptag);
+                        this.$store.commit(
+                            'setPTag',
+                            this.projectList[0].beian
+                        );
                     }
                 }
             },
@@ -437,8 +441,7 @@ export default {
 
 <style lang="less">
 #projectPanel {
-    width: 16.4px;
-    margin: 0 auto;
+    width: 100%;
     > div {
         width: 96%;
         display: flex;
@@ -591,11 +594,15 @@ export default {
         border-radius: 10px;
     }
     .kuai {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        > div {
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
         .kuai-two {
-            width: 90px;
+            width: 70px;
             margin-left: 0;
         }
     }

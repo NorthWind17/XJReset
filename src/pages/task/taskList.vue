@@ -2,7 +2,7 @@
  * @Author: NorthWind 
  * @Date: 2020-11-18 09:39:46 
  * @Last Modified by: NorthWind
- * @Last Modified time: 2021-04-09 13:36:57
+ * @Last Modified time: 2021-04-20 18:24:50
  */
 <template>
     <div id="taskList">
@@ -15,7 +15,7 @@
                         label-width="100px"
                     >
                         <div class="searchBottom">
-                            <div class="searchLeft" style="width: 80%">
+                            <div class="searchLeft">
                                 <!-- <el-form-item label="名称：" class="sbFirst">
                                     <el-input
                                         placeholder="请输入内容"

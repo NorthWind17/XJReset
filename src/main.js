@@ -18,7 +18,6 @@ import './style/task.less';
 import elformdesign from 'el-form-design';
 import utils from './config/util.js';
 Vue.prototype.$utils = utils;
-// import 'amfe-flexible'
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
 Vue.prototype.$echarts = echarts;

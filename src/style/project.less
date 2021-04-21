@@ -24,110 +24,172 @@ body {
                 }
                 .fourLicheng {
                     padding: 20px 0 40px 0;
-                    > div {
-                        padding: 0 20px;
-                        overflow-x: auto;
-                        overflow-y: hidden;
-                        display: flex;
-                        height: 600px;
-                        width: 100%;
-                        // background-color: rgb(155, 198, 253);
-                        background: url('../assets/workbench/pbac.png') repeat;
-                        // background-size: 100% 100%;
-                        .proFdiv {
-                            display: flex;
-                            height: 200px;
-                            margin-top: 200px;
-                            position: relative;
-                            .prostartdiv {
-                                position: relative;
-                                width: 68px;
-                                img {
-                                    position: absolute;
-                                    bottom: 0;
-                                }
+                    .flMain {
+                        .flmTips {
+                            text-align: center;
+                            // margin-top: 20px;
+                            line-height: 16px;
+                            height: 16px;
+                            vertical-align: middle;
+                            font-size: 15px;
+                            img {
+                                vertical-align: middle;
                             }
                         }
-                        .prodiv {
-                            display: flex;
-                            height: 200px;
-                            margin-top: 200px;
-                            position: relative;
-
-                            .proldiv {
-                                width: 290px;
-                                position: relative;
-                                img {
-                                    width: 100%;
-                                    position: absolute;
-                                    bottom: 0;
-                                }
-                            }
-                            .promtdiv {
-                                position: relative;
-                                width: 68px;
-                                .tcimg {
-                                    position: absolute;
-                                    top: -50px;
-                                    width: 100%;
-                                }
-                                .tclockimg {
-                                    position: absolute;
-                                    width: 30px;
-                                    left: 25%;
-                                    top: -36px;
-                                }
-                                .mbContent {
-                                    position: absolute;
-                                    width: 200px;
-                                    top: 34px;
-                                    left: -33px;
-                                    color: #fff;
-                                    > div {
-                                        font-size: 16px;
-                                        margin-bottom: 3px;
+                        .flmList {
+                            margin-bottom: 30px;
+                            margin-top: 20px;
+                            > div {
+                                display: flex;
+                                .list {
+                                    .listtop {
+                                        display: flex;
+                                        .ltlp {
+                                            width: 28px;
+                                            height: 28px;
+                                            cursor: pointer;
+                                            position: relative;
+                                            img {
+                                                width: 100%;
+                                            }
+                                            span {
+                                                position: absolute;
+                                                left: 0;
+                                                display: inline-block;
+                                                width: 28px;
+                                                height: 28px;
+                                                text-align: center;
+                                                font-size: 14px;
+                                                line-height: 28px;
+                                                color: #6b6a6a;
+                                            }
+                                        }
+                                        .ltr {
+                                            width: 80px;
+                                            .el-progress {
+                                                margin-top: 11px;
+                                            }
+                                        }
                                     }
-                                }
-                            }
-                            .prombdiv {
-                                position: relative;
-                                width: 68px;
-                                .tcimg {
-                                    position: absolute;
-                                    bottom: 0;
-                                    width: 100%;
-                                }
-                                .tclockimg {
-                                    position: absolute;
-                                    width: 30px;
-                                    left: 25%;
-                                    bottom: 20px;
-                                }
-                                .mbContent {
-                                    position: absolute;
-                                    width: 200px;
-                                    bottom: -100px;
-                                    left: -33px;
-                                    color: #fff;
-                                    > div {
-                                        font-size: 16px;
-                                        margin-bottom: 3px;
+                                    .listbottom {
+                                        margin-top: 8px;
+                                        width: 100px;
+                                        cursor: pointer;
+                                        font-size: 15px;
+                                        font-weight: 700;
+                                        color: #888;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
                                     }
-                                }
-                            }
-                            .prordiv {
-                                width: 290px;
-                                position: relative;
-                                img {
-                                    width: 100%;
-                                    position: absolute;
-                                    right: 0;
-                                    bottom: 0;
-                                    transform: rotateX(180deg);
                                 }
                             }
                         }
                     }
+                    // > div {
+                    //     padding: 0 20px;
+                    //     overflow-x: auto;
+                    //     overflow-y: hidden;
+                    //     display: flex;
+                    //     height: 600px;
+                    //     width: 100%;
+                    //     // background-color: rgb(155, 198, 253);
+                    //     background: url('../assets/workbench/pbac.png') repeat;
+                    //     // background-size: 100% 100%;
+                    //     .proFdiv {
+                    //         display: flex;
+                    //         height: 200px;
+                    //         margin-top: 200px;
+                    //         position: relative;
+                    //         .prostartdiv {
+                    //             position: relative;
+                    //             width: 68px;
+                    //             img {
+                    //                 position: absolute;
+                    //                 bottom: 0;
+                    //             }
+                    //         }
+                    //     }
+                    //     .prodiv {
+                    //         display: flex;
+                    //         height: 200px;
+                    //         margin-top: 200px;
+                    //         position: relative;
+
+                    //         .proldiv {
+                    //             width: 290px;
+                    //             position: relative;
+                    //             img {
+                    //                 width: 100%;
+                    //                 position: absolute;
+                    //                 bottom: 0;
+                    //             }
+                    //         }
+                    //         .promtdiv {
+                    //             position: relative;
+                    //             width: 68px;
+                    //             .tcimg {
+                    //                 position: absolute;
+                    //                 top: -50px;
+                    //                 width: 100%;
+                    //             }
+                    //             .tclockimg {
+                    //                 position: absolute;
+                    //                 width: 30px;
+                    //                 left: 25%;
+                    //                 top: -36px;
+                    //             }
+                    //             .mbContent {
+                    //                 position: absolute;
+                    //                 width: 200px;
+                    //                 top: 34px;
+                    //                 left: -33px;
+                    //                 color: #fff;
+                    //                 > div {
+                    //                     font-size: 16px;
+                    //                     margin-bottom: 3px;
+                    //                 }
+                    //             }
+                    //         }
+                    //         .prombdiv {
+                    //             position: relative;
+                    //             width: 68px;
+                    //             .tcimg {
+                    //                 position: absolute;
+                    //                 bottom: 0;
+                    //                 width: 100%;
+                    //             }
+                    //             .tclockimg {
+                    //                 position: absolute;
+                    //                 width: 30px;
+                    //                 left: 25%;
+                    //                 bottom: 20px;
+                    //             }
+                    //             .mbContent {
+                    //                 position: absolute;
+                    //                 width: 200px;
+                    //                 bottom: -100px;
+                    //                 left: -33px;
+                    //                 color: #fff;
+                    //                 > div {
+                    //                     font-size: 16px;
+                    //                     margin-bottom: 3px;
+                    //                 }
+                    //             }
+                    //         }
+                    //         .prordiv {
+                    //             width: 290px;
+                    //             position: relative;
+                    //             img {
+                    //                 width: 100%;
+                    //                 position: absolute;
+                    //                 right: 0;
+                    //                 bottom: 0;
+                    //                 transform: rotateX(180deg);
+                    //             }
+                    //         }
+                    //     }
+                    // }
                 }
                 .ppcontent {
                     .panelList {
@@ -138,6 +200,11 @@ body {
                         padding-top: 10px;
                         flex-wrap: wrap;
                         padding: 20px 0;
+                        @media screen and (max-width: 1250px) {
+                            .progress {
+                                width: 44%;
+                            }
+                        }
                     }
                     .progress {
                         font-size: 16px;

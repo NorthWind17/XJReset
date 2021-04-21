@@ -712,6 +712,7 @@ export default {
     flex-basis: 100%;
     display: flex;
     .scroll-content {
+        width: 100%;
         min-width: 1000px;
         .scroll-item {
             width: 96%;
@@ -963,8 +964,8 @@ export default {
     width: 70%;
 
     background-color: #ffffff;
-    height: 350px;
     border-radius: 10px;
+    padding: 20px 0;
     > div {
         padding: 0 40px;
     }

@@ -298,6 +298,7 @@
                 :visible.sync="exportVisible"
                 :append-to-body="true"
                 @close="closeExport('exform')"
+                class="diaryCeDialog"
             >
                 <div>
                     <el-form

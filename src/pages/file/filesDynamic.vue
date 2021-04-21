@@ -2,9 +2,7 @@
     <div id="filesCurrent">
         <div class="main">
             <div class="middleContent">
-                <div class="file" style="margin-bottom: 20px">
-                    文件操作动态
-                </div>
+                <div class="file" style="margin-bottom: 20px">文件操作动态</div>
                 <div>
                     <el-table :data="banner" stripe border style="width: 100%">
                         <el-table-column

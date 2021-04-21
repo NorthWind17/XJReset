@@ -5,29 +5,17 @@
                 <img src="../assets/menu/logo.png" alt />
             </div>
             <div class="workURight">
-                <div class="switch">
-                    <div class="switch-box">
-                        <span>项目名称：</span>
-                        <span>{{ nameS }}</span>
-                    </div>
-                    <div class="switch-button">
-                        <span
-                            style="color: #fff; cursor: pointer"
-                            @click="switchover"
-                        >
-                            <i class="el-icon-arrow-down"></i>
-                        </span>
-                    </div>
-                </div>
                 <div class="workbench-center">
                     <ul>
                         <li :class="cNameOneS" @click="buttonTop('/workbench')">
-                            首页
+                            <img src="../assets/workbench/home.png" alt="" />
+                            <span>首页</span>
                         </li>
                         <li
                             :class="cNameTwoS"
                             @click="buttonTop('/project/projectPanel')"
                         >
+                            <img src="../assets/workbench/project.png" alt="" />
                             <span>项目</span>
                             <div class="proTips" v-if="warnTipView">
                                 请点击此处进入项目页面
@@ -38,113 +26,138 @@
                             :class="cNameFourS"
                             @click="buttonTop('/task/taskMould')"
                         >
-                            任务
+                            <img src="../assets/workbench/task.png" alt="" />
+                            <span>任务</span>
                         </li>
                         <li
                             :class="cNameThreeS"
                             @click="buttonTop('/files/filesCurrent')"
                         >
-                            资料
+                            <img src="../assets/workbench/files.png" alt="" />
+                            <span>资料</span>
                         </li>
                         <li
                             :class="cNameTS"
                             @click="buttonTop('/diary/diaryAdd')"
                         >
-                            日志
+                            <img src="../assets/workbench/diary.png" alt="" />
+                            <span>日志</span>
                         </li>
                     </ul>
                 </div>
+                <div class="switch">
+                    <div class="switch-box">
+                        <span>项目名称：</span>
+                        <span>{{ nameS }}</span>
+                    </div>
+                    <div class="switch-button">
+                        <span
+                            style="color: #409eff; cursor: pointer"
+                            @click="switchover"
+                        >
+                            <i class="el-icon-arrow-down"></i>
+                        </span>
+                    </div>
+                </div>
                 <div class="workURa">
-                    <div class="relation-box">
-                        <ul>
-                            <li>
-                                <img
-                                    style="cursor: pointer"
-                                    @click="takeMoney"
-                                    src="../assets/menu/zsss.png"
-                                    alt
-                                />
-                            </li>
-                            <li>
-                                <el-popover
-                                    placement="bottom"
-                                    width="290"
-                                    trigger="hover"
-                                >
-                                    <div slot="reference">
-                                        <img
-                                            style="cursor: pointer"
-                                            src="../assets/menu/kefu.jpg"
-                                            alt
-                                        />
-                                    </div>
-                                    <div
-                                        class="down"
-                                        style="text-align: center"
+                    <div class="workMore">
+                        <div class="wmtext">
+                            <img src="../assets/menu/menudown.png" alt="" />
+                        </div>
+                        <div class="relation-box">
+                            <ul>
+                                <li>
+                                    <img
+                                        style="cursor: pointer"
+                                        @click="takeMoney"
+                                        src="../assets/menu/zs1.png"
+                                        alt
+                                    />
+                                </li>
+                                <li>
+                                    <el-popover
+                                        placement="bottom"
+                                        width="290"
+                                        trigger="hover"
                                     >
-                                        <img
-                                            style="width: 220px; height: 220px"
-                                            src="../assets/workbench/erweima.jpg"
-                                            alt
-                                        />
-                                        <div
-                                            style="margin: 6px 0"
-                                            @click="goMobil"
-                                        >
-                                            手机钉钉扫描二维码加入“用户服务群”
+                                        <div slot="reference">
+                                            <img
+                                                style="cursor: pointer"
+                                                src="../assets/menu/zskefu.png"
+                                                alt
+                                            />
                                         </div>
-                                        <div>联系电话：0371-56775558</div>
-                                    </div>
-                                </el-popover>
-                            </li>
-                            <li>
-                                <el-popover
-                                    placement="bottom"
-                                    width="150"
-                                    trigger="hover"
-                                >
-                                    <div slot="reference">
-                                        <img
-                                            style="cursor: pointer"
-                                            src="../assets/menu/bangzhu.jpg"
-                                            alt
-                                        />
-                                    </div>
-                                    <div
-                                        class="down"
-                                        style="text-align: center"
+                                        <div
+                                            class="down"
+                                            style="text-align: center"
+                                        >
+                                            <img
+                                                style="
+                                                    width: 220px;
+                                                    height: 220px;
+                                                "
+                                                src="../assets/workbench/erweima.jpg"
+                                                alt
+                                            />
+                                            <div
+                                                style="margin: 6px 0"
+                                                @click="goMobil"
+                                            >
+                                                手机钉钉扫描二维码加入“用户服务群”
+                                            </div>
+                                            <div>联系电话：0371-56775558</div>
+                                        </div>
+                                    </el-popover>
+                                </li>
+                                <li>
+                                    <el-popover
+                                        placement="bottom"
+                                        width="150"
+                                        trigger="hover"
                                     >
-                                        <p
-                                            style="
-                                                margin-bottom: 12px;
-                                                cursor: pointer;
-                                            "
-                                            @click="goHelp"
+                                        <div slot="reference">
+                                            <img
+                                                style="cursor: pointer"
+                                                src="../assets/menu/zsbangzhu.png"
+                                                alt
+                                            />
+                                        </div>
+                                        <div
+                                            class="down"
+                                            style="text-align: center"
                                         >
-                                            帮助文档
-                                        </p>
-                                        <p
-                                            style="cursor: pointer"
-                                            @click="backMsg"
-                                        >
-                                            意见反馈
-                                        </p>
-                                    </div>
-                                </el-popover>
-                            </li>
-                            <li>
-                                <img
-                                    style="cursor: pointer"
-                                    @click="
-                                        buttonTop(
-                                            '/application/applicationPower'
-                                        )
-                                    "
-                                    src="../assets/menu/shezhi.jpg"
-                                    alt
-                                />
-                            </li>
-                        </ul>
+                                            <p
+                                                style="
+                                                    margin-bottom: 12px;
+                                                    cursor: pointer;
+                                                "
+                                                @click="goHelp"
+                                            >
+                                                帮助文档
+                                            </p>
+                                            <p
+                                                style="cursor: pointer"
+                                                @click="backMsg"
+                                            >
+                                                意见反馈
+                                            </p>
+                                        </div>
+                                    </el-popover>
+                                </li>
+                                <li>
+                                    <img
+                                        style="cursor: pointer"
+                                        @click="
+                                            buttonTop(
+                                                '/application/applicationPower'
+                                            )
+                                        "
+                                        src="../assets/menu/zsshezhi.png"
+                                        alt
+                                    />
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="admin">
                         <img src="../assets/menu/YH.png" v-if="ImageShow" />
@@ -172,6 +185,7 @@
             title="切换项目"
             :visible.sync="dialogFormVisible"
             :modal-append-to-body="false"
+            class="workChangeDialog"
         >
             <div>
                 <div class="headerWarn">
@@ -1172,7 +1186,11 @@ body {
     height: 90px;
     // background-image: linear-gradient(to right, #409efe, #458cfe);
     line-height: 90px;
-
+    .workChangeDialog {
+        .el-dialog {
+            min-width: 800px;
+        }
+    }
     .workUser,
     .workURight,
     .workURa {
@@ -1180,8 +1198,73 @@ body {
         justify-content: space-between;
         height: 90px;
     }
+    .workURa {
+        .workMore {
+            position: relative;
+            .wmtext {
+                display: none;
+                width: 22px;
+                margin-right: 10px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
     .workURight {
         width: calc(100%-220px);
+        border-bottom: 1px solid #f6f6f6;
+        @media screen and (max-width: 1240px) {
+            .workbench-center {
+                margin-left: 20px;
+                ul {
+                    li {
+                        span {
+                            display: none;
+                        }
+                        img {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (min-width: 1241px) and (max-width: 1488px) {
+            .workbench-center {
+                margin-left: 20px;
+                ul {
+                    li {
+                        span {
+                            display: inline-block;
+                        }
+                        img {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 1140px) {
+            .workURa {
+                .wmtext {
+                    display: block;
+                }
+                .relation-box {
+                    display: none;
+                    height: 40px;
+                    line-height: 40px;
+                    margin-right: 0;
+                    position: absolute;
+                    top: 90px;
+                    left: -54px;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    border-radius: 10px;
+                }
+            }
+            .workURa :hover .relation-box {
+                display: block;
+            }
+        }
     }
     .sendBackDialog {
         .el-dialog {
@@ -1218,23 +1301,35 @@ body {
         color: white;
     }
     .workbench-center {
-        // width: 650px;
+        width: 34%;
         height: 90px;
         font-size: 18px;
+        margin-left: 50px;
         ul {
-            // width: 650px;
+            width: 100%;
             height: 90px;
             display: flex;
-            // margin: 0 auto;
-            margin-left: 50px;
+            justify-content: space-between;
+
             li {
                 // width: 130px;
                 height: 90px;
                 text-align: center;
-                color: white;
+                color: #000;
                 cursor: pointer;
                 position: relative;
                 padding: 0 10px;
+                overflow: hidden;
+                img,
+                span {
+                    vertical-align: middle;
+                }
+                span {
+                    margin-left: 8px;
+                }
+                img {
+                    width: 22px;
+                }
                 .proTips {
                     position: absolute;
                     bottom: -12px;
@@ -1254,9 +1349,12 @@ body {
                     }
                 }
             }
-
+            li:hover {
+                color: #fb8103;
+            }
             .colorName {
                 color: #fb8103;
+                border-bottom: 2px solid #fb8103;
             }
         }
     }
@@ -1275,6 +1373,7 @@ body {
 
                 img {
                     vertical-align: middle;
+                    width: 22px;
                 }
             }
             li:nth-child(3) {
@@ -1299,7 +1398,7 @@ body {
         }
         span {
             font-size: 18px;
-            color: white;
+            color: #000;
             display: inline-block;
             margin: 0 10px;
         }
@@ -1317,6 +1416,12 @@ body {
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            span:nth-child(1) {
+                color: #000;
+            }
+            span:nth-child(2) {
+                color: #409eff;
+            }
         }
         .switch-button {
             // width: 100px;

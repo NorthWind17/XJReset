@@ -1362,11 +1362,13 @@ export default {
                                     onFail: function () {
                                         setTimeout(() => {
                                             _this.getList();
-                                            _this.$parent.fatherUpNum();
+                                            _this.$emit('updateN');
+                                            // _this.$parent.fatherUpNum();
                                         }, 5000);
                                         setTimeout(() => {
                                             _this.getList();
-                                            _this.$parent.fatherUpNum();
+                                            _this.$emit('updateN');
+                                            // _this.$parent.fatherUpNum();
                                         }, 10000);
                                     }
                                 });
@@ -1942,11 +1944,13 @@ export default {
                                     onFail: function () {
                                         setTimeout(() => {
                                             _this.getList();
-                                            _this.$parent.fatherUpNum();
+                                            _this.$emit('updateN');
+                                            // _this.$parent.fatherUpNum();
                                         }, 5000);
                                         setTimeout(() => {
                                             _this.getList();
-                                            _this.$parent.fatherUpNum();
+                                            _this.$emit('updateN');
+                                            // _this.$parent.fatherUpNum();
                                         }, 10000);
                                     }
                                 });

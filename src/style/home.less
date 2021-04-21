@@ -38,9 +38,10 @@ body {
                 font-size: 18px;
                 height: 90px !important;
                 line-height: 90px;
-                background-image: linear-gradient(to right, #409efe, #458cfe);
+                // background-image: linear-gradient(to right, #409efe, #458cfe);
                 color: #000;
                 padding: 0;
+                background-color: #fff;
                 .workbench-img {
                     width: 220px;
                     height: 100%;
@@ -180,7 +181,7 @@ body {
                     .homeBottomMenu {
                         width: 220px !important;
                         height: calc(100vh - 90px);
-                        background-color: #fff;
+                        background-color: #3296fa;
                         overflow-x: hidden;
                         .hbmMain {
                             .el-menu {
@@ -304,6 +305,36 @@ body {
                     }
                 }
             }
+        }
+        @media screen and (max-width: 1380px) {
+            #project {
+                #projectPanel {
+                    .topTitle {
+                        .kuai {
+                            width: 45%;
+                        }
+                    }
+                    .panelList {
+                        .progress {
+                            width: 46%;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 1300px) {
+            .anchor-point {
+                .workbench {
+                    .content-one {
+                        flex-wrap: wrap;
+                        > div {
+                            width: 46%;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (min-width: 1120px) and (max-width: 1500px) {
         }
     }
 }

@@ -89,16 +89,9 @@
                                             {{ item.jdtitle }}
                                         </div>
                                         <div class="circle">
-                                            <div
-                                                style="
-                                                    color: gray;
-                                                    margin-right: 20px;
-                                                "
-                                            >
+                                            <div style="color: gray">
                                                 <div
-                                                    style="
-                                                        margin-bottom: 20px;
-                                                    "
+                                                    style="margin-bottom: 20px"
                                                 >
                                                     负责人：{{ item.jduser }}
                                                 </div>
@@ -111,20 +104,6 @@
                                                     type="circle"
                                                     :percentage="item.jindu"
                                                 ></el-progress>
-                                                <!-- <el-progress
-                                                    type="circle"
-                                                    :percentage="0"
-                                                    v-else-if="
-                                                        item.waitTime < 1
-                                                    "
-                                                ></el-progress>
-                                                <el-progress
-                                                    type="circle"
-                                                    :percentage="
-                                                        item.percentage
-                                                    "
-                                                    v-else
-                                                ></el-progress> -->
                                             </div>
                                         </div>
                                         <div
@@ -148,13 +127,13 @@
                             </div>
                             <div
                                 v-else
-                                style="text-align: center; padding: 30px 0"
+                                style="text-align: center; padding: 0.3rem 0"
                             >
                                 <img
                                     src="https://dingyunlaowu.oss-cn-hangzhou.aliyuncs.com/user-dir/NG4ZDG6eBM1600655909495.jpg"
                                     alt
                                 />
-                                <p style="font-size: 16px">
+                                <p style="font-size: 0.16rem">
                                     暂时还没有数据哦
                                 </p>
                             </div>
@@ -297,8 +276,9 @@
                     <el-tab-pane label="里程碑事件" name="four">
                         <div style="display: flex">
                             <el-select
-                                style="margin-right: 20px"
+                                style="margin-right: 0.2rem"
                                 v-model="searchLCId"
+                                @change="searchLCClick"
                                 placeholder="请选择子项目"
                             >
                                 <el-option
@@ -309,15 +289,175 @@
                                 >
                                 </el-option>
                             </el-select>
-                            <el-button
+                            <!-- <el-button
                                 type="primary"
                                 round
                                 @click="searchLCClick"
                                 >搜索</el-button
-                            >
+                            > -->
                         </div>
                         <div class="fourLicheng">
-                            <div>
+                            <div class="flMain">
+                                <div class="flmTips">
+                                    <img
+                                        src="../../assets/journal/startp.jpg"
+                                        alt=""
+                                    />
+                                    进度&nbsp;
+                                    <img
+                                        src="../../assets/journal/weip.png"
+                                        alt=""
+                                    />
+                                    进度=0&nbsp;
+                                    <img
+                                        src="../../assets/journal/syi.png"
+                                        alt=""
+                                    />
+                                    0%--100% 进度&nbsp;
+                                    <img
+                                        src="../../assets/journal/fwan.png"
+                                        alt=""
+                                    />
+                                    进度=100%&nbsp;
+                                </div>
+                                <div class="flmList">
+                                    <div>
+                                        <div
+                                            class="list"
+                                            v-for="(
+                                                item, index
+                                            ) in progressList"
+                                            :key="index"
+                                        >
+                                            <div class="listtop">
+                                                <div
+                                                    class="ltlp"
+                                                    @click="
+                                                        goNext(item.id, index)
+                                                    "
+                                                >
+                                                    <img
+                                                        v-if="item.jindu == 100"
+                                                        src="../../assets/journal/finish.png"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        v-else-if="
+                                                            item.jindu == 0
+                                                        "
+                                                        src="../../assets/journal/wei.png"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        v-else
+                                                        src="../../assets/journal/start.png"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="ltr">
+                                                    <el-progress
+                                                        :percentage="item.jindu"
+                                                        :show-text="false"
+                                                        status="success"
+                                                    ></el-progress>
+                                                </div>
+                                            </div>
+                                            <div class="listbottom">
+                                                <el-tooltip
+                                                    placement="top-start"
+                                                >
+                                                    <div slot="content">
+                                                        {{ item.jdtitle
+                                                        }}<br />{{
+                                                            item.jindu
+                                                        }}%
+                                                    </div>
+                                                    <div
+                                                        @click="
+                                                            editClick(item.id)
+                                                        "
+                                                    >
+                                                        {{ item.jdtitle }}
+                                                    </div>
+                                                </el-tooltip>
+                                            </div>
+                                        </div>
+                                        <div class="list">
+                                            <div class="listtop">
+                                                <div class="ltlp">
+                                                    <img
+                                                        v-if="lcType == 1"
+                                                        src="../../assets/journal/finish.png"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        v-else
+                                                        src="../../assets/journal/wei.png"
+                                                        alt=""
+                                                    />
+                                                    <span v-if="lcType != 1">{{
+                                                        progressList.length
+                                                    }}</span>
+                                                </div>
+                                                <div class="ltr"></div>
+                                            </div>
+                                            <div class="listbottom">
+                                                <div>完成</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <el-table
+                                    :data="progressNextList"
+                                    style="width: 100%; margin-bottom: 20px"
+                                    row-key="id"
+                                    border
+                                    lazy
+                                    :load="loadTable"
+                                    :tree-props="{
+                                        children: 'children',
+                                        hasChildren: 'hasChildren'
+                                    }"
+                                    max-height="650"
+                                    @row-click="checkList"
+                                >
+                                    <el-table-column
+                                        prop="text"
+                                        label="事件名称"
+                                        show-overflow-tooltip="true"
+                                    >
+                                    </el-table-column>
+                                    <el-table-column
+                                        prop="personName"
+                                        label="负责人"
+                                        align="center"
+                                        show-overflow-tooltip="true"
+                                    >
+                                    </el-table-column>
+                                    <el-table-column
+                                        prop="content"
+                                        label="事件描述"
+                                        align="center"
+                                        show-overflow-tooltip="true"
+                                    >
+                                    </el-table-column>
+                                    <el-table-column
+                                        prop="start_date"
+                                        label="开始时间"
+                                        align="center"
+                                        show-overflow-tooltip="true"
+                                    >
+                                    </el-table-column>
+                                    <el-table-column
+                                        prop="end_date"
+                                        label="结束时间"
+                                        align="center"
+                                        show-overflow-tooltip="true"
+                                    >
+                                    </el-table-column>
+                                </el-table>
+                            </div>
+                            <!-- <div>
                                 <div class="proFdiv">
                                     <div class="prostartdiv">
                                         <img
@@ -328,8 +468,8 @@
                                         <div
                                             style="
                                                 position: absolute;
-                                                bottom: -33px;
-                                                right: 20px;
+                                                bottom: -0.33rem;
+                                                right: 0.2rem;
                                                 color: #fff;
                                             "
                                         >
@@ -411,7 +551,7 @@
                                         />
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </el-tab-pane>
                 </el-tabs>
@@ -1141,6 +1281,7 @@ export default {
             }
         };
         return {
+            progressNextList: [],
             peopleIsShow: true,
             searchLCId: this.$store.state.projectInfo.pid,
             searchId: this.$store.state.projectInfo.pid,
@@ -1367,11 +1508,33 @@ export default {
             total: '',
             pagesize: 12,
             currentPage: 1,
-            newStatus: 1
+            newStatus: 1,
+            currentFid: '',
+            newLStatus: 1,
+            lcType: 2
         };
     },
 
     methods: {
+        loadTable(tree, treeNode, resolve) {
+            const _this = this;
+            _this.$axios
+                .post('/task/NewJinDuContent', {
+                    corp_id: _this.$store.state.cid,
+                    fid: tree.id,
+                    xmid: _this.searchLCId,
+                    type: _this.newLStatus
+                })
+                .then((res) => {
+                    if (res.data.code == 200) {
+                        let newData = res.data.content;
+                        resolve(newData);
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
         fortStatus(row) {
             switch (row.status) {
                 case '0':
@@ -1509,6 +1672,7 @@ export default {
                 this.getCharts();
             } else if (tab.name == 'four') {
                 this.getLCList();
+                this.getLCNList();
             }
         },
         derive() {
@@ -1613,6 +1777,7 @@ export default {
                                 _this.editProgressView = false;
                                 _this.getLCList();
                                 _this.getProgressList();
+                                _this.getLCNList();
                                 _this.$message({
                                     message: res.data.msg,
                                     type: 'success',
@@ -1649,6 +1814,7 @@ export default {
                     if (res.data.code == 200) {
                         _this.getProgressList();
                         _this.getLCList();
+                        _this.getLCNList();
                         _this.deleteVisible = false;
                         _this.editProgressView = false;
                     } else {
@@ -1689,6 +1855,11 @@ export default {
                 _this.nfid = item.id;
                 _this.getProgressList();
             }, 300);
+        },
+        checkList(row, column) {
+            this.editID = row.id;
+            this.comform.jid = row.id;
+            this.getInfo(row.id);
         },
         editClick(id) {
             this.editID = id;
@@ -1970,6 +2141,7 @@ export default {
                                 _this.editProgressView = false;
                                 _this.getProgressList();
                                 _this.getLCList();
+                                _this.getLCNList();
                                 _this.$message({
                                     message: res.data.msg,
                                     type: 'success',
@@ -2063,16 +2235,52 @@ export default {
             this.currentPage = 1;
             this.getProgressList();
         },
-        searchLCClick() {
+        searchLCClick(val) {
+            let obj = {};
+            obj = this.nextProject.find((item) => {
+                return item.zid === val;
+            });
+            if (obj.ztype == '主项目') {
+                this.newLStatus = 1;
+            } else {
+                this.newLStatus = 2;
+            }
             this.getLCList();
+            this.getLCNList();
+        },
+        goNext(id, index) {
+            if (index == 0) {
+                this.currentFid = '1';
+            } else {
+                this.currentFid = id;
+            }
+            this.getLCNList();
+        },
+
+        getLCNList() {
+            const _this = this;
+            _this.$axios
+                .post('/task/NewJinDuContent', {
+                    corp_id: _this.$store.state.cid,
+                    fid: _this.currentFid,
+                    xmid: _this.searchLCId,
+                    type: _this.newLStatus
+                })
+                .then((res) => {
+                    if (res.data.code == 200) {
+                        _this.progressNextList = res.data.content;
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
         },
         getLCList() {
             const _this = this;
 
             _this.$axios
-                .post('/task/JinDuList', {
+                .post('/task/newJinDuList', {
                     corp_id: _this.$store.state.cid,
-                    xmid: _this.$store.state.projectInfo.pid,
                     jdstatus: _this.jdstatus,
                     fid: _this.nfid,
                     name: '',
@@ -2083,6 +2291,7 @@ export default {
                 .then((res) => {
                     if (res.data.code == 200) {
                         _this.progressList = res.data.content;
+                        _this.lcType = res.data.type;
                     }
                 })
                 .catch(function (error) {
@@ -2177,7 +2386,7 @@ export default {
                 });
         },
         //获取子项目
-        getNextProject() {
+        getNextProject(ntype) {
             const _this = this;
             _this.$axios
                 .post('/task/ZiProjectXiaLa', {
@@ -2186,6 +2395,13 @@ export default {
                 .then((res) => {
                     if (res.data.code == 200) {
                         _this.nextProject = res.data.content;
+                        if (ntype == 1) {
+                            _this.searchId = _this.nextProject[0].zid;
+                            _this.searchLCId = _this.nextProject[0].zid;
+                            _this.getProgressList();
+                            _this.getLCNList();
+                            _this.getLCList();
+                        }
                     } else {
                         _this.$message.warning(res.data.msg);
                     }
@@ -2370,48 +2586,48 @@ export default {
                 }
             };
         },
-        lastLine() {
-            let newArrData = this.progressList;
-            let newLength = this.progressList.length;
-            if (newLength % 2 != 0) {
-                this.isLast = true;
-                return 'prordiv';
-            } else {
-                this.isLast = false;
-                return 'proldiv';
-            }
-        },
-        lastTopClass() {
-            let newArrData = this.progressList;
-            let newLength = this.progressList.length;
-            if (newLength % 2 != 0) {
-                this.isLast = true;
-                return 'prombdiv';
-            } else {
-                this.isLast = false;
-                return 'promtdiv';
-            }
-        },
-        lineClass() {
-            return function (index) {
-                let newIndex = index + 1;
-                if (newIndex % 2 != 0) {
-                    return 'proldiv';
-                } else {
-                    return 'prordiv';
-                }
-            };
-        },
-        topClass() {
-            return function (index) {
-                let newIndex = index + 1;
-                if (newIndex % 2 != 0) {
-                    return 'promtdiv';
-                } else {
-                    return 'prombdiv';
-                }
-            };
-        },
+        // lastLine() {
+        //     let newArrData = this.progressList;
+        //     let newLength = this.progressList.length;
+        //     if (newLength % 2 != 0) {
+        //         this.isLast = true;
+        //         return 'prordiv';
+        //     } else {
+        //         this.isLast = false;
+        //         return 'proldiv';
+        //     }
+        // },
+        // lastTopClass() {
+        //     let newArrData = this.progressList;
+        //     let newLength = this.progressList.length;
+        //     if (newLength % 2 != 0) {
+        //         this.isLast = true;
+        //         return 'prombdiv';
+        //     } else {
+        //         this.isLast = false;
+        //         return 'promtdiv';
+        //     }
+        // },
+        // lineClass() {
+        //     return function (index) {
+        //         let newIndex = index + 1;
+        //         if (newIndex % 2 != 0) {
+        //             return 'proldiv';
+        //         } else {
+        //             return 'prordiv';
+        //         }
+        //     };
+        // },
+        // topClass() {
+        //     return function (index) {
+        //         let newIndex = index + 1;
+        //         if (newIndex % 2 != 0) {
+        //             return 'promtdiv';
+        //         } else {
+        //             return 'prombdiv';
+        //         }
+        //     };
+        // },
         projectData() {
             return this.$store.state.projectInfo;
         }
@@ -2425,10 +2641,9 @@ export default {
                 }
                 if (oldVal) {
                     this.getGant();
-                    this.getNextProject();
-                    this.getProgressList();
+                    this.getNextProject(1);
+
                     this.getCharts();
-                    this.getLCList();
                 }
             },
             deep: true,

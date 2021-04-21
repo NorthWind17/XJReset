@@ -19,7 +19,11 @@
         </el-aside>
         <el-main class="homeMain">
             <div id="project">
-                <router-view ref="projectRef" @openD="fatherViewDialog" />
+                <router-view
+                    ref="projectRef"
+                    @openD="fatherViewDialog"
+                    @updateN="fatherUpNum"
+                />
             </div>
         </el-main>
     </div>

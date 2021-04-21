@@ -17,8 +17,8 @@
                 @open="handleOpen"
                 mode="vertical"
                 @close="menuClose"
-                background-color="#fff"
-                text-color="#000"
+                background-color="#3296fa"
+                text-color="#fff"
                 active-text-color="#ffd04b"
                 :unique-opened="uopen"
                 :collapse-transition="ctran"
@@ -2331,18 +2331,28 @@ export default {
         .el-menu-vertical-demo {
             border-right: 0;
             .el-menu-item {
-                span,
                 i {
                     font-size: 18px;
+                    color: #fff;
+                }
+                span {
+                    font-size: 16px;
+                }
+            }
+            .el-menu-item.is-active {
+                i {
+                    color: #ffd04b;
                 }
             }
             .el-submenu {
-                span,
                 i {
                     font-size: 18px;
                 }
+                span {
+                    font-size: 16px;
+                }
                 .el-menu-item {
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }
         }

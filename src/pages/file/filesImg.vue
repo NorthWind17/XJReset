@@ -149,19 +149,13 @@
                                     <el-col :span="3" v-if="scope.row.gurl">
                                         <img
                                             :src="scope.row.gurl"
-                                            style="
-                                                height: 40px;
-                                                width: 40px;
-                                            "
+                                            style="height: 40px; width: 40px"
                                         />
                                     </el-col>
                                     <el-col :span="3" v-else>
                                         <img
                                             src="../../assets/management/guidang.png"
-                                            style="
-                                                height: 34px;
-                                                width: 38px;
-                                            "
+                                            style="height: 34px; width: 38px"
                                             v-show="
                                                 scope.row.type == 'file'
                                                     ? true
@@ -170,10 +164,7 @@
                                         />
                                         <img
                                             src="../../assets/management/TZ.png"
-                                            style="
-                                                height: 40px;
-                                                width: 40px;
-                                            "
+                                            style="height: 40px; width: 40px"
                                             v-show="
                                                 scope.row.filetype == '2' &&
                                                 scope.row.type != 'file'
@@ -183,10 +174,7 @@
                                         />
                                         <img
                                             src="../../assets/management/MX.png"
-                                            style="
-                                                height: 40px;
-                                                width: 40px;
-                                            "
+                                            style="height: 40px; width: 40px"
                                             v-show="
                                                 scope.row.filetype == '3' &&
                                                 scope.row.type != 'file'
@@ -196,10 +184,7 @@
                                         />
                                         <img
                                             src="../../assets/management/GX.png"
-                                            style="
-                                                height: 40px;
-                                                width: 40px;
-                                            "
+                                            style="height: 40px; width: 40px"
                                             v-show="
                                                 scope.row.filetype == '4' &&
                                                 scope.row.type != 'file'
@@ -209,10 +194,7 @@
                                         />
                                         <img
                                             src="../../assets/management/BD.png"
-                                            style="
-                                                height: 40px;
-                                                width: 40px;
-                                            "
+                                            style="height: 40px; width: 40px"
                                             v-show="
                                                 scope.row.filetype == '5' &&
                                                 scope.row.type != 'file'
@@ -222,10 +204,7 @@
                                         />
                                         <img
                                             src="../../assets/management/GF.png"
-                                            style="
-                                                height: 40px;
-                                                width: 40px;
-                                            "
+                                            style="height: 40px; width: 40px"
                                             v-show="
                                                 scope.row.filetype == '6' &&
                                                 scope.row.type != 'file'
@@ -235,10 +214,7 @@
                                         />
                                         <img
                                             src="../../assets/management/SC.png"
-                                            style="
-                                                height: 40px;
-                                                width: 40px;
-                                            "
+                                            style="height: 40px; width: 40px"
                                             v-show="
                                                 scope.row.filetype == '7'
                                                     ? true
@@ -437,6 +413,7 @@
             width="80%"
             :close-on-click-modal="false"
             @close="closeBimface"
+            class="viewFileDialog"
         >
             <div style="text-align: right; margin-bottom: 10px; color: red">
                 <i
@@ -791,6 +768,7 @@
             :visible.sync="newView"
             width="30%"
             @close="closeTaskType('typeform')"
+            class="newAddFileDialog"
         >
             <el-form
                 ref="typeform"

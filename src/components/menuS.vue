@@ -2358,6 +2358,9 @@ export default {
         }
     }
     .meNewPro {
+        .el-dialog {
+            min-width: 800px;
+        }
         .el-form {
             .el-date-editor,
             .el-cascader {

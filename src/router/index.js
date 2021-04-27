@@ -195,6 +195,12 @@ const routes = [
                             import('../pages/project/projectContract.vue')
                     },
                     {
+                        path: 'projectZContract',
+                        name: 'projectZContract',
+                        component: () =>
+                            import('../pages/project/projectZContract.vue')
+                    },
+                    {
                         path: 'projectError1',
                         name: 'projectError1',
                         component: () =>
@@ -215,6 +221,12 @@ const routes = [
                     {
                         path: 'projectError4',
                         name: 'projectError4',
+                        component: () =>
+                            import('../pages/project/projectError.vue')
+                    },
+                    {
+                        path: 'projectError6',
+                        name: 'projectError6',
                         component: () =>
                             import('../pages/project/projectError.vue')
                     },

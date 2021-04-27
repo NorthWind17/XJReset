@@ -507,6 +507,7 @@ export default {
                 this.$route.path == '/project/projectSafe' ||
                 this.$route.path == '/project/projectCost' ||
                 this.$route.path == '/project/projectContract' ||
+                this.$route.path == '/project/projectZContract' ||
                 this.$route.path == '/project/projectError1' ||
                 this.$route.path == '/project/projectError2' ||
                 this.$route.path == '/project/projectError3' ||
@@ -1319,7 +1320,7 @@ body {
                 cursor: pointer;
                 position: relative;
                 padding: 0 10px;
-                overflow: hidden;
+                // overflow: hidden;
                 img,
                 span {
                     vertical-align: middle;

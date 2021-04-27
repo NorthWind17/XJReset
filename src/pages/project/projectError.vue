@@ -86,6 +86,11 @@ export default {
                                 path: '/project/projectProgress'
                             });
                             break;
+                        case '/project/projectError6':
+                            this.$router.push({
+                                path: '/project/projectZContract'
+                            });
+                            break;
                     }
                 }
             },

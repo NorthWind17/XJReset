@@ -421,68 +421,85 @@ export default {
                     if (res.data.code == 200) {
                         _this.loading = false;
                         _this.deleteVisible = false;
-                        if (
-                            _this.deleteXmId ==
-                                _this.$store.state.projectInfo.pid &&
-                            _this.deleteXmId != _this.tableData[0].id
-                        ) {
-                            _this.$store.commit(
-                                'setProjectName',
-                                _this.tableData[0].pcontent
-                            );
-                            _this.$store.commit(
-                                'setProjectId',
-                                _this.tableData[0].id
-                            );
-                            _this.$store.commit(
-                                'setProjectPurl',
-                                _this.tableData[0].xmurl
-                            );
-                            _this.$store.commit(
-                                'setPerctentage',
-                                _this.tableData[0].jindu
-                            );
-                            _this.$store.commit(
-                                'setPTag',
-                                _this.tableData[0].beian
-                            );
-                            _this.$store.commit(
-                                'setPStatus',
-                                _this.tableData[0].status
-                            );
-                            _this.$store.commit(
-                                'setPPower',
-                                _this.tableData[0].quanxian
-                            );
-                        } else {
-                            _this.$store.commit(
-                                'setProjectName',
-                                _this.tableData[1].pcontent
-                            );
-                            _this.$store.commit(
-                                'setPPower',
-                                _this.tableData[1].quanxian
-                            );
-                            _this.$store.commit(
-                                'setProjectId',
-                                _this.tableData[1].id
-                            );
-                            _this.$store.commit(
-                                'setProjectPurl',
-                                _this.tableData[1].xmurl
-                            );
-                            _this.$store.commit(
-                                'setPerctentage',
-                                _this.tableData[1].jindu
-                            );
-                            _this.$store.commit(
-                                'setPTag',
-                                _this.tableData[1].beian
-                            );
-                            _this.$store.commit(
-                                'setPStatus',
-                                _this.tableData[1].status
-                            );
+
+                        if (_this.tableData.length > 0) {
+                            if (_this.tableData.length == 1) {
+                                _this.$store.commit('setProjectName', '');
+                                _this.$store.commit('setPPower', '');
+                                _this.$store.commit('setProjectId', '');
+                                _this.$store.commit('setProjectPurl', '');
+                                _this.$store.commit('setPerctentage', '');
+                                _this.$store.commit('setPTag', '');
+                                _this.$store.commit('setPStatus', '');
+                            } else {
+                                if (
+                                    _this.deleteXmId ==
+                                        _this.$store.state.projectInfo.pid &&
+                                    _this.deleteXmId == _this.tableData[0].id
+                                ) {
+                                    _this.$store.commit(
+                                        'setProjectName',
+                                        _this.tableData[1].pcontent
+                                    );
+                                    _this.$store.commit(
+                                        'setProjectId',
+                                        _this.tableData[1].id
+                                    );
+                                    _this.$store.commit(
+                                        'setProjectPurl',
+                                        _this.tableData[1].xmurl
+                                    );
+                                    _this.$store.commit(
+                                        'setPerctentage',
+                                        _this.tableData[1].jindu
+                                    );
+                                    _this.$store.commit(
+                                        'setPTag',
+                                        _this.tableData[1].beian
+                                    );
+                                    _this.$store.commit(
+                                        'setPStatus',
+                                        _this.tableData[1].status
+                                    );
+                                    _this.$store.commit(
+                                        'setPPower',
+                                        _this.tableData[1].quanxian
+                                    );
+                                } else if (
+                                    _this.deleteXmId ==
+                                        _this.$store.state.projectInfo.pid &&
+                                    _this.deleteXmId != _this.tableData[0].id
+                                ) {
+                                    _this.$store.commit(
+                                        'setProjectName',
+                                        _this.tableData[0].pcontent
+                                    );
+                                    _this.$store.commit(
+                                        'setProjectId',
+                                        _this.tableData[0].id
+                                    );
+                                    _this.$store.commit(
+                                        'setProjectPurl',
+                                        _this.tableData[0].xmurl
+                                    );
+                                    _this.$store.commit(
+                                        'setPerctentage',
+                                        _this.tableData[0].jindu
+                                    );
+                                    _this.$store.commit(
+                                        'setPTag',
+                                        _this.tableData[0].beian
+                                    );
+                                    _this.$store.commit(
+                                        'setPStatus',
+                                        _this.tableData[0].status
+                                    );
+                                    _this.$store.commit(
+                                        'setPPower',
+                                        _this.tableData[0].quanxian
+                                    );
+                                }
+                            }
                         }
                         _this.currentPage = 1;
                         _this.getList();

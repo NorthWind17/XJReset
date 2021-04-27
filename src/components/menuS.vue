@@ -32,7 +32,7 @@
                 >
                     <el-submenu v-if="item.chlid" :index="item.path">
                         <template slot="title">
-                            <i class="el-icon-location"></i>
+                            <i :class="item.icon"></i>
                             <span>{{ item.name }}</span>
                         </template>
                         <el-menu-item-group>
@@ -1474,8 +1474,22 @@ export default {
                 {
                     name: '合同管理',
                     icon: 'el-icon-notebook-2',
-                    path: '/project/projectContract',
-                    num: 0
+                    path: '/project/projectContract1',
+                    num: 0,
+                    chlid: [
+                        {
+                            name: '收入合同管理',
+                            icon: 'el-icon-notebook-2',
+                            path: '/project/projectContract',
+                            num: 0
+                        },
+                        {
+                            name: '支出合同管理',
+                            icon: 'el-icon-notebook-2',
+                            path: '/project/projectZContract',
+                            num: 0
+                        }
+                    ]
                 }
             ],
             errorProjectList: [
@@ -1519,7 +1533,21 @@ export default {
                     name: '合同管理',
                     icon: 'el-icon-notebook-2',
                     path: '/project/projectError4',
-                    num: 0
+                    num: 0,
+                    chlid: [
+                        {
+                            name: '收入合同管理',
+                            icon: 'el-icon-notebook-2',
+                            path: '/project/projectError4',
+                            num: 0
+                        },
+                        {
+                            name: '支出合同管理',
+                            icon: 'el-icon-notebook-2',
+                            path: '/project/projectError6',
+                            num: 0
+                        }
+                    ]
                 }
             ],
             activeName: 'basic',
@@ -1730,7 +1758,7 @@ export default {
                             .then((res) => {
                                 if (res.data.code == 200) {
                                     // _this.$parent.fatherMethod();
-                                    _this.$emit('updateL');
+                                    _this.$emit('updateL', 1);
                                     _this.loading = false;
                                     _this.dialogFormVisible = false;
                                     _this.$refs[formName].resetFields();
@@ -2161,13 +2189,19 @@ export default {
                             this.errorProjectList[3].num = res.data.content[0];
                             this.errorProjectList[4].num = res.data.content[1];
                             this.errorProjectList[5].num = res.data.content[2];
-                            this.errorProjectList[6].num = res.data.content[3];
+                            this.errorProjectList[6].chlid[0].num =
+                                res.data.content[3];
+                            this.errorProjectList[6].chlid[1].num =
+                                res.data.content[4];
                             this.menuList = this.errorProjectList;
                         } else {
                             this.projectList[3].num = res.data.content[0];
                             this.projectList[4].num = res.data.content[1];
                             this.projectList[5].num = res.data.content[2];
-                            this.projectList[6].num = res.data.content[3];
+                            this.projectList[6].chlid[0].num =
+                                res.data.content[3];
+                            this.projectList[6].chlid[1].num =
+                                res.data.content[4];
                             this.menuList = this.projectList;
                         }
                     } else {

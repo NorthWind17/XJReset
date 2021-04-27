@@ -24,14 +24,60 @@
                                             >
                                         </div>
                                         <div class="searchRight">
+                                            <!-- <el-button
+                                                type="primary"
+                                                plain
+                                                @click="
+                                                    viewDraw('支出合同审批')
+                                                "
+                                                >新建支出合同审批</el-button
+                                            > -->
                                             <el-button
                                                 slot="reference"
                                                 type="primary"
-                                                @click="
-                                                    viewDraw('收入合同审批')
-                                                "
+                                                @click="viewDraw"
                                                 >新建</el-button
                                             >
+                                            <!-- <el-form-item>
+                                                <el-popover
+                                                    placement="bottom"
+                                                    trigger="hover"
+                                                    v-model="conVisible"
+                                                >
+                                                    <div
+                                                        style="
+                                                            text-align: center;
+                                                            margin: 0;
+                                                        "
+                                                    >
+                                                        <el-button
+                                                            type="primary"
+                                                            plain
+                                                            @click="
+                                                                viewDraw(
+                                                                    '收入合同审批'
+                                                                )
+                                                            "
+                                                            >新建收入合同审批</el-button
+                                                        >
+                                                        <el-button
+                                                            type="primary"
+                                                            plain
+                                                            @click="
+                                                                viewDraw(
+                                                                    '支出合同审批'
+                                                                )
+                                                            "
+                                                            >新建支出合同审批</el-button
+                                                        >
+                                                    </div>
+                                                    <el-button
+                                                        slot="reference"
+                                                        type="primary"
+                                                        >新建</el-button
+                                                    >
+                                                </el-popover>
+                                            </el-form-item> -->
                                         </div>
                                     </div>
                                     <div class="srbContent">
@@ -185,17 +231,18 @@
                                 >
                             </div> -->
                             <div class="qchart">
-                                <!-- <div
+                                <div
                                     v-if="activeName == 'second'"
                                     id="qualityLX"
                                     ref="QLX"
-                                ></div> -->
-                                <div
-                                    v-if="activeName == 'second'"
                                     style="margin: 0 auto"
+                                ></div>
+                                <div></div>
+                                <!-- <div
+                                    v-if="activeName == 'second'"
                                     id="qualityDJ"
                                     ref="QDJ"
-                                ></div>
+                                ></div> -->
                             </div>
                         </div>
                     </el-tab-pane>
@@ -213,7 +260,7 @@
                                 v-model="basicActiveNames"
                                 @change="handleChange"
                             >
-                                <el-collapse-item
+                                <!-- <el-collapse-item
                                     title="收入合同"
                                     name="1"
                                     v-if="AbasicList.length > 0"
@@ -231,6 +278,21 @@
                                             >{{ list.name }}</el-tag
                                         >
                                     </div>
+                                </el-collapse-item> -->
+                                <el-collapse-item
+                                    title="支出合同"
+                                    name="2"
+                                    v-if="BbasicList.length > 0"
+                                >
+                                    <el-tag
+                                        v-for="list in BbasicList"
+                                        :key="list.id"
+                                        :closable="
+                                            list.status == '1' ? true : false
+                                        "
+                                        @close="deleteTitleClick(list, 2)"
+                                        >{{ list.name }}</el-tag
+                                    >
                                 </el-collapse-item>
                             </el-collapse>
                         </div>
@@ -1017,6 +1079,7 @@
                         <el-form-item label="基础设置名称：" prop="content">
                             <el-input v-model="basicAddForm.content"></el-input>
                         </el-form-item>
+                        <input type="hidden" />
                     </div>
                     <el-form-item>
                         <el-button
@@ -1175,13 +1238,13 @@ export default {
                 ]
             },
             basicAddFormRules: {
-                type: [
-                    {
-                        required: true,
-                        message: '请选择基础设置',
-                        trigger: ['blur', 'change']
-                    }
-                ],
+                // type: [
+                //     {
+                //         required: true,
+                //         message: '请选择基础设置',
+                //         trigger: ['blur', 'change']
+                //     }
+                // ],
                 content: [
                     {
                         required: true,
@@ -1192,7 +1255,7 @@ export default {
             },
             basicAddForm: {
                 content: '',
-                type: 'f',
+                type: 'g',
                 xmid: this.$store.state.projectInfo.pid,
                 corp_id: this.$store.state.cid
             },
@@ -1296,7 +1359,7 @@ export default {
                     _this.$axios
                         .post('/dingding/CreateTemplate', {
                             corp_id: _this.$store.state.cid,
-                            tmpname: _this.seleName,
+                            tmpname: '支出合同审批',
                             xmid: _this.$store.state.projectInfo.pid,
                             zxmid: _this.selectAddForm.zid,
                             userid: _this.$store.state.userInfo.uid
@@ -1310,7 +1373,7 @@ export default {
                             dd.ready(function () {
                                 dd.biz.util.openSlidePanel({
                                     url: newUrl, //打开侧边栏的url
-                                    title: '发起' + _this.seleName, //侧边栏顶部标题
+                                    title: '发起支出合同审批', //侧边栏顶部标题
                                     onSuccess: function (result) {},
                                     onFail: function () {
                                         setTimeout(() => {
@@ -1367,10 +1430,11 @@ export default {
         },
         doPie() {
             const _this = this;
-            let DJChart = echarts.init(document.getElementById('qualityDJ'));
+            let mChart = echarts.init(document.getElementById('qualityLX'));
+            // DJChart = echarts.init(document.getElementById('qualityDJ'));
 
-            DJChart.clear();
-            DJChart.setOption({
+            mChart.clear();
+            mChart.setOption({
                 tooltip: {
                     trigger: 'item',
                     // formatter: '{a} <br/>{b} : {c} ({d}%)'
@@ -1392,11 +1456,11 @@ export default {
                 },
                 series: [
                     {
-                        name: '收入合同统计',
+                        name: '支出合同类型统计',
                         type: 'pie',
                         radius: '55%',
                         center: ['50%', '60%'],
-                        data: _this.DJData,
+                        data: _this.LXData,
                         emphasis: {
                             itemStyle: {
                                 shadowBlur: 10,
@@ -1407,6 +1471,44 @@ export default {
                     }
                 ]
             });
+            // DJChart.clear();
+            // DJChart.setOption({
+            //     tooltip: {
+            //         trigger: 'item',
+            //         // formatter: '{a} <br/>{b} : {c} ({d}%)'
+            //         formatter: function (params) {
+            //             return (
+            //                 params.seriesName +
+            //                 '<br/>' +
+            //                 params.name +
+            //                 ' : ' +
+            //                 params.value +
+            //                 ' (' +
+            //                 params.percent +
+            //                 '%)' +
+            //                 '<br/>' +
+            //                 '总数：' +
+            //                 params.data.money
+            //             );
+            //         }
+            //     },
+            //     series: [
+            //         {
+            //             name: '收入合同统计',
+            //             type: 'pie',
+            //             radius: '55%',
+            //             center: ['50%', '60%'],
+            //             data: _this.DJData,
+            //             emphasis: {
+            //                 itemStyle: {
+            //                     shadowBlur: 10,
+            //                     shadowOffsetX: 0,
+            //                     shadowColor: 'rgba(0, 0, 0, 0.5)'
+            //                 }
+            //             }
+            //         }
+            //     ]
+            // });
         },
         getPie() {
             this.$axios
@@ -1507,7 +1609,7 @@ export default {
             this.addFormVisible = false;
             this.basicAddForm = {
                 content: '',
-                type: 'f',
+                type: 'g',
                 xmid: this.$store.state.projectInfo.pid,
                 corp_id: this.$store.state.cid
             };
@@ -1556,7 +1658,12 @@ export default {
                 this.currentPage = 1;
                 this.getList();
             } else if (tab.name == 'second') {
-                this.getPie();
+                this.activeName = tab.name;
+                this.$nextTick(() => {
+                    if (this.$refs.QLX) {
+                        this.getPie();
+                    }
+                });
             } else if (tab.name == 'third') {
                 this.getBasicList();
             }
@@ -1829,7 +1936,6 @@ export default {
         //打开抽屉
         viewDraw(name) {
             const _this = this;
-            _this.seleName = name;
             _this.selectAddForm.name = _this.$store.state.projectInfo.pname;
             _this.conVisible = false;
             if (_this.$store.state.projectInfo.pid) {
@@ -1839,7 +1945,7 @@ export default {
                     _this.$axios
                         .post('/dingding/CreateTemplate', {
                             corp_id: _this.$store.state.cid,
-                            tmpname: name,
+                            tmpname: '支出合同审批',
                             xmid: _this.$store.state.projectInfo.pid,
                             zxmid: '',
                             userid: _this.$store.state.userInfo.uid
@@ -2084,7 +2190,7 @@ export default {
                     bstatus: this.payform.bstatus,
                     zixmid: this.payform.next,
                     admin: this.$store.state.userInfo.admin,
-                    htype: 1
+                    htype: 2
                 })
                 .then((res) => {
                     if (res.data.code == 200) {
@@ -2167,18 +2273,18 @@ export default {
         }
     },
     mounted() {
-        let DJChart = null;
+        let mChart = null;
         this.getPRole();
         this.$utils.checkding();
         this.getNextProject();
         this.getList();
         this.getBasicList();
         if (this.activeName == 'second') {
-            DJChart = echarts.init(document.getElementById('qualityDJ'));
+            mChart = echarts.init(document.getElementById('qualityLX'));
         }
         window.addEventListener('resize', () => {
             // 自动渲染echarts
-            DJChart.resize();
+            mChart.resize();
         });
     },
     computed: {
@@ -2191,13 +2297,15 @@ export default {
             handler(newVal, oldVal) {
                 //你需要执行的代码
                 if (newVal.ppower == '2') {
-                    this.$router.push({ path: '/project/projectError4' });
+                    this.$router.push({ path: '/project/projectError6' });
                 }
                 if (oldVal) {
                     this.getList();
                     this.getNextProject();
                     this.getBasicList();
-                    this.getPie();
+                    if (this.$refs.QLX) {
+                        this.getPie();
+                    }
                 }
             },
             deep: true,

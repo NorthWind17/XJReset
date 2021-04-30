@@ -869,27 +869,36 @@ export default {
                     })
                     .then((res) => {
                         let newUrl =
-                            'https://aflow.dingtalk.com/dingtalk/pc/query/pchomepage.htm?corpid=' +
+                            'https://aflow.dingtalk.com/dingtalk/pc/query/pchomepage.htm?ddtab=true&corpid=' +
                             _this.$store.state.cid +
                             '#/custom/?processCode=' +
                             res.data.process_code;
                         dd.ready(function () {
-                            dd.biz.util.openSlidePanel({
-                                url: newUrl, //打开侧边栏的url
-                                title: '发起' + item.tmpname, //侧边栏顶部标题
+                            dd.biz.util.openLink({
+                                url: newUrl, //要打开链接的地址
                                 onSuccess: function (result) {
-                                    _this.viewMould = false;
+                                    /**/
                                 },
-                                onFail: function () {
-                                    setTimeout(() => {
-                                        _this.getNum();
-                                    }, 5000);
-                                    setTimeout(() => {
-                                        _this.getNum();
-                                    }, 10000);
-                                }
+                                onFail: function (err) {}
                             });
                         });
+                        // dd.ready(function () {
+                        //     dd.biz.util.openSlidePanel({
+                        //         url: newUrl, //打开侧边栏的url
+                        //         title: '发起' + item.tmpname, //侧边栏顶部标题
+                        //         onSuccess: function (result) {
+                        //             _this.viewMould = false;
+                        //         },
+                        //         onFail: function () {
+                        //             setTimeout(() => {
+                        //                 _this.getNum();
+                        //             }, 5000);
+                        //             setTimeout(() => {
+                        //                 _this.getNum();
+                        //             }, 10000);
+                        //         }
+                        //     });
+                        // });
                         _this.viewMould = false;
                         _this.appVisible = false;
                         _this.loaded = false;
@@ -1187,27 +1196,36 @@ export default {
                         })
                         .then((res) => {
                             let newUrl =
-                                'https://aflow.dingtalk.com/dingtalk/pc/query/pchomepage.htm?corpid=' +
+                                'https://aflow.dingtalk.com/dingtalk/pc/query/pchomepage.htm?ddtab=true&corpid=' +
                                 _this.$store.state.cid +
                                 '#/custom/?processCode=' +
                                 res.data.process_code;
                             dd.ready(function () {
-                                dd.biz.util.openSlidePanel({
-                                    url: newUrl, //打开侧边栏的url
-                                    title: '发起' + _this.checkName, //侧边栏顶部标题
+                                dd.biz.util.openLink({
+                                    url: newUrl, //要打开链接的地址
                                     onSuccess: function (result) {
-                                        _this.viewMould = false;
+                                        /**/
                                     },
-                                    onFail: function () {
-                                        setTimeout(() => {
-                                            _this.getNum();
-                                        }, 5000);
-                                        setTimeout(() => {
-                                            _this.getNum();
-                                        }, 10000);
-                                    }
+                                    onFail: function (err) {}
                                 });
                             });
+                            // dd.ready(function () {
+                            //     dd.biz.util.openSlidePanel({
+                            //         url: newUrl, //打开侧边栏的url
+                            //         title: '发起' + _this.checkName, //侧边栏顶部标题
+                            //         onSuccess: function (result) {
+                            //             _this.viewMould = false;
+                            //         },
+                            //         onFail: function () {
+                            //             setTimeout(() => {
+                            //                 _this.getNum();
+                            //             }, 5000);
+                            //             setTimeout(() => {
+                            //                 _this.getNum();
+                            //             }, 10000);
+                            //         }
+                            //     });
+                            // });
                             _this.viewMould = false;
                             _this.appVisible = false;
                             _this.loaded = false;

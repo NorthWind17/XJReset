@@ -2186,22 +2186,22 @@ export default {
                 .then((res) => {
                     if (res.data.code == 200) {
                         if (this.$store.state.projectInfo.ppower == '2') {
-                            this.errorProjectList[3].num = res.data.content[0];
-                            this.errorProjectList[4].num = res.data.content[1];
-                            this.errorProjectList[5].num = res.data.content[2];
-                            this.errorProjectList[6].chlid[0].num =
-                                res.data.content[3];
-                            this.errorProjectList[6].chlid[1].num =
-                                res.data.content[4];
+                            // this.errorProjectList[3].num = res.data.content[0];
+                            // this.errorProjectList[4].num = res.data.content[1];
+                            // this.errorProjectList[5].num = res.data.content[2];
+                            // this.errorProjectList[6].chlid[0].num =
+                            //     res.data.content[3];
+                            // this.errorProjectList[6].chlid[1].num =
+                            //     res.data.content[4];
                             this.menuList = this.errorProjectList;
                         } else {
-                            this.projectList[3].num = res.data.content[0];
-                            this.projectList[4].num = res.data.content[1];
-                            this.projectList[5].num = res.data.content[2];
-                            this.projectList[6].chlid[0].num =
-                                res.data.content[3];
-                            this.projectList[6].chlid[1].num =
-                                res.data.content[4];
+                            // this.projectList[3].num = res.data.content[0];
+                            // this.projectList[4].num = res.data.content[1];
+                            // this.projectList[5].num = res.data.content[2];
+                            // this.projectList[6].chlid[0].num =
+                            //     res.data.content[3];
+                            // this.projectList[6].chlid[1].num =
+                            //     res.data.content[4];
                             this.menuList = this.projectList;
                         }
                     } else {

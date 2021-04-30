@@ -1366,29 +1366,38 @@ export default {
                         })
                         .then((res) => {
                             let newUrl =
-                                'https://aflow.dingtalk.com/dingtalk/pc/query/pchomepage.htm?corpid=' +
+                                'https://aflow.dingtalk.com/dingtalk/pc/query/pchomepage.htm?ddtab=true&corpid=' +
                                 _this.$store.state.cid +
                                 '#/custom/?processCode=' +
                                 res.data.process_code;
                             dd.ready(function () {
-                                dd.biz.util.openSlidePanel({
-                                    url: newUrl, //打开侧边栏的url
-                                    title: '发起支出合同审批', //侧边栏顶部标题
-                                    onSuccess: function (result) {},
-                                    onFail: function () {
-                                        setTimeout(() => {
-                                            _this.getList();
-                                            _this.$emit('updateN');
-                                            // _this.$parent.fatherUpNum();
-                                        }, 5000);
-                                        setTimeout(() => {
-                                            _this.getList();
-                                            _this.$emit('updateN');
-                                            // _this.$parent.fatherUpNum();
-                                        }, 10000);
-                                    }
+                                dd.biz.util.openLink({
+                                    url: newUrl, //要打开链接的地址
+                                    onSuccess: function (result) {
+                                        /**/
+                                    },
+                                    onFail: function (err) {}
                                 });
                             });
+                            // dd.ready(function () {
+                            //     dd.biz.util.openSlidePanel({
+                            //         url: newUrl, //打开侧边栏的url
+                            //         title: '发起支出合同审批', //侧边栏顶部标题
+                            //         onSuccess: function (result) {},
+                            //         onFail: function () {
+                            //             setTimeout(() => {
+                            //                 _this.getList();
+                            //                 _this.$emit('updateN');
+                            //                 // _this.$parent.fatherUpNum();
+                            //             }, 5000);
+                            //             setTimeout(() => {
+                            //                 _this.getList();
+                            //                 _this.$emit('updateN');
+                            //                 // _this.$parent.fatherUpNum();
+                            //             }, 10000);
+                            //         }
+                            //     });
+                            // });
                             _this.appVisible = false;
                             _this.loaded = false;
                             _this.$refs[formName].resetFields();
@@ -1952,29 +1961,38 @@ export default {
                         })
                         .then((res) => {
                             let newUrl =
-                                'https://aflow.dingtalk.com/dingtalk/pc/query/pchomepage.htm?corpid=' +
+                                'https://aflow.dingtalk.com/dingtalk/pc/query/pchomepage.htm?ddtab=true&corpid=' +
                                 _this.$store.state.cid +
                                 '#/custom/?processCode=' +
                                 res.data.process_code;
                             dd.ready(function () {
-                                dd.biz.util.openSlidePanel({
-                                    url: newUrl, //打开侧边栏的url
-                                    title: '发起' + name, //侧边栏顶部标题
-                                    onSuccess: function (result) {},
-                                    onFail: function () {
-                                        setTimeout(() => {
-                                            _this.getList();
-                                            _this.$emit('updateN');
-                                            // _this.$parent.fatherUpNum();
-                                        }, 5000);
-                                        setTimeout(() => {
-                                            _this.getList();
-                                            _this.$emit('updateN');
-                                            // _this.$parent.fatherUpNum();
-                                        }, 10000);
-                                    }
+                                dd.biz.util.openLink({
+                                    url: newUrl, //要打开链接的地址
+                                    onSuccess: function (result) {
+                                        /**/
+                                    },
+                                    onFail: function (err) {}
                                 });
                             });
+                            // dd.ready(function () {
+                            //     dd.biz.util.openSlidePanel({
+                            //         url: newUrl, //打开侧边栏的url
+                            //         title: '发起' + name, //侧边栏顶部标题
+                            //         onSuccess: function (result) {},
+                            //         onFail: function () {
+                            //             setTimeout(() => {
+                            //                 _this.getList();
+                            //                 _this.$emit('updateN');
+                            //                 // _this.$parent.fatherUpNum();
+                            //             }, 5000);
+                            //             setTimeout(() => {
+                            //                 _this.getList();
+                            //                 _this.$emit('updateN');
+                            //                 // _this.$parent.fatherUpNum();
+                            //             }, 10000);
+                            //         }
+                            //     });
+                            // });
                         })
                         .catch(function (error) {
                             console.log(error);

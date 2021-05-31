@@ -136,10 +136,19 @@
                                                 帮助文档
                                             </p>
                                             <p
-                                                style="cursor: pointer"
+                                                style="
+                                                    margin-bottom: 12px;
+                                                    cursor: pointer;
+                                                "
                                                 @click="backMsg"
                                             >
                                                 意见反馈
+                                            </p>
+                                            <p
+                                                style="cursor: pointer"
+                                                @click="goMovie"
+                                            >
+                                                讲解视频
                                             </p>
                                         </div>
                                     </el-popover>
@@ -604,6 +613,10 @@ export default {
         goHelp() {
             window.location.href =
                 'https://www.yuque.com/books/share/0b3cefc0-655f-4555-ab1d-908e9186a0f2?#';
+        },
+        goMovie() {
+            window.location.href =
+                'https://dingyunlaowu.oss-cn-hangzhou.aliyuncs.com/shipin/%E5%8D%8F%E5%90%8C%E5%BB%BA%E8%AE%BE%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D%281%29.mp4';
         },
         goCreate() {
             this.$router.push('/project/projectPanel');
